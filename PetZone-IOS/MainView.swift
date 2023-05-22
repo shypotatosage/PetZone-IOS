@@ -17,20 +17,7 @@ struct MainView: View {
                 if self.selected == 0 {
                     HomeView()
                 } else if self.selected == 1 {
-                    GeometryReader {_ in
-                        VStack(spacing: 15) {
-                            Spacer()
-                            Text("Wishlist")
-                                .font(.title)
-                                .foregroundColor(.white)
-                            Image("2")
-                                .resizable()
-                                .frame(height: 250)
-                                .cornerRadius(15)
-                            Spacer()
-                        }
-                        .padding()
-                    }
+                    OrderListView()
                 } else {
                     GeometryReader {_ in
                         VStack(spacing: 15) {
@@ -88,7 +75,7 @@ struct FloatingTabBar : View {
                 Button(action: {
                     self.selected = 1
                 }) {
-                    Image(systemName: "clock")
+                    Image(systemName: "list.bullet")
                         .resizable()
                         .frame(width: 16, height: 16)
                         .foregroundColor(self.selected == 1 ? Color(hex: "EF233C") : .white)
