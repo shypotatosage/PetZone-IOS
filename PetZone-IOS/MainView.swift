@@ -19,11 +19,10 @@ struct MainView: View {
                 } else if self.selected == 1 {
                     OrderListView()
                 } else {
-                    OrderListView()
+                    TransactionView()
                 }
                 
             }
-            .background(Color.gray)
             .edgesIgnoringSafeArea(.all)
             
             FloatingTabBar(selected: self.$selected)
