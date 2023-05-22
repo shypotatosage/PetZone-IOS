@@ -33,6 +33,7 @@
 		046225982A1B245800B610AD /* PetHotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225952A1B245800B610AD /* PetHotel.swift */; };
 		046225992A1B245800B610AD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225962A1B245800B610AD /* Order.swift */; };
 		0462259A2A1B245800B610AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225972A1B245800B610AD /* User.swift */; };
+		0462259C2A1B2AB200B610AD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462259B2A1B2AB200B610AD /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		046225952A1B245800B610AD /* PetHotel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetHotel.swift; sourceTree = "<group>"; };
 		046225962A1B245800B610AD /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		046225972A1B245800B610AD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0462259B2A1B2AB200B610AD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		0465DC162A1B2BC2002FDCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,7 @@
 		046225412A1B22F700B610AD /* PetZone-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				0465DC162A1B2BC2002FDCAC /* Info.plist */,
 				046225942A1B245800B610AD /* Model */,
 				046225852A1B242700B610AD /* View */,
 				046225712A1B23BC00B610AD /* Fonts */,
@@ -142,6 +146,7 @@
 				0462254B2A1B22F800B610AD /* Persistence.swift */,
 				0462254D2A1B22F800B610AD /* PetZone_IOS.xcdatamodeld */,
 				046225482A1B22F800B610AD /* Preview Content */,
+				0462259B2A1B2AB200B610AD /* MainView.swift */,
 			);
 			path = "PetZone-IOS";
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046225982A1B245800B610AD /* PetHotel.swift in Sources */,
+				0462259C2A1B2AB200B610AD /* MainView.swift in Sources */,
 				0462258F2A1B242700B610AD /* EditProfileView.swift in Sources */,
 				046225992A1B245800B610AD /* Order.swift in Sources */,
 				046225822A1B240F00B610AD /* CustomFont.swift in Sources */,
@@ -560,6 +566,7 @@
 				DEVELOPMENT_TEAM = 9KGU3SB5D7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PetZone-IOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -589,6 +596,7 @@
 				DEVELOPMENT_TEAM = 9KGU3SB5D7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PetZone-IOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
