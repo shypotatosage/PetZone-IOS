@@ -43,7 +43,7 @@ struct PetHotel: Identifiable, Codable{
 
 extension PetHotel{
     static var emptyHotel: PetHotel{
-        PetHotel(name: "", description: "", city: "", address: "", phone_number: "", opening_hour: "", closing_hour: "", hotel_pic: "", price: 0, user: User(name: "", email: "", address: "", phone_number: "", password: "", profile_pic: ""))
+        PetHotel(name: "", description: "", city: "", address: "", phone_number: "", opening_hour: "", closing_hour: "", hotel_pic: "", price: 0, user: User(name: "", email: "", address: "", phone_number: "", profile_pic: ""))
     }
     
     static let sampleHotel: PetHotel =
@@ -63,7 +63,6 @@ extension PetHotel{
             email: "mjiemesha@gmail.com",
             address: "Surabaya, Blue House Wp 2 No 26",
             phone_number: "081212341234",
-            password: "asassa",
             profile_pic: ""
             )
         )
@@ -86,7 +85,6 @@ extension PetHotel{
                 email: "mjiemesha@gmail.com",
                 address: "Surabaya, Blue House Wp 2 No 26",
                 phone_number: "081212341234",
-                password: "asassa",
                 profile_pic: ""
                 )
         ),
@@ -106,7 +104,6 @@ extension PetHotel{
                 email: "mjiemesha@gmail.com",
                 address: "Surabaya, Blue House Wp 2 No 26",
                 phone_number: "081212341234",
-                password: "asassa",
                 profile_pic: ""
                 )
         ),
@@ -126,7 +123,6 @@ extension PetHotel{
                 email: "mjiemesha@gmail.com",
                 address: "Surabaya, Blue House Wp 2 No 26",
                 phone_number: "081212341234",
-                password: "asassa",
                 profile_pic: ""
                 )
         )
