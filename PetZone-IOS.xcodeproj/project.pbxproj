@@ -30,6 +30,9 @@
 		046225912A1B242700B610AD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462258B2A1B242700B610AD /* HomeView.swift */; };
 		046225922A1B242700B610AD /* HotelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462258C2A1B242700B610AD /* HotelCardView.swift */; };
 		046225932A1B242700B610AD /* HotelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462258E2A1B242700B610AD /* HotelDetailView.swift */; };
+		046225982A1B245800B610AD /* PetHotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225952A1B245800B610AD /* PetHotel.swift */; };
+		046225992A1B245800B610AD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225962A1B245800B610AD /* Order.swift */; };
+		0462259A2A1B245800B610AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225972A1B245800B610AD /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,9 @@
 		0462258B2A1B242700B610AD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0462258C2A1B242700B610AD /* HotelCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelCardView.swift; sourceTree = "<group>"; };
 		0462258E2A1B242700B610AD /* HotelDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelDetailView.swift; sourceTree = "<group>"; };
+		046225952A1B245800B610AD /* PetHotel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetHotel.swift; sourceTree = "<group>"; };
+		046225962A1B245800B610AD /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		046225972A1B245800B610AD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,7 @@
 		046225412A1B22F700B610AD /* PetZone-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				046225942A1B245800B610AD /* Model */,
 				046225852A1B242700B610AD /* View */,
 				046225712A1B23BC00B610AD /* Fonts */,
 				0462257A2A1B240F00B610AD /* Helper */,
@@ -229,6 +236,16 @@
 				0462258E2A1B242700B610AD /* HotelDetailView.swift */,
 			);
 			path = Hotel;
+			sourceTree = "<group>";
+		};
+		046225942A1B245800B610AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				046225952A1B245800B610AD /* PetHotel.swift */,
+				046225962A1B245800B610AD /* Order.swift */,
+				046225972A1B245800B610AD /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,11 +382,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046225982A1B245800B610AD /* PetHotel.swift in Sources */,
 				0462258F2A1B242700B610AD /* EditProfileView.swift in Sources */,
+				046225992A1B245800B610AD /* Order.swift in Sources */,
 				046225822A1B240F00B610AD /* CustomFont.swift in Sources */,
 				0462254C2A1B22F800B610AD /* Persistence.swift in Sources */,
 				046225452A1B22F700B610AD /* ContentView.swift in Sources */,
 				046225432A1B22F700B610AD /* PetZone_IOSApp.swift in Sources */,
+				0462259A2A1B245800B610AD /* User.swift in Sources */,
 				046225902A1B242700B610AD /* TransactionView.swift in Sources */,
 				046225802A1B240F00B610AD /* OvalTextFieldStyle.swift in Sources */,
 				0462254F2A1B22F800B610AD /* PetZone_IOS.xcdatamodeld in Sources */,
