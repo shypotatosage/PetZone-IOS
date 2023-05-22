@@ -12,40 +12,45 @@ struct MainView: View {
     
     var body: some View {
         
-        ZStack(alignment: .bottom){
-            
-            VStack{
-                
-                if self.selected == 0{
+        ZStack(alignment: .bottom) {
+            VStack {
+                if self.selected == 0 {
                     HomeView()
-                }
-                else if self.selected == 1{
-                    GeometryReader{_ in
-                        VStack(spacing: 15){
+                } else if self.selected == 1 {
+                    GeometryReader {_ in
+                        VStack(spacing: 15) {
                             Spacer()
                             Text("Wishlist")
                                 .font(.title)
                                 .foregroundColor(.white)
-                            Image("2").resizable().frame(height: 250).cornerRadius(15)
+                            Image("2")
+                                .resizable()
+                                .frame(height: 250)
+                                .cornerRadius(15)
                             Spacer()
-                        }.padding()
+                        }
+                        .padding()
                     }
-                }
-                else{
-                    GeometryReader{_ in
-                        VStack(spacing: 15){
+                } else {
+                    GeometryReader {_ in
+                        VStack(spacing: 15) {
                             Spacer()
                             Text("Cart")
                                 .font(.title)
                                 .foregroundColor(.white)
-                            Image("3").resizable().frame(height: 250).cornerRadius(15)
+                            Image("3")
+                                .resizable()
+                                .frame(height: 250)
+                                .cornerRadius(15)
                             Spacer()
-                        }.padding()
+                        }
+                        .padding()
                     }
                 }
                 
-            }.background(Color.gray)
-                .edgesIgnoringSafeArea(.all)
+            }
+            .background(Color.gray)
+            .edgesIgnoringSafeArea(.all)
             
             FloatingTabBar(selected: self.$selected)
         }
@@ -59,13 +64,10 @@ struct MainView_Previews: PreviewProvider {
 }
 
 struct FloatingTabBar : View {
-    
     @Binding var selected : Int
     
-    var body : some View{
-        
-        HStack{
-            
+    var body : some View {
+        HStack {
             Spacer(minLength: 0)
             
             HStack{
