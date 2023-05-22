@@ -19,7 +19,7 @@ struct OrderDetailView: View {
                 .resizable()
                 .scaledToFill()
                 .clipped()
-                .frame(width: .infinity, height: 300, alignment: .topLeading)
+                .frame(height: 300, alignment: .topLeading)
                 .padding(.bottom)
             VStack {
                 VStack(spacing: 10) {
