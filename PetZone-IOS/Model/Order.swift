@@ -31,6 +31,6 @@ struct Order: Identifiable, Codable{
 
 extension Order{
     static var emptyOrder: Order{
-        Order(petName: "", petType: "", startDate: Date.now, endDate: Date.now,purchase: 0, user: User(name: "", email: "", address: "", phone_number: "", password: "", profile_pic: ""), petHotel: (PetHotel(name: "", description: "", city: "", address: "", phone_number: "", opening_hour: "", closing_hour: "", hotelpic: "", harga: 0, user: User(name: "", email: "", address: "", phone_number: "", password: "", profile_pic: ""))))
+        Order(petName: "", petType: "", startDate: Date.now, endDate: Date.now,purchase: 0, user: User(name: "", email: "", address: "", phone_number: "", profile_pic: ""), petHotel: (PetHotel(name: "", description: "", city: "", address: "", phone_number: "", opening_hour: "", closing_hour: "", hotel_pic: "", price: 0, user: User(name: "", email: "", address: "", phone_number: "", profile_pic: ""))))
     }
 }
