@@ -13,9 +13,9 @@ struct MainView: View {
     var body: some View {
         
         ZStack(alignment: .bottom){
-             
+            
             VStack{
-                 
+                
                 if self.selected == 0{
                     HomeView()
                 }
@@ -43,11 +43,11 @@ struct MainView: View {
                         }.padding()
                     }
                 }
-                 
+                
             }.background(Color.gray)
-            .edgesIgnoringSafeArea(.all)
-             
-            FloatingTabbar(selected: self.$selected)
+                .edgesIgnoringSafeArea(.all)
+            
+            FloatingTabBar(selected: self.$selected)
         }
     }
 }
@@ -58,59 +58,63 @@ struct MainView_Previews: PreviewProvider {
     }
 }
 
-struct FloatingTabbar : View {
-     
+struct FloatingTabBar : View {
+    
     @Binding var selected : Int
-    @State var expand = false
-     
+    
     var body : some View{
-         
+        
         HStack{
-             
+            
             Spacer(minLength: 0)
-             
+            
             HStack{
-                if !self.expand{
-                     
-                    Button(action: {
-                        self.expand.toggle()
-                    }) {
-                        Image(systemName: "arrow.left").foregroundColor(.green).padding()
-                    }
+                Button(action: {
+                    self.selected = 0
+                }) {
+                    Image(systemName: "house")
+                        .resizable()
+                        .frame(width: 20, height: 16)
+                        .foregroundColor(self.selected == 0 ? Color(hex: "EF233C") : .white)
+                        .padding(12)
+                        .background(self.selected == 0 ?  Color.white : Color(hex: "EF233C"))
+                        .cornerRadius(100)
                 }
-                else{
-                    Button(action: {
-                        self.selected = 0
-                    }) {
-                        Image(systemName: "house").foregroundColor(self.selected == 0 ? .green : .gray).padding(.horizontal)
-                    }
-                     
-                    Spacer(minLength: 15)
-                     
-                    Button(action: {
-                        self.selected = 1
-                    }) {
-                        Image(systemName: "suit.heart").foregroundColor(self.selected == 1 ? .green : .gray).padding(.horizontal)
-                    }
-                     
-                    Spacer(minLength: 15)
-                     
-                    Button(action: {
-                        self.selected = 2
-                    }) {
-                        Image(systemName: "cart").foregroundColor(self.selected == 2 ? .green : .gray).padding(.horizontal)
-                    }
+                
+                Spacer(minLength: 15)
+                
+                Button(action: {
+                    self.selected = 1
+                }) {
+                    Image(systemName: "clock")
+                        .resizable()
+                        .frame(width: 16, height: 16)
+                        .foregroundColor(self.selected == 1 ? Color(hex: "EF233C") : .white)
+                        .padding(12)
+                        .background(self.selected == 1 ?  Color.white : Color(hex: "EF233C"))
+                        .cornerRadius(100)
                 }
-            }.padding(.vertical,self.expand ? 20 : 8)
-            .padding(.horizontal,self.expand ? 35 : 8)
-            .background(Color.white)
-            .clipShape(Capsule())
-            .padding(22)
-            .onLongPressGesture {
-                     
-                    self.expand.toggle()
+                
+                Spacer(minLength: 15)
+                
+                Button(action: {
+                    self.selected = 2
+                }) {
+                    Image(systemName: "person")
+                        .resizable()
+                        .frame(width: 16, height: 16)
+                        .foregroundColor(self.selected == 2 ? Color(hex: "EF233C") : .white)
+                        .padding(12)
+                        .background(self.selected == 2 ?  Color.white : Color(hex: "EF233C"))
+                        .cornerRadius(100)
+                }
             }
-            .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6))
+            .padding(.vertical, 12)
+            .padding(.horizontal, 40)
+            .background(Color(hex: "EF233C"))
+            .clipShape(Capsule())
+            .padding(.horizontal, 20)
+            .padding(.vertical, 4)
         }
     }
 }
