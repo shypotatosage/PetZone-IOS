@@ -19,20 +19,7 @@ struct MainView: View {
                 } else if self.selected == 1 {
                     OrderListView()
                 } else {
-                    GeometryReader {_ in
-                        VStack(spacing: 15) {
-                            Spacer()
-                            Text("Cart")
-                                .font(.title)
-                                .foregroundColor(.white)
-                            Image("3")
-                                .resizable()
-                                .frame(height: 250)
-                                .cornerRadius(15)
-                            Spacer()
-                        }
-                        .padding()
-                    }
+                    OrderListView()
                 }
                 
             }

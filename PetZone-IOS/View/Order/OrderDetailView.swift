@@ -8,76 +8,95 @@
 import SwiftUI
 
 struct OrderDetailView: View {
-    var order = Order.sampleOrder
+    @State private var order = Order.sampleOrder
     var body: some View {
-        ScrollView {
-            Text("Order Detail")
-                .customFont(.largeTitle)
-                .foregroundColor(Color(hex: "EF233C"))
-                .padding(.top)
-            Image("dummypicthotel")
-                .resizable()
-                .scaledToFill()
-                .clipped()
-                .frame(height: 300, alignment: .topLeading)
-                .padding(.bottom)
-            VStack {
-                VStack(spacing: 10) {
-                    Text("Pet Name")
-                        .frame(maxWidth: .infinity, alignment: .topLeading)
-                        .customFont(.headline)
-                        .padding(.leading, 2)
-//                    TextField("Pet Name", text: $newOrder.petName)
-//                        .customFont(.body)
+        NavigationView {
+            ScrollView{
+                VStack{
+                    Image("dummypicthotel")
+                        .resizable()
+                        .scaledToFit()
+                    Text("Order Detail")
+                        .customFont(.largeTitle)
+                        .padding(.top)
+                        .foregroundColor(Color(hex: "EF233C"))
+                    Group{
+                        HStack {
+                            Image(systemName: "pawprint.fill").foregroundColor(.gray)
+                            Text("Pet Name").customFont(.subheadline)
+                        }
+                        .padding(.top)
+                        .padding(.leading)
+                        .frame(
+                            maxWidth: .infinity,
+                            alignment:  .topLeading)
+                    }
+                    Text(order.petName)
+                        .padding(.horizontal)
+                        .padding(.horizontal)
+                        .padding(.horizontal)
+                        .frame(
+                            maxWidth: .infinity,
+                            alignment:  .topLeading)
+                    Group{
+                        HStack {
+                            Image(systemName: "house.fill").foregroundColor(.gray)
+                            Text("Pet Type").customFont(.subheadline)
+                        }
+                        .padding(.top)
+                        .padding(.leading)
+                        
+                        .frame(
+                            maxWidth: .infinity,
+                            alignment:  .topLeading)
+                    }
+                    Text(order.petType)
+                        .padding(.horizontal)
+                        .padding(.horizontal)
+                        .padding(.horizontal)
+                        .frame(
+                            maxWidth: .infinity,
+                            alignment:  .topLeading)
+                    Group{
+                        HStack {
+                            Image(systemName: "clock.fill").foregroundColor(.gray)
+                            Text("Start - End Date").customFont(.subheadline)
+                        }
+                        .padding(.top)
+                        .padding(.leading)
+                        
+                        .frame(
+                            maxWidth: .infinity,
+                            alignment:  .topLeading)
+                    }
+                    Text("\(order.startDate.formatted()) - \(order.endDate.formatted())")
+                        .padding(.horizontal)
+                        .padding(.horizontal)
+                        .padding(.horizontal)
+                        .frame(
+                            maxWidth: .infinity,
+                            alignment:  .topLeading)
+                    Group{
+                        HStack {
+                            Image(systemName: "dollarsign.square.fill").foregroundColor(.gray)
+                            Text("Total Price").customFont(.subheadline)
+                        }
+                        .padding(.top)
+                        .padding(.leading)
+                        
+                        .frame(
+                            maxWidth: .infinity,
+                            alignment:  .topLeading)
+                    }
+                    Text("Rp. \(order.purchase.description)")
+                        .padding(.horizontal)
+                        .padding(.horizontal)
+                        .padding(.horizontal)
+                        .frame(
+                            maxWidth: .infinity,
+                            alignment:  .topLeading)
                 }
-                .textFieldStyle(OvalTextFieldStyle())
-                .padding(.horizontal)
-                
-                VStack(spacing: 10) {
-                    Text("Pet Type")
-                        .frame(maxWidth: .infinity, alignment: .topLeading)
-                        .customFont(.headline)
-                        .padding(.leading, 2)
-//                    TextField("Pet Type", text: $newOrder.petType)
-//                        .customFont(.body)
-                }
-                .textFieldStyle(OvalTextFieldStyle())
-                .padding(.horizontal)
-                .padding(.top, 8)
-                
-                VStack(spacing: 0) {
-                    Text("Start Date")
-                        .frame(maxWidth: .infinity, alignment: .topLeading)
-                        .customFont(.headline)
-                        .padding(.leading, 2)
-                   
-                }
-                .textFieldStyle(OvalTextFieldStyle())
-                .padding(.horizontal)
-                .padding(.top, 8)
-                
-                VStack(spacing: 0) {
-                    Text("End Date")
-                        .frame(maxWidth: .infinity, alignment: .topLeading)
-                        .customFont(.headline)
-                        .padding(.leading, 2)
-                }
-                .textFieldStyle(OvalTextFieldStyle())
-                .padding(.horizontal)
-                
-                VStack(spacing: 10) {
-                    Text("Total Price")
-                        .frame(maxWidth: .infinity, alignment: .topLeading)
-                        .customFont(.headline)
-                        .padding(.leading, 2)
-                }
-                .textFieldStyle(OvalTextFieldStyle())
-                .padding(.horizontal)
-                .padding(.bottom, 28)
-                
             }
-            .padding(.horizontal, 10)
-            .padding(.bottom)
         }
     }
 }

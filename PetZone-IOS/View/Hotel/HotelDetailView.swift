@@ -19,17 +19,20 @@ struct HotelDetailView: View {
                     Text(newHotel.name)
                         .customFont(.largeTitle)
                         .padding(.top)
+                        .foregroundColor(Color(hex: "EF233C"))
                     Text(newHotel.address)
                     Text(newHotel.phone_number)
                     HStack{
-                        Text(newHotel.opening_hour)
+                        Text(newHotel.opening_hour).customFont(.subheadline)
                         Text("-")
+                            .customFont(.subheadline)
                         Text(newHotel.closing_hour)
+                            .customFont(.subheadline)
                     }
                     Group{
                         HStack {
                             Image(systemName: "location.fill").foregroundColor(.gray)
-                            Text("Lokasi")
+                            Text("Lokasi").customFont(.subheadline)
                         }
                         .padding(.top)
                         .padding(.leading)
@@ -47,7 +50,7 @@ struct HotelDetailView: View {
                     Group{
                         HStack {
                             Image(systemName: "house.fill").foregroundColor(.gray)
-                            Text("Deskripsi")
+                            Text("Deskripsi").customFont(.subheadline)
                         }
                         .padding(.top)
                         .padding(.leading)
