@@ -16,6 +16,20 @@
 		046225592A1B22F900B610AD /* PetZone_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225582A1B22F900B610AD /* PetZone_IOSTests.swift */; };
 		046225632A1B22F900B610AD /* PetZone_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225622A1B22F900B610AD /* PetZone_IOSUITests.swift */; };
 		046225652A1B22F900B610AD /* PetZone_IOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225642A1B22F900B610AD /* PetZone_IOSUITestsLaunchTests.swift */; };
+		046225762A1B23BC00B610AD /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 046225722A1B23BC00B610AD /* Poppins-Medium.ttf */; };
+		046225772A1B23BC00B610AD /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 046225732A1B23BC00B610AD /* Poppins-Regular.ttf */; };
+		046225782A1B23BC00B610AD /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 046225742A1B23BC00B610AD /* Poppins-Bold.ttf */; };
+		046225792A1B23BC00B610AD /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 046225752A1B23BC00B610AD /* Poppins-SemiBold.ttf */; };
+		046225802A1B240F00B610AD /* OvalTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462257B2A1B240F00B610AD /* OvalTextFieldStyle.swift */; };
+		046225812A1B240F00B610AD /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462257C2A1B240F00B610AD /* SearchBar.swift */; };
+		046225822A1B240F00B610AD /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462257D2A1B240F00B610AD /* CustomFont.swift */; };
+		046225832A1B240F00B610AD /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462257E2A1B240F00B610AD /* DefaultButton.swift */; };
+		046225842A1B240F00B610AD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462257F2A1B240F00B610AD /* Color.swift */; };
+		0462258F2A1B242700B610AD /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225872A1B242700B610AD /* EditProfileView.swift */; };
+		046225902A1B242700B610AD /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225892A1B242700B610AD /* TransactionView.swift */; };
+		046225912A1B242700B610AD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462258B2A1B242700B610AD /* HomeView.swift */; };
+		046225922A1B242700B610AD /* HotelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462258C2A1B242700B610AD /* HotelCardView.swift */; };
+		046225932A1B242700B610AD /* HotelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462258E2A1B242700B610AD /* HotelDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +62,20 @@
 		0462255E2A1B22F900B610AD /* PetZone-IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PetZone-IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		046225622A1B22F900B610AD /* PetZone_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetZone_IOSUITests.swift; sourceTree = "<group>"; };
 		046225642A1B22F900B610AD /* PetZone_IOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetZone_IOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		046225722A1B23BC00B610AD /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		046225732A1B23BC00B610AD /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		046225742A1B23BC00B610AD /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		046225752A1B23BC00B610AD /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		0462257B2A1B240F00B610AD /* OvalTextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvalTextFieldStyle.swift; sourceTree = "<group>"; };
+		0462257C2A1B240F00B610AD /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		0462257D2A1B240F00B610AD /* CustomFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		0462257E2A1B240F00B610AD /* DefaultButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
+		0462257F2A1B240F00B610AD /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		046225872A1B242700B610AD /* EditProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		046225892A1B242700B610AD /* TransactionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		0462258B2A1B242700B610AD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0462258C2A1B242700B610AD /* HotelCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelCardView.swift; sourceTree = "<group>"; };
+		0462258E2A1B242700B610AD /* HotelDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +126,9 @@
 		046225412A1B22F700B610AD /* PetZone-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				046225852A1B242700B610AD /* View */,
+				046225712A1B23BC00B610AD /* Fonts */,
+				0462257A2A1B240F00B610AD /* Helper */,
 				046225422A1B22F700B610AD /* PetZone_IOSApp.swift */,
 				046225442A1B22F700B610AD /* ContentView.swift */,
 				046225462A1B22F800B610AD /* Assets.xcassets */,
@@ -131,6 +162,73 @@
 				046225642A1B22F900B610AD /* PetZone_IOSUITestsLaunchTests.swift */,
 			);
 			path = "PetZone-IOSUITests";
+			sourceTree = "<group>";
+		};
+		046225712A1B23BC00B610AD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				046225722A1B23BC00B610AD /* Poppins-Medium.ttf */,
+				046225732A1B23BC00B610AD /* Poppins-Regular.ttf */,
+				046225742A1B23BC00B610AD /* Poppins-Bold.ttf */,
+				046225752A1B23BC00B610AD /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0462257A2A1B240F00B610AD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0462257B2A1B240F00B610AD /* OvalTextFieldStyle.swift */,
+				0462257C2A1B240F00B610AD /* SearchBar.swift */,
+				0462257D2A1B240F00B610AD /* CustomFont.swift */,
+				0462257E2A1B240F00B610AD /* DefaultButton.swift */,
+				0462257F2A1B240F00B610AD /* Color.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		046225852A1B242700B610AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				046225862A1B242700B610AD /* EditProfile */,
+				046225882A1B242700B610AD /* Transaction */,
+				0462258A2A1B242700B610AD /* Home */,
+				0462258D2A1B242700B610AD /* Hotel */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		046225862A1B242700B610AD /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				046225872A1B242700B610AD /* EditProfileView.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		046225882A1B242700B610AD /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				046225892A1B242700B610AD /* TransactionView.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		0462258A2A1B242700B610AD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0462258B2A1B242700B610AD /* HomeView.swift */,
+				0462258C2A1B242700B610AD /* HotelCardView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0462258D2A1B242700B610AD /* Hotel */ = {
+			isa = PBXGroup;
+			children = (
+				0462258E2A1B242700B610AD /* HotelDetailView.swift */,
+			);
+			path = Hotel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +335,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046225762A1B23BC00B610AD /* Poppins-Medium.ttf in Resources */,
 				0462254A2A1B22F800B610AD /* Preview Assets.xcassets in Resources */,
+				046225782A1B23BC00B610AD /* Poppins-Bold.ttf in Resources */,
+				046225792A1B23BC00B610AD /* Poppins-SemiBold.ttf in Resources */,
 				046225472A1B22F800B610AD /* Assets.xcassets in Resources */,
+				046225772A1B23BC00B610AD /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +365,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0462258F2A1B242700B610AD /* EditProfileView.swift in Sources */,
+				046225822A1B240F00B610AD /* CustomFont.swift in Sources */,
 				0462254C2A1B22F800B610AD /* Persistence.swift in Sources */,
 				046225452A1B22F700B610AD /* ContentView.swift in Sources */,
 				046225432A1B22F700B610AD /* PetZone_IOSApp.swift in Sources */,
+				046225902A1B242700B610AD /* TransactionView.swift in Sources */,
+				046225802A1B240F00B610AD /* OvalTextFieldStyle.swift in Sources */,
 				0462254F2A1B22F800B610AD /* PetZone_IOS.xcdatamodeld in Sources */,
+				046225812A1B240F00B610AD /* SearchBar.swift in Sources */,
+				046225922A1B242700B610AD /* HotelCardView.swift in Sources */,
+				046225932A1B242700B610AD /* HotelDetailView.swift in Sources */,
+				046225912A1B242700B610AD /* HomeView.swift in Sources */,
+				046225832A1B240F00B610AD /* DefaultButton.swift in Sources */,
+				046225842A1B240F00B610AD /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
