@@ -75,9 +75,7 @@ struct HotelDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
 
-                    NavigationLink {
-                        TransactionView()
-                    } label: {
+                    NavigationLink (destination: TransactionView()){
                         Text("Order")
                             .customFont(.subheadline)
                             .foregroundColor(.white)
