@@ -54,7 +54,7 @@ struct HotelCardView: View {
                 .padding(.trailing, 1)
                 .frame(maxWidth: .infinity, alignment: .topLeading)
                 VStack {
-                    Image("dummypicthotel")
+                    Image(petHotel.hotel_pic)
                         .resizable()
                         .scaledToFill()
                         .frame(maxWidth: width/2.25)

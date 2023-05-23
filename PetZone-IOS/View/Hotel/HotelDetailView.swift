@@ -14,13 +14,20 @@ struct HotelDetailView: View {
         NavigationView {
             ScrollView{
                 VStack{
-                    Image("dummypicthotel")
+                    Image(choosenHotel.hotel_pic)
                         .resizable()
                         .scaledToFit()
+                    
                     Text(choosenHotel.name)
                         .customFont(.largeTitle)
                         .padding(.top)
                         .foregroundColor(Color(hex: "EF233C"))
+                    HStack{
+                        Text("Rp.")
+                        Text(String(choosenHotel.price))
+                    }
+                    .customFont(.subheadline)
+                    
                     Text(choosenHotel.address)
                     Text(choosenHotel.phone_number)
                     HStack{
@@ -67,8 +74,8 @@ struct HotelDetailView: View {
                         .frame(
                             maxWidth: .infinity,
                             alignment:  .topLeading)
-                    Button("Order"){
-                    }
+//                    Button("Order"){
+//                    }
                     .padding(.top)
                     .buttonStyle(DefaultButton())
                     .bold()
