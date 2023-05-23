@@ -61,6 +61,7 @@
 		0462259C2A1B2AB200B610AD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462259B2A1B2AB200B610AD /* MainView.swift */; };
 		0465DC182A1C4E6B002FDCAC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC172A1C4E6B002FDCAC /* MainView.swift */; };
 		0465DC1A2A1C5099002FDCAC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC192A1C5099002FDCAC /* HomeView.swift */; };
+		062927C92A1C5A6F00126B01 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 062927C82A1C5A6F00126B01 /* SwiftDate */; };
 		064A37A62A1B5A0C00FEF914 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A32A1B5A0C00FEF914 /* OrderListView.swift */; };
 		064A37A72A1B5A0C00FEF914 /* OrderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */; };
 		064A37A82A1B5A0C00FEF914 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */; };
@@ -143,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				062927C92A1C5A6F00126B01 /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +383,9 @@
 			dependencies = (
 			);
 			name = "PetZone-IOS";
+			packageProductDependencies = (
+				062927C82A1C5A6F00126B01 /* SwiftDate */,
+			);
 			productName = "PetZone-IOS";
 			productReference = 0462253F2A1B22F600B610AD /* PetZone-IOS.app */;
 			productType = "com.apple.product-type.application";
@@ -456,6 +461,9 @@
 				Base,
 			);
 			mainGroup = 046225362A1B22F600B610AD;
+			packageReferences = (
+				062927C72A1C5A6F00126B01 /* XCRemoteSwiftPackageReference "SwiftDate" */,
+			);
 			productRefGroup = 046225402A1B22F600B610AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -960,6 +968,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		062927C72A1C5A6F00126B01 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		062927C82A1C5A6F00126B01 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 062927C72A1C5A6F00126B01 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		0462254D2A1B22F800B610AD /* PetZone_IOS.xcdatamodeld */ = {

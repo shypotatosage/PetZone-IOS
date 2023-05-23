@@ -33,7 +33,7 @@ struct OrderListView: View {
                         ForEach(orderViewModel.filteredOrders) { order in
                             ZStack {
                                 NavigationLink {
-                                    OrderDetailView()
+                                    OrderDetailView(order: order)
                                 } label: {
                                     EmptyView()
                                 }

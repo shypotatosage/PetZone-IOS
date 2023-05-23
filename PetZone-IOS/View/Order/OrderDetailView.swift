@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OrderDetailView: View {
-    @State private var order = Order.sampleOrder
+    @State var order : Order
     var body: some View {
         NavigationView {
             ScrollView{
@@ -103,6 +103,6 @@ struct OrderDetailView: View {
 
 struct OrderDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderDetailView()
+        OrderDetailView(order: Order.sampleOrder)
     }
 }

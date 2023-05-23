@@ -35,15 +35,15 @@ extension Order{
     }
     
     static var sampleOrder: Order{
-        Order(petName: "Si Unyil", petType: "Asu", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
+        Order(petName: "Oreo", petType: "Anjing", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
             name: "Micheila Jiemesha",
             email: "mjiemesha@gmail.com",
             address: "Surabaya, Blue House Wp 2 No 26",
             phone_number: "081212341234",
             profile_pic: ""
         ), petHotel: PetHotel(
-            name: "BIM",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            name: "PetPal Hotel",
+            description: "Penitipan PetPal Hotel menyediakan penitipan hewan untuk hamster, gerbil, sugar glider dan reptil kecil.",
             //        coordinates: "Surabaya, Blue House Wp 2 No 26",
             city: "Surabaya",
             address: "Jalan WP 2 No 26",
@@ -64,32 +64,14 @@ extension Order{
     
     static let sampleOrderList: [Order] =
     [
-        Order(petName: "Si Unyil", petType: "Asu", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
+        Order(petName: "Poppy", petType: "Cat", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
             name: "Micheila Jiemesha",
             email: "mjiemesha@gmail.com",
             address: "Surabaya, Blue House Wp 2 No 26",
             phone_number: "081212341234",
             profile_pic: ""
-        ), petHotel: PetHotel(
-            name: "Peterpan",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            //        coordinates: "Surabaya, Blue House Wp 2 No 26",
-            city: "Surabaya",
-            address: "Jalan WP 2 No 26",
-            phone_number: "081212341234",
-            opening_hour: "10.00",
-            closing_hour: "22.00",
-            hotel_pic: "dummypicthotel",
-            price: 80000,
-            user : User(
-                name: "Micheila Jiemesha",
-                email: "mjiemesha@gmail.com",
-                address: "Surabaya, Blue House Wp 2 No 26",
-                phone_number: "081212341234",
-                profile_pic: ""
-            )
-        ))
-        ,        Order(petName: "Si Unyil", petType: "Asu", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
+        ), petHotel: PetHotel.sampleHotelList[1])
+        ,        Order(petName: "Milky", petType: "Dog", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
             name: "Micheila Jiemesha",
             email: "mjiemesha@gmail.com",
             address: "Surabaya, Blue House Wp 2 No 26",
@@ -114,7 +96,7 @@ extension Order{
                 profile_pic: ""
             )
         ))
-        ,        Order(petName: "Si Unyil", petType: "Asu", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
+        ,        Order(petName: "Blacky", petType: "Dog", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
             name: "Micheila Jiemesha",
             email: "mjiemesha@gmail.com",
             address: "Surabaya, Blue House Wp 2 No 26",
@@ -131,15 +113,9 @@ extension Order{
             closing_hour: "22.00",
             hotel_pic: "",
             price: 80000,
-            user : User(
-                name: "Micheila Jiemesha",
-                email: "mjiemesha@gmail.com",
-                address: "Surabaya, Blue House Wp 2 No 26",
-                phone_number: "081212341234",
-                profile_pic: ""
-            )
+            user : User.sampleUser
         ))
-        ,        Order(petName: "Si Unyil", petType: "Asu", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
+        ,        Order(petName: "Pochita", petType: "Dog", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
             name: "Micheila Jiemesha",
             email: "mjiemesha@gmail.com",
             address: "Surabaya, Blue House Wp 2 No 26",
@@ -189,7 +165,7 @@ extension Order{
                 profile_pic: ""
             )
         ))
-        ,        Order(petName: "Si Unyil", petType: "Asu", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
+        ,        Order(petName: "Viper", petType: "Gecko", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
             name: "Micheila Jiemesha",
             email: "mjiemesha@gmail.com",
             address: "Surabaya, Blue House Wp 2 No 26",
