@@ -28,12 +28,17 @@ struct HotelDetailView: View {
                                 .frame(
                                     maxWidth: .infinity,
                                     alignment:  .topLeading)
-                            Text(String(choosenHotel.price))           .font(.system(size: 30))
+                            HStack{
+                                Text("Rp.")
+                                Text(String(choosenHotel.price))
+                            }
+                                   .font(.system(size: 30))
                             .bold()
                         }
                         
+                        
                         HStack {
-                            Image(systemName: "location.fill").foregroundColor(.gray)
+                            Image(systemName: "location.fill").foregroundColor(.black)
                             Text(choosenHotel.address)
                         }
                         .padding(.top, 1)
@@ -41,7 +46,7 @@ struct HotelDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                         HStack {
-                            Image(systemName: "location.fill").foregroundColor(.gray)
+                            Image(systemName: "phone.fill").foregroundColor(.black)
                             Text(choosenHotel.phone_number)
                         }
                         .padding(.top, 1)
@@ -49,7 +54,7 @@ struct HotelDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                         HStack {
-                            Image(systemName: "location.fill").foregroundColor(.gray)
+                            Image(systemName: "clock.fill").foregroundColor(.black)
                             HStack{
                                 Text(choosenHotel.opening_hour)
                                 Text("-")

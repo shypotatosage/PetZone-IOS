@@ -17,7 +17,9 @@ struct HotelDetailView: View {
                     Group{
                         Image(choosenHotel.hotel_pic)
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
+                            .frame(maxWidth: .infinity, maxHeight: 300)
+                            .clipped()
                         
                         Text(choosenHotel.name)
                             .customFont(.largeTitle)
@@ -96,6 +98,7 @@ struct HotelDetailView: View {
                             .shadow(color: Color(hex: "BABABA"), radius: 3)
                     }
                 }
+                .padding([.bottom], 100)
             }
         }
     }
