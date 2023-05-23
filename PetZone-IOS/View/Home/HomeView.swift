@@ -36,12 +36,23 @@ struct HomeView: View {
                             .padding(.bottom)
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
-                        ForEach(PetHotel.sampleHotelList) { hotel in
-                            ZStack {
-                                NavigationLink {
-                                    HotelDetailView()
-                                } label: {
-                                    EmptyView()
+
+                            SearchBar(text: $searchText)
+                                .padding(.horizontal)
+                                .padding(.bottom)
+                                .listRowSeparator(.hidden)
+                                .listRowInsets(EdgeInsets())
+                            ForEach(PetHotel.sampleHotelList) { hotel in
+                                ZStack {
+                                    NavigationLink {
+                                        HotelDetailView(choosenHotel: hotel)
+                                    } label: {
+                                        EmptyView()
+                                    }
+                                    .opacity(0)
+                                    
+                                    HotelCardView(width: geo.size.width, petHotel: hotel)
+                                        .padding(.vertical, 8)
                                 }
                                 .opacity(0)
                                 
@@ -58,7 +69,7 @@ struct HomeView: View {
             }
         }
     }
-}
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
