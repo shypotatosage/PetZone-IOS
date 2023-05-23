@@ -13,7 +13,7 @@ struct HotelDetailView: View {
     var body: some View {
         ScrollView{
             VStack{
-                Image("dummypicthotel")
+                Image(choosenHotel.hotel_pic)
                     .resizable()
                     .scaledToFill()
                     .frame(maxWidth: .infinity, maxHeight: 400)
@@ -22,6 +22,7 @@ struct HotelDetailView: View {
                     VStack{
                         HStack{
                             Text(choosenHotel.name)
+                                .foregroundColor(Color(hex: "EF233C"))
                                 .font(.system(size: 36))
                                 .bold()
                                 .frame(

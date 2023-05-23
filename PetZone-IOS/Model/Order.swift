@@ -79,7 +79,7 @@ extension Order{
             phone_number: "081212341234",
             opening_hour: "10.00",
             closing_hour: "22.00",
-            hotel_pic: "",
+            hotel_pic: "dummypicthotel",
             price: 80000,
             user : User(
                 name: "Micheila Jiemesha",
