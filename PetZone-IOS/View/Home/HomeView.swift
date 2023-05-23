@@ -31,44 +31,39 @@ struct HomeView: View {
                         .padding(.horizontal)
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets())
+                        
                         SearchBar(text: $searchText)
                             .padding(.horizontal)
                             .padding(.bottom)
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
-
-                            SearchBar(text: $searchText)
-                                .padding(.horizontal)
-                                .padding(.bottom)
-                                .listRowSeparator(.hidden)
-                                .listRowInsets(EdgeInsets())
-                            ForEach(PetHotel.sampleHotelList) { hotel in
-                                ZStack {
-                                    NavigationLink {
-                                        HotelDetailView(choosenHotel: hotel)
-                                    } label: {
-                                        EmptyView()
-                                    }
-                                    .opacity(0)
-                                    
-                                    HotelCardView(width: geo.size.width, petHotel: hotel)
-                                        .padding(.vertical, 8)
+                        ForEach(PetHotel.sampleHotelList) { hotel in
+                            ZStack {
+                                NavigationLink {
+                                    HotelDetailView(choosenHotel: hotel)
+                                } label: {
+                                    EmptyView()
                                 }
                                 .opacity(0)
                                 
                                 HotelCardView(width: geo.size.width, petHotel: hotel)
                                     .padding(.vertical, 8)
                             }
-                            .listRowSeparator(.hidden)
+                            .opacity(0)
+                            
+                            HotelCardView(width: geo.size.width, petHotel: hotel)
+                                .padding(.vertical, 8)
                         }
-                        
-                        Spacer(minLength: 60)
+                        .listRowSeparator(.hidden)
                     }
-                    .listStyle(PlainListStyle())
+                    
+                    Spacer(minLength: 60)
                 }
+                .listStyle(PlainListStyle())
             }
         }
     }
+}
 
 
 struct HomeView_Previews: PreviewProvider {
