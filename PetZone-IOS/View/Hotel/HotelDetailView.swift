@@ -11,7 +11,7 @@ struct HotelDetailView: View {
     @State var choosenHotel : PetHotel
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView{
                 VStack{
                     Image(choosenHotel.hotel_pic)
@@ -74,11 +74,23 @@ struct HotelDetailView: View {
                         .frame(
                             maxWidth: .infinity,
                             alignment:  .topLeading)
-//                    Button("Order"){
-//                    }
-                    .padding(.top)
-                    .buttonStyle(DefaultButton())
-                    .bold()
+
+                    NavigationLink {
+                        TransactionView()
+                    } label: {
+                        Text("Order")
+                            .customFont(.subheadline)
+                            .foregroundColor(.white)
+                            .padding([.horizontal], 30)
+                            .padding([.vertical], 10)
+                            .background(Color(hex: "EF233D"))
+                            .cornerRadius(30)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 30)
+                                    .stroke(Color(hex: "E91732"), lineWidth: 1)
+                            }
+                            .shadow(color: Color(hex: "BABABA"), radius: 3)
+                    }
                 }
             }
         }

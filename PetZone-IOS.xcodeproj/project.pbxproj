@@ -26,13 +26,11 @@
 		040855202A1C458900595321 /* PetZone_IOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0462254D2A1B22F800B610AD /* PetZone_IOS.xcdatamodeld */; };
 		040855212A1C463400595321 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462254B2A1B22F800B610AD /* Persistence.swift */; };
 		040855222A1C46EE00595321 /* PetZone_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225422A1B22F700B610AD /* PetZone_IOSApp.swift */; };
-		040855232A1C470E00595321 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462259B2A1B2AB200B610AD /* MainView.swift */; };
 		040855242A1C471D00595321 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */; };
 		040855252A1C471D00595321 /* OrderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */; };
 		040855262A1C471D00595321 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A32A1B5A0C00FEF914 /* OrderListView.swift */; };
 		040855272A1C472000595321 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225872A1B242700B610AD /* EditProfileView.swift */; };
 		040855282A1C472300595321 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225892A1B242700B610AD /* TransactionView.swift */; };
-		040855292A1C472700595321 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462258B2A1B242700B610AD /* HomeView.swift */; };
 		0408552A2A1C472B00595321 /* HotelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462258C2A1B242700B610AD /* HotelCardView.swift */; };
 		046225432A1B22F700B610AD /* PetZone_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225422A1B22F700B610AD /* PetZone_IOSApp.swift */; };
 		046225452A1B22F700B610AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225442A1B22F700B610AD /* ContentView.swift */; };
@@ -61,6 +59,8 @@
 		046225992A1B245800B610AD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225962A1B245800B610AD /* Order.swift */; };
 		0462259A2A1B245800B610AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225972A1B245800B610AD /* User.swift */; };
 		0462259C2A1B2AB200B610AD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462259B2A1B2AB200B610AD /* MainView.swift */; };
+		0465DC182A1C4E6B002FDCAC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC172A1C4E6B002FDCAC /* MainView.swift */; };
+		0465DC1A2A1C5099002FDCAC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC192A1C5099002FDCAC /* HomeView.swift */; };
 		064A37A62A1B5A0C00FEF914 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A32A1B5A0C00FEF914 /* OrderListView.swift */; };
 		064A37A72A1B5A0C00FEF914 /* OrderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */; };
 		064A37A82A1B5A0C00FEF914 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */; };
@@ -121,6 +121,8 @@
 		046225972A1B245800B610AD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0462259B2A1B2AB200B610AD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0465DC162A1B2BC2002FDCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0465DC172A1C4E6B002FDCAC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		0465DC192A1C5099002FDCAC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		064A37A32A1B5A0C00FEF914 /* OrderListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
 		064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCardView.swift; sourceTree = "<group>"; };
 		064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,8 @@
 				040855062A1C430A00595321 /* Assets.xcassets */,
 				0408550B2A1C430A00595321 /* PetZone_MacOS.entitlements */,
 				040855082A1C430A00595321 /* Preview Content */,
+				0465DC172A1C4E6B002FDCAC /* MainView.swift */,
+				0465DC192A1C5099002FDCAC /* HomeView.swift */,
 			);
 			path = "PetZone-MacOS";
 			sourceTree = "<group>";
@@ -509,10 +513,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				040855272A1C472000595321 /* EditProfileView.swift in Sources */,
+				0465DC182A1C4E6B002FDCAC /* MainView.swift in Sources */,
 				0408552A2A1C472B00595321 /* HotelCardView.swift in Sources */,
 				040855202A1C458900595321 /* PetZone_IOS.xcdatamodeld in Sources */,
-				040855232A1C470E00595321 /* MainView.swift in Sources */,
 				040855122A1C441300595321 /* PetHotel.swift in Sources */,
+				0465DC1A2A1C5099002FDCAC /* HomeView.swift in Sources */,
 				040855192A1C443600595321 /* DefaultButton.swift in Sources */,
 				040855282A1C472300595321 /* TransactionView.swift in Sources */,
 				040855262A1C471D00595321 /* OrderListView.swift in Sources */,
@@ -522,7 +527,6 @@
 				040855102A1C43B800595321 /* HotelDetailView.swift in Sources */,
 				0408551D2A1C443600595321 /* CustomFont.swift in Sources */,
 				040855132A1C441300595321 /* Order.swift in Sources */,
-				040855292A1C472700595321 /* HomeView.swift in Sources */,
 				0408551B2A1C443600595321 /* SearchBar.swift in Sources */,
 				040855212A1C463400595321 /* Persistence.swift in Sources */,
 				040855142A1C441300595321 /* User.swift in Sources */,
@@ -603,7 +607,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PetZone-MacOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 5H7J7YUY92;
+				DEVELOPMENT_TEAM = 9KGU3SB5D7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
