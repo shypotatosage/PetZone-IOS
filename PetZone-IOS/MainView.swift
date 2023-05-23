@@ -36,10 +36,10 @@ struct MainView_Previews: PreviewProvider {
     }
 }
 
-struct FloatingTabBar : View {
-    @Binding var selected : Int
+struct FloatingTabBar: View {
+    @Binding var selected: Int
     
-    var body : some View {
+    var body: some View {
         HStack {
             Spacer(minLength: 0)
             

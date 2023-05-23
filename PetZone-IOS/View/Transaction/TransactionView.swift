@@ -97,14 +97,14 @@ struct TransactionView: View {
                 .padding(.bottom, 28)
                 
                 Text("Order")
-                    .customFont(.title3)
+                    .customFont(.subheadline)
                     .foregroundColor(.white)
                     .padding([.horizontal], 30)
                     .padding([.vertical], 10)
                     .background(Color(hex: "EF233D"))
-                    .cornerRadius(15)
+                    .cornerRadius(30)
                     .overlay {
-                        RoundedRectangle(cornerRadius: 15)
+                        RoundedRectangle(cornerRadius: 30)
                             .stroke(Color(hex: "E91732"), lineWidth: 1)
                     }
                     .shadow(color: Color(hex: "BABABA"), radius: 3)
@@ -112,7 +112,7 @@ struct TransactionView: View {
                         
                     }
             }
-            .padding(.horizontal, 10)
+            .padding(.horizontal, 2)
             .padding(.bottom)
         }
     }

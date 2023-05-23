@@ -10,7 +10,7 @@ import SwiftUI
 struct HotelDetailView: View {
     @State private var newHotel = PetHotel.sampleHotel
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView{
                 VStack{
                     Image("dummypicthotel")
@@ -66,11 +66,22 @@ struct HotelDetailView: View {
                         .frame(
                             maxWidth: .infinity,
                             alignment:  .topLeading)
-                    Button("Order"){
+                    NavigationLink {
+                        TransactionView()
+                    } label: {
+                        Text("Order")
+                            .customFont(.subheadline)
+                            .foregroundColor(.white)
+                            .padding([.horizontal], 30)
+                            .padding([.vertical], 10)
+                            .background(Color(hex: "EF233D"))
+                            .cornerRadius(30)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 30)
+                                    .stroke(Color(hex: "E91732"), lineWidth: 1)
+                            }
+                            .shadow(color: Color(hex: "BABABA"), radius: 3)
                     }
-                    .padding(.top)
-                    .buttonStyle(DefaultButton())
-                    .bold()
                 }
             }
         }

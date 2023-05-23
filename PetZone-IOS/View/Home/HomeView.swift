@@ -12,48 +12,50 @@ struct HomeView: View {
     
     var body: some View {
         GeometryReader { geo in
-                NavigationStack {
-                    VStack {
-                        List {
-                            VStack {
-                                HStack {
-                                    Text("Hotel List")
-                                        .customFont(.largeTitle)
-                                        .foregroundColor(Color(hex: "EF233C"))
-                                    Spacer()
-                                    Image("dummypicthotel")
-                                        .resizable()
-                                        .frame(width: 50, height: 50)
-                                        .cornerRadius(1000)
-                                }
-                                .padding()
+            NavigationStack {
+                VStack {
+                    List {
+                        VStack {
+                            HStack {
+                                Text("Hotel List")
+                                    .customFont(.largeTitle)
+                                    .foregroundColor(Color(hex: "EF233C"))
+                                Spacer()
+                                Image("dummypicthotel")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                    .cornerRadius(1000)
                             }
+                            .padding()
+                        }
+                        .padding(.horizontal)
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(EdgeInsets())
+                        SearchBar(text: $searchText)
                             .padding(.horizontal)
+                            .padding(.bottom)
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
-                            SearchBar(text: $searchText)
-                                .padding(.horizontal)
-                                .padding(.bottom)
-                                .listRowSeparator(.hidden)
-                                .listRowInsets(EdgeInsets())
-                            ForEach(PetHotel.sampleHotelList) { hotel in
-                                ZStack {
-                                    NavigationLink {
-                                        HotelDetailView()
-                                    } label: {
-                                        EmptyView()
-                                    }
-                                    .opacity(0)
-                                    
-                                    HotelCardView(width: geo.size.width, petHotel: hotel)
-                                        .padding(.vertical, 8)
+                        ForEach(PetHotel.sampleHotelList) { hotel in
+                            ZStack {
+                                NavigationLink {
+                                    HotelDetailView()
+                                } label: {
+                                    EmptyView()
                                 }
-                                .listRowSeparator(.hidden)
+                                .opacity(0)
+                                
+                                HotelCardView(width: geo.size.width, petHotel: hotel)
+                                    .padding(.vertical, 8)
                             }
+                            .listRowSeparator(.hidden)
                         }
-                        .listStyle(PlainListStyle())
+                        
+                        Spacer(minLength: 60)
                     }
+                    .listStyle(PlainListStyle())
                 }
+            }
         }
     }
 }
