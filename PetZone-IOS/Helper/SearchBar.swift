@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
- 
+
 struct SearchBar: View {
     @Binding var text: String
  
@@ -16,9 +16,10 @@ struct SearchBar: View {
         HStack {
  
             TextField("Search", text: $text)
+                .textFieldStyle(PlainTextFieldStyle()) 
                 .padding(7)
                 .padding(.horizontal, 25)
-//                .background(Color(.systemGray6))
+                .background(Color(hex: "EDEDED"))
                 .cornerRadius(8)
                 .overlay(
                     HStack {

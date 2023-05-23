@@ -49,10 +49,6 @@ struct HomeView: View {
                                 HotelCardView(width: geo.size.width, petHotel: hotel)
                                     .padding(.vertical, 8)
                             }
-                            .opacity(0)
-                            
-                            HotelCardView(width: geo.size.width, petHotel: hotel)
-                                .padding(.vertical, 8)
                         }
                         .listRowSeparator(.hidden)
                     }
