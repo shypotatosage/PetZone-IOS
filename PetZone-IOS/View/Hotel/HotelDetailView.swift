@@ -14,28 +14,32 @@ struct HotelDetailView: View {
         NavigationStack {
             ScrollView{
                 VStack{
-                    Image(choosenHotel.hotel_pic)
-                        .resizable()
-                        .scaledToFit()
-                    
-                    Text(choosenHotel.name)
-                        .customFont(.largeTitle)
-                        .padding(.top)
-                        .foregroundColor(Color(hex: "EF233C"))
-                    HStack{
-                        Text("Rp.")
-                        Text(String(choosenHotel.price))
+                    Group{
+                        Image(choosenHotel.hotel_pic)
+                            .resizable()
+                            .scaledToFit()
+                        
+                        Text(choosenHotel.name)
+                            .customFont(.largeTitle)
+                            .padding(.top)
+                            .foregroundColor(Color(hex: "EF233C"))
+                        HStack{
+                            Text("Rp.")
+                            Text(String(choosenHotel.price))
+                        }
+                        .customFont(.subheadline)
+                        
+                        Text(choosenHotel.address)
+                        Text(choosenHotel.phone_number)
                     }
-                    .customFont(.subheadline)
-                    
-                    Text(choosenHotel.address)
-                    Text(choosenHotel.phone_number)
-                    HStack{
-                        Text(choosenHotel.opening_hour).customFont(.subheadline)
-                        Text("-")
-                            .customFont(.subheadline)
-                        Text(choosenHotel.closing_hour)
-                            .customFont(.subheadline)
+                    Group{
+                        HStack{
+                            Text(choosenHotel.opening_hour).customFont(.subheadline)
+                            Text("-")
+                                .customFont(.subheadline)
+                            Text(choosenHotel.closing_hour)
+                                .customFont(.subheadline)
+                        }
                     }
                     Group{
                         HStack {
@@ -48,13 +52,15 @@ struct HotelDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                     }
-                    Text(choosenHotel.address)
-                        .padding(.horizontal)
-                        .padding(.horizontal)
-                        .padding(.horizontal)
-                        .frame(
-                            maxWidth: .infinity,
-                            alignment:  .topLeading)
+                    Group{
+                        Text(choosenHotel.address)
+                            .padding(.horizontal)
+                            .padding(.horizontal)
+                            .padding(.horizontal)
+                            .frame(
+                                maxWidth: .infinity,
+                                alignment:  .topLeading)
+                    }
                     Group{
                         HStack {
                             Image(systemName: "house.fill").foregroundColor(.gray)
@@ -75,22 +81,20 @@ struct HotelDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
 
-//                    NavigationLink {
-//                        TransactionView()
-//                    } label: {
-//                        Text("Order")
-//                            .customFont(.subheadline)
-//                            .foregroundColor(.white)
-//                            .padding([.horizontal], 30)
-//                            .padding([.vertical], 10)
-//                            .background(Color(hex: "EF233D"))
-//                            .cornerRadius(30)
-//                            .overlay {
-//                                RoundedRectangle(cornerRadius: 30)
-//                                    .stroke(Color(hex: "E91732"), lineWidth: 1)
-//                            }
-//                            .shadow(color: Color(hex: "BABABA"), radius: 3)
-//                    }
+                    NavigationLink (destination: TransactionView()){
+                        Text("Order")
+                            .customFont(.subheadline)
+                            .foregroundColor(.white)
+                            .padding([.horizontal], 30)
+                            .padding([.vertical], 10)
+                            .background(Color(hex: "EF233D"))
+                            .cornerRadius(30)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 30)
+                                    .stroke(Color(hex: "E91732"), lineWidth: 1)
+                            }
+                            .shadow(color: Color(hex: "BABABA"), radius: 3)
+                    }
                 }
             }
         }

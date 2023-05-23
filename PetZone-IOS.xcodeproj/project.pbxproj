@@ -64,6 +64,8 @@
 		064A37A62A1B5A0C00FEF914 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A32A1B5A0C00FEF914 /* OrderListView.swift */; };
 		064A37A72A1B5A0C00FEF914 /* OrderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */; };
 		064A37A82A1B5A0C00FEF914 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */; };
+		068CC7852A1C53D700099235 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068CC7842A1C53D700099235 /* OrderViewModel.swift */; };
+		068CC7862A1C53D700099235 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068CC7842A1C53D700099235 /* OrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +128,7 @@
 		064A37A32A1B5A0C00FEF914 /* OrderListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
 		064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCardView.swift; sourceTree = "<group>"; };
 		064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
+		068CC7842A1C53D700099235 /* OrderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +340,7 @@
 		064A37A22A1B5A0C00FEF914 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				068CC7842A1C53D700099235 /* OrderViewModel.swift */,
 				064A37A32A1B5A0C00FEF914 /* OrderListView.swift */,
 				064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */,
 				064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */,
@@ -513,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				040855272A1C472000595321 /* EditProfileView.swift in Sources */,
+				068CC7862A1C53D700099235 /* OrderViewModel.swift in Sources */,
 				0465DC182A1C4E6B002FDCAC /* MainView.swift in Sources */,
 				0408552A2A1C472B00595321 /* HotelCardView.swift in Sources */,
 				040855202A1C458900595321 /* PetZone_IOS.xcdatamodeld in Sources */,
@@ -541,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046225982A1B245800B610AD /* PetHotel.swift in Sources */,
+				068CC7852A1C53D700099235 /* OrderViewModel.swift in Sources */,
 				064A37A62A1B5A0C00FEF914 /* OrderListView.swift in Sources */,
 				0462259C2A1B2AB200B610AD /* MainView.swift in Sources */,
 				0462258F2A1B242700B610AD /* EditProfileView.swift in Sources */,

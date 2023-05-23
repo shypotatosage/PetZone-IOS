@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OrderListView: View {
-    @State private var searchText = ""
+    @StateObject var orderViewModel = OrderViewModel()
     var body: some View {
         GeometryReader { geo in
             NavigationStack {
@@ -25,12 +25,12 @@ struct OrderListView: View {
                         .padding(.horizontal)
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets())
-                        SearchBar(text: $searchText)
+                        SearchBar(text: $orderViewModel.searchText)
                             .padding(.horizontal)
                             .padding(.bottom)
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
-                        ForEach(Order.sampleOrderList) { order in
+                        ForEach(orderViewModel.filteredOrders) { order in
                             ZStack {
                                 NavigationLink {
                                     OrderDetailView()
