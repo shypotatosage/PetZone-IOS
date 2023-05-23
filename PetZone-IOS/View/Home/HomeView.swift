@@ -39,7 +39,7 @@ struct HomeView: View {
                             ForEach(PetHotel.sampleHotelList) { hotel in
                                 ZStack {
                                     NavigationLink {
-                                        HotelDetailView()
+                                        HotelDetailView(choosenHotel: hotel)
                                     } label: {
                                         EmptyView()
                                     }

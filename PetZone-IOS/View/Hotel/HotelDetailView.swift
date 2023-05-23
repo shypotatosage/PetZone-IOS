@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HotelDetailView: View {
-    @State private var newHotel = PetHotel.sampleHotel
+    @State var choosenHotel : PetHotel
+
     var body: some View {
         NavigationView {
             ScrollView{
@@ -16,17 +17,17 @@ struct HotelDetailView: View {
                     Image("dummypicthotel")
                         .resizable()
                         .scaledToFit()
-                    Text(newHotel.name)
+                    Text(choosenHotel.name)
                         .customFont(.largeTitle)
                         .padding(.top)
                         .foregroundColor(Color(hex: "EF233C"))
-                    Text(newHotel.address)
-                    Text(newHotel.phone_number)
+                    Text(choosenHotel.address)
+                    Text(choosenHotel.phone_number)
                     HStack{
-                        Text(newHotel.opening_hour).customFont(.subheadline)
+                        Text(choosenHotel.opening_hour).customFont(.subheadline)
                         Text("-")
                             .customFont(.subheadline)
-                        Text(newHotel.closing_hour)
+                        Text(choosenHotel.closing_hour)
                             .customFont(.subheadline)
                     }
                     Group{
@@ -40,7 +41,7 @@ struct HotelDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                     }
-                    Text(newHotel.address)
+                    Text(choosenHotel.address)
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)
@@ -59,7 +60,7 @@ struct HotelDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                     }
-                    Text(newHotel.description)
+                    Text(choosenHotel.description)
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)
@@ -79,6 +80,6 @@ struct HotelDetailView: View {
 
 struct HotelDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        HotelDetailView()
+        HotelDetailView(choosenHotel: PetHotel.sampleHotel)
     }
 }
