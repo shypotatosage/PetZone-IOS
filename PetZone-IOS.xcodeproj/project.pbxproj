@@ -30,7 +30,6 @@
 		040855252A1C471D00595321 /* OrderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */; };
 		040855262A1C471D00595321 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A32A1B5A0C00FEF914 /* OrderListView.swift */; };
 		040855272A1C472000595321 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225872A1B242700B610AD /* EditProfileView.swift */; };
-		0408552A2A1C472B00595321 /* HotelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462258C2A1B242700B610AD /* HotelCardView.swift */; };
 		046225432A1B22F700B610AD /* PetZone_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225422A1B22F700B610AD /* PetZone_IOSApp.swift */; };
 		046225452A1B22F700B610AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225442A1B22F700B610AD /* ContentView.swift */; };
 		046225472A1B22F800B610AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046225462A1B22F800B610AD /* Assets.xcassets */; };
@@ -60,9 +59,8 @@
 		0462259C2A1B2AB200B610AD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462259B2A1B2AB200B610AD /* MainView.swift */; };
 		0465DC182A1C4E6B002FDCAC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC172A1C4E6B002FDCAC /* MainView.swift */; };
 		0465DC1A2A1C5099002FDCAC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC192A1C5099002FDCAC /* HomeView.swift */; };
-		0465DC1C2A1C59E5002FDCAC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0465DC162A1B2BC2002FDCAC /* Info.plist */; };
-		0465DC1D2A1C59E6002FDCAC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0465DC162A1B2BC2002FDCAC /* Info.plist */; };
 		0465DC222A1CA6F8002FDCAC /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC212A1CA6F8002FDCAC /* TransactionView.swift */; };
+		0465DC242A1DC4ED002FDCAC /* HotelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC232A1DC4ED002FDCAC /* HotelCardView.swift */; };
 		064A37A62A1B5A0C00FEF914 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A32A1B5A0C00FEF914 /* OrderListView.swift */; };
 		064A37A72A1B5A0C00FEF914 /* OrderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */; };
 		064A37A82A1B5A0C00FEF914 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */; };
@@ -129,6 +127,7 @@
 		0465DC192A1C5099002FDCAC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0465DC1F2A1CA1A2002FDCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0465DC212A1CA6F8002FDCAC /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		0465DC232A1DC4ED002FDCAC /* HotelCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCardView.swift; sourceTree = "<group>"; };
 		064A37A32A1B5A0C00FEF914 /* OrderListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
 		064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCardView.swift; sourceTree = "<group>"; };
 		064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
@@ -179,6 +178,7 @@
 				0408550B2A1C430A00595321 /* PetZone_MacOS.entitlements */,
 				040855082A1C430A00595321 /* Preview Content */,
 				0465DC172A1C4E6B002FDCAC /* MainView.swift */,
+				0465DC232A1DC4ED002FDCAC /* HotelCardView.swift */,
 			);
 			path = "PetZone-MacOS";
 			sourceTree = "<group>";
@@ -501,7 +501,6 @@
 				040855182A1C443200595321 /* Poppins-SemiBold.ttf in Resources */,
 				0408551E2A1C445000595321 /* Assets.xcassets in Resources */,
 				0408550A2A1C430A00595321 /* Preview Assets.xcassets in Resources */,
-				0465DC1D2A1C59E6002FDCAC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +514,6 @@
 				046225792A1B23BC00B610AD /* Poppins-SemiBold.ttf in Resources */,
 				046225472A1B22F800B610AD /* Assets.xcassets in Resources */,
 				046225772A1B23BC00B610AD /* Poppins-Regular.ttf in Resources */,
-				0465DC1C2A1C59E5002FDCAC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,9 +539,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				040855272A1C472000595321 /* EditProfileView.swift in Sources */,
+				0465DC242A1DC4ED002FDCAC /* HotelCardView.swift in Sources */,
 				068CC7862A1C53D700099235 /* OrderViewModel.swift in Sources */,
 				0465DC182A1C4E6B002FDCAC /* MainView.swift in Sources */,
-				0408552A2A1C472B00595321 /* HotelCardView.swift in Sources */,
 				040855202A1C458900595321 /* PetZone_IOS.xcdatamodeld in Sources */,
 				0465DC222A1CA6F8002FDCAC /* TransactionView.swift in Sources */,
 				040855122A1C441300595321 /* PetHotel.swift in Sources */,
