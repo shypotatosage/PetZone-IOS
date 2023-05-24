@@ -67,6 +67,7 @@
 		068CC7852A1C53D700099235 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068CC7842A1C53D700099235 /* OrderViewModel.swift */; };
 		068CC7862A1C53D700099235 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068CC7842A1C53D700099235 /* OrderViewModel.swift */; };
 		06EF77012A1E1C450085A50F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EF77002A1E1C450085A50F /* SplashView.swift */; };
+		06EF77022A1E1CD40085A50F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EF77002A1E1C450085A50F /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -566,6 +567,7 @@
 				0408551D2A1C443600595321 /* CustomFont.swift in Sources */,
 				040855132A1C441300595321 /* Order.swift in Sources */,
 				0408551B2A1C443600595321 /* SearchBar.swift in Sources */,
+				06EF77022A1E1CD40085A50F /* SplashView.swift in Sources */,
 				040855212A1C463400595321 /* Persistence.swift in Sources */,
 				040855142A1C441300595321 /* User.swift in Sources */,
 				040855052A1C430900595321 /* ContentView.swift in Sources */,
