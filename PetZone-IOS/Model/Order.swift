@@ -42,10 +42,10 @@ extension Order{
     [
         Order(petName: "Poppy", petType: "Cat", startDate: Date.now, endDate: Date.now,purchase: 70000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[1])
         ,        Order(petName: "Chiki", petType: "Hamster", startDate: Date.now, endDate: Calendar.current.date(byAdding: .day, value: -1, to: Date.now)!,purchase: 80000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[0])
-        ,        Order(petName: "Blacky", petType: "Dog", startDate: Date.now, endDate: Date.distantFuture,purchase: 90000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[2])
-        ,        Order(petName: "Pochita", petType: "Dog", startDate: Date.distantPast, endDate: Date.distantFuture,purchase: 50000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[1])
-        ,        Order(petName: "Yuro", petType: "Gerbil", startDate: Date.now, endDate: Date.now,purchase: 45000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[2])
-        ,        Order(petName: "Viper", petType: "Gecko", startDate: Date.now, endDate: Date.now,purchase: 20000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[0])
+        ,        Order(petName: "Blacky", petType: "Dog", startDate: Date.now, endDate:  Calendar.current.date(byAdding: .day, value: -15, to: Date.now)!,purchase: 90000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[2])
+        ,        Order(petName: "Pochita", petType: "Dog", startDate: Date.distantPast, endDate:  Calendar.current.date(byAdding: .day, value: -30, to: Date.now)!,purchase: 50000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[1])
+        ,        Order(petName: "Yuro", petType: "Gerbil", startDate: Date.now, endDate:  Calendar.current.date(byAdding: .day, value: -31, to: Date.now)!,purchase: 45000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[2])
+        ,        Order(petName: "Viper", petType: "Gecko", startDate: Date.now, endDate:  Calendar.current.date(byAdding: .day, value: -7, to: Date.now)!,purchase: 20000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[0])
         
     ]
     

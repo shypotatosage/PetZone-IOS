@@ -27,7 +27,7 @@ struct OrderCardView: View {
                         Text(order.petHotel.name)
                             .customFont(.title3)
                             .frame(maxWidth: .infinity, alignment: .topLeading)
-                        Text("Rp.\(order.purchase.description)")
+                        Text(NumberFormat(order.purchase))
                             .customFont(.subheadline2)
                             .frame(maxWidth: .infinity, alignment: .topTrailing)
                             .padding(.trailing)

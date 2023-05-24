@@ -10,7 +10,7 @@ import SwiftUI
 struct OrderDetailView: View {
     @State var order : Order
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView{
                 VStack{
                     Image("dummypicthotel")
@@ -69,7 +69,7 @@ struct OrderDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                     }
-                    Text("\(order.startDate.formatted()) - \(DateFormat(order.endDate))")
+                    Text("\(DateFormat(order.startDate)) - \(DateFormat(order.endDate))")
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)
@@ -88,14 +88,14 @@ struct OrderDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                     }
-                    Text("Rp. \(order.purchase.description)")
+                    Text(NumberFormat(order.purchase))
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .frame(
                             maxWidth: .infinity,
                             alignment:  .topLeading)
-                }
+                }  .padding([.bottom], 100)
             }
         }
     }

@@ -42,12 +42,14 @@ struct OrderListView: View {
                                 OrderCardView(width: geo.size.width, order: order)
                                     .padding(.vertical, 8)
                             }
-                            .listRowSeparator(.hidden)
-                        }
+                           
+                        } .listRowSeparator(.hidden)
                     }
                     .listStyle(PlainListStyle())
                 }
+                Spacer(minLength: 60)
             }
+            .listStyle(PlainListStyle())
         }
     }
 }
