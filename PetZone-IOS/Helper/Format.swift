@@ -7,6 +7,7 @@
 
 import Foundation
 
+//untuk format tanggal jadi yesterday, today atau May 9, 2023
 func DateFormat(_ date: Date)->String{
     let dateFormatter = DateFormatter()
     dateFormatter.dateStyle = .medium
@@ -16,6 +17,7 @@ func DateFormat(_ date: Date)->String{
     return dateString
 }
 
+//untuk format harga dari int menjadi mata uang indonesia sesuai titiknya
 func NumberFormat(_ value: Int)->String{
     let currencyFormatter = NumberFormatter()
     currencyFormatter.numberStyle = .currencyISOCode

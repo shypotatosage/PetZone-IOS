@@ -7,6 +7,7 @@
 
 import Foundation
 
+//model order
 struct Order: Identifiable, Codable{
     let id: UUID
     var petName: String
@@ -29,18 +30,19 @@ struct Order: Identifiable, Codable{
     }
 }
 
+//isi order
 extension Order{
     static var emptyOrder: Order{
         Order(petName: "", petType: "", startDate: Date.now, endDate: Date.now,purchase: 0, user: User.sampleUser, petHotel: PetHotel.emptyHotel)
     }
     
     static var sampleOrder: Order{
-        Order(petName: "Oreo", petType: "Anjing", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User.sampleUser, petHotel: PetHotel.sampleHotel)
+        Order(petName: "Oreo", petType: "Dog", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User.sampleUser, petHotel: PetHotel.sampleHotel)
     }
     
     static let sampleOrderList: [Order] =
     [
-        Order(petName: "Poppy", petType: "Cat", startDate: Date.now, endDate: Date.now,purchase: 70000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[1])
+        Order(petName: "Poppy", petType: "Cat", startDate: Date.now, endDate: Date.now, purchase: 70000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[1])
         ,        Order(petName: "Chiki", petType: "Hamster", startDate: Date.now, endDate: Calendar.current.date(byAdding: .day, value: -1, to: Date.now)!,purchase: 80000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[0])
         ,        Order(petName: "Blacky", petType: "Dog", startDate: Date.now, endDate:  Calendar.current.date(byAdding: .day, value: -15, to: Date.now)!,purchase: 90000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[2])
         ,        Order(petName: "Pochita", petType: "Dog", startDate: Date.distantPast, endDate:  Calendar.current.date(byAdding: .day, value: -30, to: Date.now)!,purchase: 50000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[1])

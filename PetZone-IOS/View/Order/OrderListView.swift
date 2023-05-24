@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//untuk tampilan order list
 struct OrderListView: View {
     @StateObject var orderViewModel = OrderViewModel()
     var body: some View {
@@ -42,7 +43,7 @@ struct OrderListView: View {
                                 OrderCardView(width: geo.size.width, order: order)
                                     .padding(.vertical, 8)
                             }
-                           
+                            
                         } .listRowSeparator(.hidden)
                     }
                     .listStyle(PlainListStyle())
@@ -54,6 +55,7 @@ struct OrderListView: View {
     }
 }
 
+//untuk preview order list
 struct OrderListView_Previews: PreviewProvider {
     static var previews: some View {
         OrderListView()

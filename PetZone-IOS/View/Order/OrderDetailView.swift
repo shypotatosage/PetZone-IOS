@@ -7,13 +7,14 @@
 
 import SwiftUI
 
+//untuk tampilan order detail view
 struct OrderDetailView: View {
     @State var order : Order
     var body: some View {
         NavigationStack {
             ScrollView{
                 VStack{
-                    Image("dummypicthotel")
+                    Image(order.petHotel.hotel_pic)
                         .resizable()
                         .scaledToFit()
                     Text("Order Detail")
@@ -101,6 +102,7 @@ struct OrderDetailView: View {
     }
 }
 
+//untuk tampilan order detail preview
 struct OrderDetailView_Previews: PreviewProvider {
     static var previews: some View {
         OrderDetailView(order: Order.sampleOrder)
