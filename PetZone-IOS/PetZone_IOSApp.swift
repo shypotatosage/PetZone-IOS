@@ -15,7 +15,7 @@ struct PetZone_IOSApp: App {
         WindowGroup {
             // ContentView()
             //      .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            HomeView()
+            SplashView()
         }
     }
 }
