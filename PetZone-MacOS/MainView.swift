@@ -14,7 +14,7 @@ struct MainView: View {
                 NavigationLink(destination: HomeView()) {
                     Label("Home", systemImage: "house")
                 }
-                NavigationLink(destination: HomeView()) {
+                NavigationLink(destination: TransactionView()) {
                     Label("Order History", systemImage: "list.bullet")
                 }
                 NavigationLink(destination: HomeView()) {

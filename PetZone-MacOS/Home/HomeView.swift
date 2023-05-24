@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    var twoColumnGrid = [GridItem(.flexible()),GridItem(.flexible())]
+    
+    
     @State private var searchText = ""
     
     var body: some View {
@@ -37,24 +40,25 @@ struct HomeView: View {
                             .padding(.bottom)
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
-                        ForEach(PetHotel.sampleHotelList) { hotel in
-                            ZStack {
-                                NavigationLink {
-                                    HotelDetailView(choosenHotel: hotel)
-                                } label: {
-                                    EmptyView()
+                        
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 500))]) {
+                            ForEach(PetHotel.sampleHotelList) { hotel in
+                                ZStack {
+                                    NavigationLink {
+                                        HotelDetailView(choosenHotel: hotel)
+                                    } label: {
+                                        EmptyView()
+                                    }
+                                    .opacity(0)
+                                    
+                                    HotelCardView(width: geo.size.width, petHotel: hotel)
+                                        .padding(.vertical, 8)
                                 }
-                                .opacity(0)
                                 
-                                HotelCardView(width: geo.size.width, petHotel: hotel)
-                                    .padding(.vertical, 8)
                             }
-                            .opacity(0)
-                            
-                            HotelCardView(width: geo.size.width, petHotel: hotel)
-                                .padding(.vertical, 8)
+                            .listRowSeparator(.hidden)
                         }
-                        .listRowSeparator(.hidden)
+                        .padding(.horizontal, 12)
                     }
                     
                     Spacer(minLength: 60)

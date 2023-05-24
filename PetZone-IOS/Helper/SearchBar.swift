@@ -11,15 +11,21 @@ struct SearchBar: View {
     @Binding var text: String
  
     @State private var isEditing = false
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
  
     var body: some View {
         HStack {
  
             TextField("Search", text: $text)
-                .textFieldStyle(PlainTextFieldStyle()) 
+                .textFieldStyle(.plain)
                 .padding(7)
                 .padding(.horizontal, 25)
+                #if !os(macOS)
                 .background(Color(hex: "EDEDED"))
+                #endif
+                #if os(macOS)
+                .background(Color(NSColor.textBackgroundColor))
+                #endif
                 .cornerRadius(8)
                 .overlay(
                     HStack {
@@ -39,9 +45,15 @@ struct SearchBar: View {
                         }
                     }
                 )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color(hex: "d3d3d3"), lineWidth: 1)
+                )
                 .padding(.horizontal, 10)
                 .onTapGesture {
+                    #if !os(macOS)
                     self.isEditing = true
+                    #endif
                 }
  
             if isEditing {
