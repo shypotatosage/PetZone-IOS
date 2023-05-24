@@ -31,165 +31,21 @@ struct Order: Identifiable, Codable{
 
 extension Order{
     static var emptyOrder: Order{
-        Order(petName: "", petType: "", startDate: Date.now, endDate: Date.now,purchase: 0, user: User(name: "", email: "", address: "", phone_number: "",  profile_pic: ""), petHotel: (PetHotel(name: "", description: "", city: "", address: "", phone_number: "", opening_hour: "", closing_hour: "", hotel_pic: "", price: 0, user: User(name: "", email: "", address: "", phone_number: "", profile_pic: ""))))
+        Order(petName: "", petType: "", startDate: Date.now, endDate: Date.now,purchase: 0, user: User.sampleUser, petHotel: PetHotel.emptyHotel)
     }
     
     static var sampleOrder: Order{
-        Order(petName: "Oreo", petType: "Anjing", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
-            name: "Micheila Jiemesha",
-            email: "mjiemesha@gmail.com",
-            address: "Surabaya, Blue House Wp 2 No 26",
-            phone_number: "081212341234",
-            profile_pic: ""
-        ), petHotel: PetHotel(
-            name: "PetPal Hotel",
-            description: "Penitipan PetPal Hotel menyediakan penitipan hewan untuk hamster, gerbil, sugar glider dan reptil kecil.",
-            //        coordinates: "Surabaya, Blue House Wp 2 No 26",
-            city: "Surabaya",
-            address: "Jalan WP 2 No 26",
-            phone_number: "081212341234",
-            opening_hour: "10.00",
-            closing_hour: "22.00",
-            hotel_pic: "",
-            price: 80000,
-            user : User(
-                name: "Micheila Jiemesha",
-                email: "mjiemesha@gmail.com",
-                address: "Surabaya, Blue House Wp 2 No 26",
-                phone_number: "081212341234",
-                profile_pic: ""
-            )
-        ))
+        Order(petName: "Oreo", petType: "Anjing", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User.sampleUser, petHotel: PetHotel.sampleHotel)
     }
     
     static let sampleOrderList: [Order] =
     [
-        Order(petName: "Poppy", petType: "Cat", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
-            name: "Micheila Jiemesha",
-            email: "mjiemesha@gmail.com",
-            address: "Surabaya, Blue House Wp 2 No 26",
-            phone_number: "081212341234",
-            profile_pic: ""
-        ), petHotel: PetHotel.sampleHotelList[1])
-        ,        Order(petName: "Milky", petType: "Dog", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
-            name: "Micheila Jiemesha",
-            email: "mjiemesha@gmail.com",
-            address: "Surabaya, Blue House Wp 2 No 26",
-            phone_number: "081212341234",
-            profile_pic: ""
-        ), petHotel: PetHotel(
-            name: "Hijau Daun",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            //        coordinates: "Surabaya, Blue House Wp 2 No 26",
-            city: "Surabaya",
-            address: "Jalan WP 2 No 26",
-            phone_number: "081212341234",
-            opening_hour: "10.00",
-            closing_hour: "22.00",
-            hotel_pic: "",
-            price: 80000,
-            user : User(
-                name: "Micheila Jiemesha",
-                email: "mjiemesha@gmail.com",
-                address: "Surabaya, Blue House Wp 2 No 26",
-                phone_number: "081212341234",
-                profile_pic: ""
-            )
-        ))
-        ,        Order(petName: "Blacky", petType: "Dog", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
-            name: "Micheila Jiemesha",
-            email: "mjiemesha@gmail.com",
-            address: "Surabaya, Blue House Wp 2 No 26",
-            phone_number: "081212341234",
-            profile_pic: ""
-        ), petHotel: PetHotel(
-            name: "Sahwn Mendews",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            //        coordinates: "Surabaya, Blue House Wp 2 No 26",
-            city: "Surabaya",
-            address: "Jalan WP 2 No 26",
-            phone_number: "081212341234",
-            opening_hour: "10.00",
-            closing_hour: "22.00",
-            hotel_pic: "",
-            price: 80000,
-            user : User.sampleUser
-        ))
-        ,        Order(petName: "Pochita", petType: "Dog", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
-            name: "Micheila Jiemesha",
-            email: "mjiemesha@gmail.com",
-            address: "Surabaya, Blue House Wp 2 No 26",
-            phone_number: "081212341234",
-            profile_pic: ""
-        ), petHotel: PetHotel(
-            name: "Sahrlie Puyt",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            //        coordinates: "Surabaya, Blue House Wp 2 No 26",
-            city: "Surabaya",
-            address: "Jalan WP 2 No 26",
-            phone_number: "081212341234",
-            opening_hour: "10.00",
-            closing_hour: "22.00",
-            hotel_pic: "",
-            price: 80000,
-            user : User(
-                name: "Micheila Jiemesha",
-                email: "mjiemesha@gmail.com",
-                address: "Surabaya, Blue House Wp 2 No 26",
-                phone_number: "081212341234",
-                profile_pic: ""
-            )
-        ))
-        ,        Order(petName: "Si Unyil", petType: "Asu", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
-            name: "Micheila Jiemesha",
-            email: "mjiemesha@gmail.com",
-            address: "Surabaya, Blue House Wp 2 No 26",
-            phone_number: "081212341234",
-            profile_pic: ""
-        ), petHotel: PetHotel(
-            name: "Kamye West",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            //        coordinates: "Surabaya, Blue House Wp 2 No 26",
-            city: "Surabaya",
-            address: "Jalan WP 2 No 26",
-            phone_number: "081212341234",
-            opening_hour: "10.00",
-            closing_hour: "22.00",
-            hotel_pic: "",
-            price: 80000,
-            user : User(
-                name: "Micheila Jiemesha",
-                email: "mjiemesha@gmail.com",
-                address: "Surabaya, Blue House Wp 2 No 26",
-                phone_number: "081212341234",
-                profile_pic: ""
-            )
-        ))
-        ,        Order(petName: "Viper", petType: "Gecko", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User(
-            name: "Micheila Jiemesha",
-            email: "mjiemesha@gmail.com",
-            address: "Surabaya, Blue House Wp 2 No 26",
-            phone_number: "081212341234",
-            profile_pic: ""
-        ), petHotel: PetHotel(
-            name: "Kim Kardwasian",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            //        coordinates: "Surabaya, Blue House Wp 2 No 26",
-            city: "Surabaya",
-            address: "Jalan WP 2 No 26",
-            phone_number: "081212341234",
-            opening_hour: "10.00",
-            closing_hour: "22.00",
-            hotel_pic: "",
-            price: 80000,
-            user : User(
-                name: "Micheila Jiemesha",
-                email: "mjiemesha@gmail.com",
-                address: "Surabaya, Blue House Wp 2 No 26",
-                phone_number: "081212341234",
-                profile_pic: ""
-            )
-        ))
+        Order(petName: "Poppy", petType: "Cat", startDate: Date.now, endDate: Date.now,purchase: 70000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[1])
+        ,        Order(petName: "Chiki", petType: "Hamster", startDate: Date.now, endDate: Date.now,purchase: 80000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[0])
+        ,        Order(petName: "Blacky", petType: "Dog", startDate: Date.now, endDate: Date.now,purchase: 90000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[2])
+        ,        Order(petName: "Pochita", petType: "Dog", startDate: Date.now, endDate: Date.now,purchase: 50000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[1])
+        ,        Order(petName: "Yuro", petType: "Gerbil", startDate: Date.now, endDate: Date.now,purchase: 45000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[2])
+        ,        Order(petName: "Viper", petType: "Gecko", startDate: Date.now, endDate: Date.now,purchase: 20000, user: User.sampleUser, petHotel: PetHotel.sampleHotelList[0])
         
     ]
     

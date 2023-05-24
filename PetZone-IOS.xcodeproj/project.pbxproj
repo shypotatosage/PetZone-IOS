@@ -68,6 +68,8 @@
 		068CC7862A1C53D700099235 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068CC7842A1C53D700099235 /* OrderViewModel.swift */; };
 		06EF77012A1E1C450085A50F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EF77002A1E1C450085A50F /* SplashView.swift */; };
 		06EF77022A1E1CD40085A50F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EF77002A1E1C450085A50F /* SplashView.swift */; };
+		06EF77072A1E30770085A50F /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EF77062A1E30770085A50F /* DateFormat.swift */; };
+		06EF77082A1E30770085A50F /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EF77062A1E30770085A50F /* DateFormat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,7 @@
 		064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
 		068CC7842A1C53D700099235 /* OrderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		06EF77002A1E1C450085A50F /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		06EF77062A1E30770085A50F /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +290,7 @@
 				0462257D2A1B240F00B610AD /* CustomFont.swift */,
 				0462257E2A1B240F00B610AD /* DefaultButton.swift */,
 				0462257F2A1B240F00B610AD /* Color.swift */,
+				06EF77062A1E30770085A50F /* DateFormat.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -552,6 +556,7 @@
 			files = (
 				040855272A1C472000595321 /* EditProfileView.swift in Sources */,
 				0465DC242A1DC4ED002FDCAC /* HotelCardView.swift in Sources */,
+				06EF77082A1E30770085A50F /* DateFormat.swift in Sources */,
 				068CC7862A1C53D700099235 /* OrderViewModel.swift in Sources */,
 				0465DC182A1C4E6B002FDCAC /* MainView.swift in Sources */,
 				040855202A1C458900595321 /* PetZone_IOS.xcdatamodeld in Sources */,
@@ -582,6 +587,7 @@
 			files = (
 				046225982A1B245800B610AD /* PetHotel.swift in Sources */,
 				068CC7852A1C53D700099235 /* OrderViewModel.swift in Sources */,
+				06EF77072A1E30770085A50F /* DateFormat.swift in Sources */,
 				064A37A62A1B5A0C00FEF914 /* OrderListView.swift in Sources */,
 				0462259C2A1B2AB200B610AD /* MainView.swift in Sources */,
 				0462258F2A1B242700B610AD /* EditProfileView.swift in Sources */,

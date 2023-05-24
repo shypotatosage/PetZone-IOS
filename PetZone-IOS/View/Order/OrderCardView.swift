@@ -35,7 +35,7 @@ struct OrderCardView: View {
                     Text(order.petName)
                         .customFont(.subheadline2)
                         .frame(maxWidth: .infinity, alignment: .topLeading)
-                    Text(order.endDate.formatted())
+                    Text(DateFormat(order.endDate))
                         .customFont(.caption)
                         .frame(maxWidth: .infinity, alignment: .topLeading)
                 }
