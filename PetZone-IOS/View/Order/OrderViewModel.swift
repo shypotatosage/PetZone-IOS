@@ -7,14 +7,15 @@
 
 import Foundation
 
+//view model order
 class OrderViewModel: ObservableObject {
-
+    
     @Published var orders = [Order]()
     @Published var searchText: String = ""
-
+    
     var filteredOrders: [Order] {
         guard !searchText.isEmpty else { return orders }
-
+        
         return orders.filter { order in
             order.petHotel.name.lowercased().contains(searchText.lowercased())
         }
@@ -23,7 +24,4 @@ class OrderViewModel: ObservableObject {
     init(){
         orders = Order.sampleOrderList
     }
-    
-    
-    
 }

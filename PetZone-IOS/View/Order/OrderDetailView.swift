@@ -7,13 +7,14 @@
 
 import SwiftUI
 
+//untuk tampilan order detail view
 struct OrderDetailView: View {
     @State var order : Order
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView{
                 VStack{
-                    Image("dummypicthotel")
+                    Image(order.petHotel.hotel_pic)
                         .resizable()
                         .scaledToFit()
                     Text("Order Detail")
@@ -69,7 +70,7 @@ struct OrderDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                     }
-                    Text("\(order.startDate.formatted()) - \(order.endDate.formatted())")
+                    Text("\(DateFormat(order.startDate)) - \(DateFormat(order.endDate))")
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)
@@ -88,19 +89,20 @@ struct OrderDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                     }
-                    Text("Rp. \(order.purchase.description)")
+                    Text(NumberFormat(order.purchase))
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .frame(
                             maxWidth: .infinity,
                             alignment:  .topLeading)
-                }
+                }  .padding([.bottom], 100)
             }
         }
     }
 }
 
+//untuk tampilan order detail preview
 struct OrderDetailView_Previews: PreviewProvider {
     static var previews: some View {
         OrderDetailView(order: Order.sampleOrder)
