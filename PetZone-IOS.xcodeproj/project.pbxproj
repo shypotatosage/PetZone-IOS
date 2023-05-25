@@ -61,13 +61,12 @@
 		0462259C2A1B2AB200B610AD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462259B2A1B2AB200B610AD /* MainView.swift */; };
 		0465DC182A1C4E6B002FDCAC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC172A1C4E6B002FDCAC /* MainView.swift */; };
 		0465DC1A2A1C5099002FDCAC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC192A1C5099002FDCAC /* HomeView.swift */; };
+		049A947A2A1F10D900492A54 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462259B2A1B2AB200B610AD /* MainView.swift */; };
+		049A947B2A1F11A600492A54 /* PetZone_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225422A1B22F700B610AD /* PetZone_IOSApp.swift */; };
 		04B30AEA2A1E3AFA00781569 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B30AE92A1E3AFA00781569 /* ContentView.swift */; };
-		04B30AEC2A1E3AFB00781569 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B30AEB2A1E3AFB00781569 /* Assets.xcassets */; };
 		04B30AEF2A1E3AFB00781569 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B30AEE2A1E3AFB00781569 /* Preview Assets.xcassets */; };
 		04B30AF22A1E3AFB00781569 /* PetZone-WatchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 04B30AE52A1E3AF900781569 /* PetZone-WatchOS Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		04B30AF72A1E3B2B00781569 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462259B2A1B2AB200B610AD /* MainView.swift */; };
 		04B30AF82A1E3B5100781569 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046225462A1B22F800B610AD /* Assets.xcassets */; };
-		04B30AF92A1E3B5A00781569 /* PetZone_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225422A1B22F700B610AD /* PetZone_IOSApp.swift */; };
 		04B30AFA2A1E3B5F00781569 /* OvalTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462257B2A1B240F00B610AD /* OvalTextFieldStyle.swift */; };
 		04B30AFB2A1E3B5F00781569 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462257C2A1B240F00B610AD /* SearchBar.swift */; };
 		04B30AFC2A1E3B5F00781569 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462257E2A1B240F00B610AD /* DefaultButton.swift */; };
@@ -78,13 +77,6 @@
 		04B30B012A1E3B6400781569 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 046225732A1B23BC00B610AD /* Poppins-Regular.ttf */; };
 		04B30B022A1E3B6400781569 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 046225742A1B23BC00B610AD /* Poppins-Bold.ttf */; };
 		04B30B032A1E3B6800781569 /* HotelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462258E2A1B242700B610AD /* HotelDetailView.swift */; };
-		04B30B042A1E3B6D00781569 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462258B2A1B242700B610AD /* HomeView.swift */; };
-		04B30B052A1E3B6D00781569 /* HotelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462258C2A1B242700B610AD /* HotelCardView.swift */; };
-		04B30B062A1E3B7100781569 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225892A1B242700B610AD /* TransactionView.swift */; };
-		04B30B072A1E3B7700781569 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068CC7842A1C53D700099235 /* OrderViewModel.swift */; };
-		04B30B082A1E3B7700781569 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A32A1B5A0C00FEF914 /* OrderListView.swift */; };
-		04B30B092A1E3B7700781569 /* OrderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */; };
-		04B30B0A2A1E3B7700781569 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */; };
 		04B30B0B2A1E3B7C00781569 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225962A1B245800B610AD /* Order.swift */; };
 		04B30B0C2A1E3B7C00781569 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225972A1B245800B610AD /* User.swift */; };
 		04B30B0D2A1E3B7C00781569 /* PetHotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225952A1B245800B610AD /* PetHotel.swift */; };
@@ -124,14 +116,14 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		04B30AF32A1E3AFB00781569 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
 				04B30AF22A1E3AFB00781569 /* PetZone-WatchOS Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -622,7 +614,6 @@
 				04B30B022A1E3B6400781569 /* Poppins-Bold.ttf in Resources */,
 				04B30AF82A1E3B5100781569 /* Assets.xcassets in Resources */,
 				04B30B012A1E3B6400781569 /* Poppins-Regular.ttf in Resources */,
-				04B30AEC2A1E3AFB00781569 /* Assets.xcassets in Resources */,
 				04B30B002A1E3B6400781569 /* Poppins-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -710,24 +701,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B30AEA2A1E3AFA00781569 /* ContentView.swift in Sources */,
-				04B30B052A1E3B6D00781569 /* HotelCardView.swift in Sources */,
+				049A947A2A1F10D900492A54 /* MainView.swift in Sources */,
 				04B30AFC2A1E3B5F00781569 /* DefaultButton.swift in Sources */,
 				04B30B0F2A1E3B9C00781569 /* Persistence.swift in Sources */,
-				04B30B082A1E3B7700781569 /* OrderListView.swift in Sources */,
-				04B30B092A1E3B7700781569 /* OrderCardView.swift in Sources */,
 				04B30AFD2A1E3B5F00781569 /* Color.swift in Sources */,
 				04B30B0B2A1E3B7C00781569 /* Order.swift in Sources */,
 				04B30B0E2A1E3B9800781569 /* PetZone_IOS.xcdatamodeld in Sources */,
-				04B30B042A1E3B6D00781569 /* HomeView.swift in Sources */,
-				04B30B062A1E3B7100781569 /* TransactionView.swift in Sources */,
-				04B30AF72A1E3B2B00781569 /* MainView.swift in Sources */,
 				04B30AFB2A1E3B5F00781569 /* SearchBar.swift in Sources */,
-				04B30B0A2A1E3B7700781569 /* OrderDetailView.swift in Sources */,
 				04B30B032A1E3B6800781569 /* HotelDetailView.swift in Sources */,
+				049A947B2A1F11A600492A54 /* PetZone_IOSApp.swift in Sources */,
 				04B30AFE2A1E3B5F00781569 /* CustomFont.swift in Sources */,
 				04B30B0C2A1E3B7C00781569 /* User.swift in Sources */,
-				04B30B072A1E3B7700781569 /* OrderViewModel.swift in Sources */,
-				04B30AF92A1E3B5A00781569 /* PetZone_IOSApp.swift in Sources */,
 				04B30B0D2A1E3B7C00781569 /* PetHotel.swift in Sources */,
 				04B30AFA2A1E3B5F00781569 /* OvalTextFieldStyle.swift in Sources */,
 			);
