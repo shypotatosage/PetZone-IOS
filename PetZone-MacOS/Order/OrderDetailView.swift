@@ -16,7 +16,9 @@ struct OrderDetailView: View {
                 VStack{
                     Image(order.petHotel.hotel_pic)
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
+                        .frame(maxWidth: .infinity, maxHeight: 400)
+                        .clipped()
                     Text("Order Detail")
                         .customFont(.largeTitle)
                         .padding(.top)
@@ -33,6 +35,7 @@ struct OrderDetailView: View {
                             alignment:  .topLeading)
                     }
                     Text(order.petName)
+                        .customFont(.caption)
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)
@@ -52,6 +55,7 @@ struct OrderDetailView: View {
                             alignment:  .topLeading)
                     }
                     Text(order.petType)
+                        .customFont(.caption)
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)
@@ -71,6 +75,7 @@ struct OrderDetailView: View {
                             alignment:  .topLeading)
                     }
                     Text("\(DateFormats(order.startDate)) - \(DateFormats(order.endDate))")
+                        .customFont(.caption)
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)
@@ -90,6 +95,7 @@ struct OrderDetailView: View {
                             alignment:  .topLeading)
                     }
                     Text(NumberFormat(order.purchase))
+                        .customFont(.caption)
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)
