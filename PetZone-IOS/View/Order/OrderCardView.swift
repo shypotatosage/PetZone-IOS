@@ -18,9 +18,9 @@ struct OrderCardView: View {
                 Image(order.petHotel.hotel_pic)
                     .resizable()
                     .scaledToFill()
-                    .frame(maxWidth: width/3)
+                    .frame(maxWidth: width/6)
                     .clipped()
-                    .cornerRadius(15)
+                    .cornerRadius(20)
             }
             .frame(alignment: .leading)
             VStack {
@@ -29,7 +29,7 @@ struct OrderCardView: View {
                         .customFont(.title3)
                         .frame(maxWidth: .infinity, alignment: .topLeading)
                     Text(NumberFormat(order.purchase))
-                        .customFont(.subheadline2)
+                        .customFont(.footnote)
                         .frame(maxWidth: .infinity, alignment: .topTrailing)
                         .padding(.trailing)
                 }

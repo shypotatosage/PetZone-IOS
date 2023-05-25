@@ -42,7 +42,7 @@ struct OrderListView: View {
                                 .opacity(0)
                                 
                                 OrderCardView(width: geo.size.width, order: order)
-                                    .padding(.vertical, 8)
+                                    .padding(.vertical, 0)
                             }
                             
                         } .listRowSeparator(.hidden)
