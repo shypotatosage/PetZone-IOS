@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var hotelViewModel = HotelViewModel()
     @State private var searchText = ""
     
     var body: some View {
@@ -32,12 +33,12 @@ struct HomeView: View {
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets())
                         
-                        SearchBar(text: $searchText)
+                        SearchBar(text: $hotelViewModel.searchText)
                             .padding(.horizontal)
                             .padding(.bottom)
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
-                        ForEach(PetHotel.sampleHotelList) { hotel in
+                        ForEach(hotelViewModel.filteredPetHotels) { hotel in
                             ZStack {
                                 NavigationLink {
                                     HotelDetailView(choosenHotel: hotel)
