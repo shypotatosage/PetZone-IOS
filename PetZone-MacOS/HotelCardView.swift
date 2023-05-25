@@ -57,11 +57,11 @@ struct HotelCardView: View {
                     Image(petHotel.hotel_pic)
                         .resizable()
                         .scaledToFill()
-                        .frame(width: width/4.5, height: width/4.5)
+                        .frame(width: width/7.5, height: width/7.5)
                         .clipped()
                         .cornerRadius(15)
                 }
-                .frame(width: width/4.5, height: width/4.5)
+                .frame(width: width/7.5, height: width/7.5)
             }
             .padding(.leading, 8)
             .overlay(
