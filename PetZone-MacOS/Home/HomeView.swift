@@ -41,24 +41,22 @@ struct HomeView: View {
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
                         
-                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 500))]) {
-                            ForEach(PetHotel.sampleHotelList) { hotel in
-                                ZStack {
-                                    NavigationLink {
-                                        HotelDetailView(choosenHotel: hotel)
-                                    } label: {
-                                        EmptyView()
-                                    }
-                                    .opacity(0)
-                                    
-                                    HotelCardView(width: geo.size.width, petHotel: hotel)
-                                        .padding(.vertical, 8)
+                        ForEach(PetHotel.sampleHotelList) { hotel in
+                            ZStack {
+                                NavigationLink {
+                                    HotelDetailView(choosenHotel: hotel)
+                                } label: {
+                                    EmptyView()
                                 }
+                                .opacity(0)
                                 
+                                HotelCardView(width: geo.size.width, petHotel: hotel)
+                                    .padding(.vertical, 8)
+                                    .padding(.horizontal, 32)
                             }
-                            .listRowSeparator(.hidden)
+                            
                         }
-                        .padding(.horizontal, 12)
+                        .listRowSeparator(.hidden)
                     }
                     
                     Spacer(minLength: 60)

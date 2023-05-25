@@ -13,7 +13,7 @@ struct CustomFont: ViewModifier {
 
     var name: String {
         switch textStyle {
-        case .title, .title2, .title3:
+        case .title, .title2, .title3, .largeTitle2:
             return "Poppins Bold"
         case .body, .footnote, .caption, .subheadline3:
             return "Poppins Regular"
@@ -27,6 +27,8 @@ struct CustomFont: ViewModifier {
     var size: CGFloat {
         switch textStyle {
         case .largeTitle:
+            return 30
+        case .largeTitle2:
             return 30
         case .title:
             return 18
@@ -60,6 +62,8 @@ struct CustomFont: ViewModifier {
     var relative: Font.TextStyle {
         switch textStyle {
         case .largeTitle:
+            return .largeTitle
+        case .largeTitle2:
             return .largeTitle
         case .title:
             return .title
@@ -103,6 +107,7 @@ extension View {
 
 enum TextStyle {
     case largeTitle
+    case largeTitle2
     case title
     case title2
     case title3
