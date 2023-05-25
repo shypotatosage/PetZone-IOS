@@ -1,13 +1,14 @@
 //
 //  HomeView.swift
-//  PetZone-MacOS
+//  PetZone
 //
-//  Created by MacBook Pro on 23/05/23.
+//  Created by MacBook Pro on 19/05/23.
 //
 
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var hotelViewModel = HotelViewModel()
     @State private var searchText = ""
     
     var body: some View {
@@ -21,7 +22,7 @@ struct HomeView: View {
                                     .customFont(.largeTitle)
                                     .foregroundColor(Color(hex: "EF233C"))
                                 Spacer()
-                                Image("dummypicthotel")
+                                Image("profilepict")
                                     .resizable()
                                     .frame(width: 50, height: 50)
                                     .cornerRadius(1000)
@@ -32,12 +33,12 @@ struct HomeView: View {
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets())
                         
-                        SearchBar(text: $searchText)
+                        SearchBar(text: $hotelViewModel.searchText)
                             .padding(.horizontal)
                             .padding(.bottom)
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
-                        ForEach(PetHotel.sampleHotelList) { hotel in
+                        ForEach(hotelViewModel.filteredPetHotels) { hotel in
                             ZStack {
                                 NavigationLink {
                                     HotelDetailView(choosenHotel: hotel)
@@ -49,10 +50,6 @@ struct HomeView: View {
                                 HotelCardView(width: geo.size.width, petHotel: hotel)
                                     .padding(.vertical, 8)
                             }
-                            .opacity(0)
-                            
-                            HotelCardView(width: geo.size.width, petHotel: hotel)
-                                .padding(.vertical, 8)
                         }
                         .listRowSeparator(.hidden)
                     }
@@ -64,6 +61,7 @@ struct HomeView: View {
         }
     }
 }
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

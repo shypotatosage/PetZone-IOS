@@ -56,12 +56,14 @@ struct HotelCardView: View {
                 VStack {
                     Image(petHotel.hotel_pic)
                         .resizable()
+                        .centerCropped()
+                        .edgesIgnoringSafeArea(.all)
                         .scaledToFill()
-                        .frame(maxWidth: width/2.25)
+                        .frame(maxWidth: width*6)
                         .clipped()
                         .cornerRadius(15)
                 }
-                .frame(maxWidth: .infinity)
+                .frame(width: width/5)
             }
             .padding(.leading, 8)
             .overlay(
@@ -89,5 +91,17 @@ struct HotelCardView_Previews: PreviewProvider {
     static var previews: some View {
         HotelCardView(width: 500, petHotel: petHotel)
             .frame(height: 190)
+    }
+}
+
+extension Image {
+    func centerCropped() -> some View {
+        Color.clear
+        .overlay(
+            self
+            .resizable()
+            .scaledToFill()
+        )
+        .clipped()
     }
 }

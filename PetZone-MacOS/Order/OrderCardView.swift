@@ -1,8 +1,8 @@
 //
 //  OrderCardView.swift
-//  PetZone
+//  PetZone-MacOS
 //
-//  Created by Marsha Likorawung  on 22/05/23.
+//  Created by Marsha Likorawung  on 25/05/23.
 //
 
 import SwiftUI
@@ -17,12 +17,15 @@ struct OrderCardView: View {
             VStack {
                 Image(order.petHotel.hotel_pic)
                     .resizable()
+                    .centerCropped()
+                    .edgesIgnoringSafeArea(.all)
                     .scaledToFill()
-                    .frame(maxWidth: width/6)
+                    .frame(maxWidth: width*6)
                     .clipped()
-                    .cornerRadius(20)
+                    .cornerRadius(15)
             }
             .frame(alignment: .leading)
+            .frame( width: width/5)
             VStack {
                 HStack{
                     Text(order.petHotel.name)
@@ -73,3 +76,4 @@ struct OrderCardView_Previews: PreviewProvider {
             .frame(height: 100)
     }
 }
+

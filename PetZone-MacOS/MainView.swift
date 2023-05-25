@@ -8,20 +8,61 @@
 import SwiftUI
 
 struct MainView: View {
+    
     var body: some View {
         NavigationView {
             List {
+                Text("Menu")
+                    .customFont(.largeTitle2)
+                    .foregroundColor(Color(hex: "EF233C"))
+                    .padding(.top, 12)
                 NavigationLink(destination: HomeView()) {
-                    Label("Home", systemImage: "house")
+                    HStack(alignment: .center) {
+                        VStack {
+                            Image(systemName: "house")
+                                .customFont(.subheadline)
+                        }
+                        .frame(width: 24)
+                        Text("Home")
+                            .customFont(.subheadline)
+                            .padding(.top, 4)
+                    }
                 }
+                .padding(.vertical, 1)
+                .padding(.leading, 20)
+                NavigationLink(destination: OrderListView()) {
+                    HStack(alignment: .center) {
+                        VStack {
+                            Image(systemName: "list.bullet")
+                                .customFont(.subheadline)
+                        }
+                        .frame(width: 24)
+                        Text("Order History")
+                            .customFont(.subheadline)
+                            .padding(.top, 4)
+                    }
+                }
+                .padding(.vertical, 1)
+                .padding(.leading, 20)
                 NavigationLink(destination: HomeView()) {
-                    Label("Order History", systemImage: "list.bullet")
+                    HStack(alignment: .center) {
+                        VStack {
+                            Image(systemName: "person")
+                                .customFont(.subheadline)
+                        }
+                        .frame(width: 24)
+                        Text("Profile")
+                            .customFont(.subheadline)
+                            .padding(.top, 4)
+                    }
                 }
-                NavigationLink(destination: HomeView()) {
-                    Label("Profile", systemImage: "person")
-                }
+                .padding(.vertical, 1)
+                .padding(.leading, 20)
             }
             .listStyle(SidebarListStyle())
+            .navigationTitle("Menu")
+            
+            HomeView()
         }
     }
 }

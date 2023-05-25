@@ -1,13 +1,16 @@
 //
 //  HomeView.swift
-//  PetZone
+//  PetZone-MacOS
 //
-//  Created by MacBook Pro on 19/05/23.
+//  Created by MacBook Pro on 23/05/23.
 //
 
 import SwiftUI
 
 struct HomeView: View {
+    var twoColumnGrid = [GridItem(.flexible()),GridItem(.flexible())]
+    
+    
     @State private var searchText = ""
     
     var body: some View {
@@ -21,7 +24,7 @@ struct HomeView: View {
                                     .customFont(.largeTitle)
                                     .foregroundColor(Color(hex: "EF233C"))
                                 Spacer()
-                                Image("profilepict")
+                                Image("dummypicthotel")
                                     .resizable()
                                     .frame(width: 50, height: 50)
                                     .cornerRadius(1000)
@@ -37,6 +40,7 @@ struct HomeView: View {
                             .padding(.bottom)
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
+                        
                         ForEach(PetHotel.sampleHotelList) { hotel in
                             ZStack {
                                 NavigationLink {
@@ -48,7 +52,9 @@ struct HomeView: View {
                                 
                                 HotelCardView(width: geo.size.width, petHotel: hotel)
                                     .padding(.vertical, 8)
+                                    .padding(.horizontal, 32)
                             }
+                            
                         }
                         .listRowSeparator(.hidden)
                     }
@@ -60,7 +66,6 @@ struct HomeView: View {
         }
     }
 }
-
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

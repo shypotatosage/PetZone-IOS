@@ -26,12 +26,7 @@
 		040855202A1C458900595321 /* PetZone_IOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0462254D2A1B22F800B610AD /* PetZone_IOS.xcdatamodeld */; };
 		040855212A1C463400595321 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462254B2A1B22F800B610AD /* Persistence.swift */; };
 		040855222A1C46EE00595321 /* PetZone_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225422A1B22F700B610AD /* PetZone_IOSApp.swift */; };
-		040855242A1C471D00595321 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */; };
-		040855252A1C471D00595321 /* OrderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */; };
-		040855262A1C471D00595321 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A32A1B5A0C00FEF914 /* OrderListView.swift */; };
 		040855272A1C472000595321 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225872A1B242700B610AD /* EditProfileView.swift */; };
-		040855282A1C472300595321 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225892A1B242700B610AD /* TransactionView.swift */; };
-		0408552A2A1C472B00595321 /* HotelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462258C2A1B242700B610AD /* HotelCardView.swift */; };
 		046225432A1B22F700B610AD /* PetZone_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225422A1B22F700B610AD /* PetZone_IOSApp.swift */; };
 		046225452A1B22F700B610AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225442A1B22F700B610AD /* ContentView.swift */; };
 		046225472A1B22F800B610AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046225462A1B22F800B610AD /* Assets.xcassets */; };
@@ -85,8 +80,14 @@
 		064A37A62A1B5A0C00FEF914 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A32A1B5A0C00FEF914 /* OrderListView.swift */; };
 		064A37A72A1B5A0C00FEF914 /* OrderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */; };
 		064A37A82A1B5A0C00FEF914 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */; };
+		067EC2E22A1F2BC600D69773 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063264642A1E57780040EE6C /* Format.swift */; };
+		067EC2E82A1F2C2C00D69773 /* OrderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EC2E72A1F2C2C00D69773 /* OrderCardView.swift */; };
+		0680A4262A1F44A0009535A1 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680A4252A1F44A0009535A1 /* OrderListView.swift */; };
+		0680A4282A1F450B009535A1 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680A4272A1F450B009535A1 /* OrderDetailView.swift */; };
 		068CC7852A1C53D700099235 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068CC7842A1C53D700099235 /* OrderViewModel.swift */; };
 		068CC7862A1C53D700099235 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068CC7842A1C53D700099235 /* OrderViewModel.swift */; };
+		06EF77012A1E1C450085A50F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EF77002A1E1C450085A50F /* SplashView.swift */; };
+		06EF77022A1E1CD40085A50F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EF77002A1E1C450085A50F /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,7 +175,11 @@
 		064A37A32A1B5A0C00FEF914 /* OrderListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
 		064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCardView.swift; sourceTree = "<group>"; };
 		064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
+		067EC2E72A1F2C2C00D69773 /* OrderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCardView.swift; sourceTree = "<group>"; };
+		0680A4252A1F44A0009535A1 /* OrderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
+		0680A4272A1F450B009535A1 /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
 		068CC7842A1C53D700099235 /* OrderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		06EF77002A1E1C450085A50F /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,13 +224,17 @@
 		040855012A1C430900595321 /* PetZone-MacOS */ = {
 			isa = PBXGroup;
 			children = (
+				067EC2E62A1F2BF600D69773 /* Order */,
+				0465DC202A1CA6E9002FDCAC /* Transaction */,
+				0465DC1F2A1CA1A2002FDCAC /* Info.plist */,
+				0465DC1E2A1CA13A002FDCAC /* Home */,
 				040855112A1C43CC00595321 /* Hotel */,
 				040855042A1C430900595321 /* ContentView.swift */,
 				040855062A1C430A00595321 /* Assets.xcassets */,
 				0408550B2A1C430A00595321 /* PetZone_MacOS.entitlements */,
 				040855082A1C430A00595321 /* Preview Content */,
 				0465DC172A1C4E6B002FDCAC /* MainView.swift */,
-				0465DC192A1C5099002FDCAC /* HomeView.swift */,
+				0465DC232A1DC4ED002FDCAC /* HotelCardView.swift */,
 			);
 			path = "PetZone-MacOS";
 			sourceTree = "<group>";
@@ -333,6 +342,7 @@
 				0462257D2A1B240F00B610AD /* CustomFont.swift */,
 				0462257E2A1B240F00B610AD /* DefaultButton.swift */,
 				0462257F2A1B240F00B610AD /* Color.swift */,
+				063264642A1E57780040EE6C /* Format.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -340,10 +350,10 @@
 		046225852A1B242700B610AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				06EF76FF2A1E1C450085A50F /* Splash */,
 				064A37A22A1B5A0C00FEF914 /* Order */,
 				046225862A1B242700B610AD /* EditProfile */,
 				046225882A1B242700B610AD /* Transaction */,
-				0462258A2A1B242700B610AD /* Home */,
 				0462258D2A1B242700B610AD /* Hotel */,
 			);
 			path = View;
@@ -365,18 +375,12 @@
 			path = Transaction;
 			sourceTree = "<group>";
 		};
-		0462258A2A1B242700B610AD /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				0462258B2A1B242700B610AD /* HomeView.swift */,
-				0462258C2A1B242700B610AD /* HotelCardView.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		0462258D2A1B242700B610AD /* Hotel */ = {
 			isa = PBXGroup;
 			children = (
+				0465DC252A1EEE05002FDCAC /* HotelViewModel.swift */,
+				0462258B2A1B242700B610AD /* HomeView.swift */,
+				0462258C2A1B242700B610AD /* HotelCardView.swift */,
 				0462258E2A1B242700B610AD /* HotelDetailView.swift */,
 			);
 			path = Hotel;
@@ -419,6 +423,24 @@
 				064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */,
 			);
 			path = Order;
+			sourceTree = "<group>";
+		};
+		067EC2E62A1F2BF600D69773 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				067EC2E72A1F2C2C00D69773 /* OrderCardView.swift */,
+				0680A4252A1F44A0009535A1 /* OrderListView.swift */,
+				0680A4272A1F450B009535A1 /* OrderDetailView.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		06EF76FF2A1E1C450085A50F /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				06EF77002A1E1C450085A50F /* SplashView.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -626,27 +648,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				040855272A1C472000595321 /* EditProfileView.swift in Sources */,
+				0465DC242A1DC4ED002FDCAC /* HotelCardView.swift in Sources */,
+				0680A4282A1F450B009535A1 /* OrderDetailView.swift in Sources */,
 				068CC7862A1C53D700099235 /* OrderViewModel.swift in Sources */,
 				0465DC182A1C4E6B002FDCAC /* MainView.swift in Sources */,
-				0408552A2A1C472B00595321 /* HotelCardView.swift in Sources */,
+				067EC2E22A1F2BC600D69773 /* Format.swift in Sources */,
 				040855202A1C458900595321 /* PetZone_IOS.xcdatamodeld in Sources */,
+				067EC2E82A1F2C2C00D69773 /* OrderCardView.swift in Sources */,
+				0465DC222A1CA6F8002FDCAC /* TransactionView.swift in Sources */,
 				040855122A1C441300595321 /* PetHotel.swift in Sources */,
 				0465DC1A2A1C5099002FDCAC /* HomeView.swift in Sources */,
 				040855192A1C443600595321 /* DefaultButton.swift in Sources */,
-				040855282A1C472300595321 /* TransactionView.swift in Sources */,
-				040855262A1C471D00595321 /* OrderListView.swift in Sources */,
 				0408551C2A1C443600595321 /* OvalTextFieldStyle.swift in Sources */,
 				040855222A1C46EE00595321 /* PetZone_IOSApp.swift in Sources */,
 				0408551A2A1C443600595321 /* Color.swift in Sources */,
 				040855102A1C43B800595321 /* HotelDetailView.swift in Sources */,
+				0680A4262A1F44A0009535A1 /* OrderListView.swift in Sources */,
 				0408551D2A1C443600595321 /* CustomFont.swift in Sources */,
 				040855132A1C441300595321 /* Order.swift in Sources */,
 				0408551B2A1C443600595321 /* SearchBar.swift in Sources */,
+				06EF77022A1E1CD40085A50F /* SplashView.swift in Sources */,
 				040855212A1C463400595321 /* Persistence.swift in Sources */,
 				040855142A1C441300595321 /* User.swift in Sources */,
 				040855052A1C430900595321 /* ContentView.swift in Sources */,
-				040855242A1C471D00595321 /* OrderDetailView.swift in Sources */,
-				040855252A1C471D00595321 /* OrderCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,7 +679,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				046225982A1B245800B610AD /* PetHotel.swift in Sources */,
+				063264652A1E57780040EE6C /* Format.swift in Sources */,
 				068CC7852A1C53D700099235 /* OrderViewModel.swift in Sources */,
+				0465DC262A1EEE05002FDCAC /* HotelViewModel.swift in Sources */,
 				064A37A62A1B5A0C00FEF914 /* OrderListView.swift in Sources */,
 				0462259C2A1B2AB200B610AD /* MainView.swift in Sources */,
 				0462258F2A1B242700B610AD /* EditProfileView.swift in Sources */,
@@ -671,6 +697,7 @@
 				0462254F2A1B22F800B610AD /* PetZone_IOS.xcdatamodeld in Sources */,
 				046225812A1B240F00B610AD /* SearchBar.swift in Sources */,
 				046225922A1B242700B610AD /* HotelCardView.swift in Sources */,
+				06EF77012A1E1C450085A50F /* SplashView.swift in Sources */,
 				046225932A1B242700B610AD /* HotelDetailView.swift in Sources */,
 				046225912A1B242700B610AD /* HomeView.swift in Sources */,
 				046225832A1B240F00B610AD /* DefaultButton.swift in Sources */,
@@ -752,6 +779,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PetZone-MacOS/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -781,6 +809,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PetZone-MacOS/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
