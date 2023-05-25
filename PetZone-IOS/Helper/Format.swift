@@ -26,3 +26,12 @@ func NumberFormat(_ value: Int)->String{
     let formattedValue = currencyFormatter.string(from: value as NSNumber)!
     return formattedValue + ",00"
 }
+
+//untuk format tanggal May 9, 2023
+func DateFormats(_ date: Date)->String{
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .medium
+    dateFormatter.timeStyle = .short
+    let dateString = dateFormatter.string(from:date)
+    return dateString
+}

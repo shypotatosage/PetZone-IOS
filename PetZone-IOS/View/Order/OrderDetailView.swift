@@ -70,7 +70,7 @@ struct OrderDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                     }
-                    Text("\(DateFormat(order.startDate)) - \(DateFormat(order.endDate))")
+                    Text("\(DateFormats(order.startDate)) - \(DateFormats(order.endDate))")
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)
