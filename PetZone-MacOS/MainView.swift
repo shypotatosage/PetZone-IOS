@@ -30,7 +30,7 @@ struct MainView: View {
                 }
                 .padding(.vertical, 1)
                 .padding(.leading, 20)
-                NavigationLink(destination: TransactionView()) {
+                NavigationLink(destination: OrderListView()) {
                     HStack(alignment: .center) {
                         VStack {
                             Image(systemName: "list.bullet")

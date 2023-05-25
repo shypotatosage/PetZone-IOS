@@ -35,7 +35,7 @@ struct OrderListView: View {
                         ForEach(orderViewModel.filteredOrders) { order in
                             ZStack {
                                 NavigationLink {
-                                    OrderDetailView(order: order)
+//                                    HotelDetailView(order: order)
                                 } label: {
                                     EmptyView()
                                 }
