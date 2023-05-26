@@ -68,7 +68,7 @@ struct EditProfileView: View {
                 .bold()
             }
             .padding(20)
-                .navigationTitle("Edit Profile")
+                .navigationTitle("Profile")
         }
     }
 }
