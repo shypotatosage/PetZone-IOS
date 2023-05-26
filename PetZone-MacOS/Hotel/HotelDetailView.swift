@@ -30,8 +30,7 @@ struct HotelDetailView: View {
                                     maxWidth: .infinity,
                                     alignment:  .topLeading)
                             HStack{
-                                Text("Rp.")
-                                Text(String(choosenHotel.price))
+                                Text(NumberFormat(choosenHotel.price))
                             }
                             .customFont(.largeTitle)
                             .font(.system(size: 30))

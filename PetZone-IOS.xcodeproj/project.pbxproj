@@ -61,6 +61,7 @@
 		063264652A1E57780040EE6C /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063264642A1E57780040EE6C /* Format.swift */; };
 		0649E6732A2059E900D6CDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040855062A1C430A00595321 /* Assets.xcassets */; };
 		0649E6742A205A8100D6CDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046225462A1B22F800B610AD /* Assets.xcassets */; };
+		0649E6752A205C3D00D6CDE2 /* HotelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC252A1EEE05002FDCAC /* HotelViewModel.swift */; };
 		064A37A62A1B5A0C00FEF914 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A32A1B5A0C00FEF914 /* OrderListView.swift */; };
 		064A37A72A1B5A0C00FEF914 /* OrderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */; };
 		064A37A82A1B5A0C00FEF914 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */; };
@@ -573,6 +574,7 @@
 				067EC2E22A1F2BC600D69773 /* Format.swift in Sources */,
 				040855202A1C458900595321 /* PetZone_IOS.xcdatamodeld in Sources */,
 				067EC2E82A1F2C2C00D69773 /* OrderCardView.swift in Sources */,
+				0649E6752A205C3D00D6CDE2 /* HotelViewModel.swift in Sources */,
 				0465DC222A1CA6F8002FDCAC /* TransactionView.swift in Sources */,
 				040855122A1C441300595321 /* PetHotel.swift in Sources */,
 				0465DC1A2A1C5099002FDCAC /* HomeView.swift in Sources */,
