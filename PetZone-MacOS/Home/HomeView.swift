@@ -24,7 +24,7 @@ struct HomeView: View {
                                     .customFont(.largeTitle)
                                     .foregroundColor(Color(hex: "EF233C"))
                                 Spacer()
-                                Image("dummypicthotel")
+                                Image("profilepict")
                                     .resizable()
                                     .frame(width: 50, height: 50)
                                     .cornerRadius(1000)
