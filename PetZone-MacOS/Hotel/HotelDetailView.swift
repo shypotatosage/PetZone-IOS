@@ -23,16 +23,17 @@ struct HotelDetailView: View {
                         HStack{
                             Text(choosenHotel.name)
                                 .foregroundColor(Color(hex: "EF233C"))
+                                .customFont(.largeTitle)
                                 .font(.system(size: 36))
                                 .bold()
                                 .frame(
                                     maxWidth: .infinity,
                                     alignment:  .topLeading)
                             HStack{
-                                Text("Rp.")
-                                Text(String(choosenHotel.price))
+                                Text(NumberFormat(choosenHotel.price))
                             }
-                                   .font(.system(size: 30))
+                            .customFont(.largeTitle)
+                            .font(.system(size: 30))
                             .bold()
                         }
                         
@@ -40,6 +41,7 @@ struct HotelDetailView: View {
                         HStack {
                             Image(systemName: "location.fill").foregroundColor(.black)
                             Text(choosenHotel.address)
+                                .customFont(.subheadline)
                         }
                         .padding(.top, 1)
                         .frame(
@@ -48,6 +50,7 @@ struct HotelDetailView: View {
                         HStack {
                             Image(systemName: "phone.fill").foregroundColor(.black)
                             Text(choosenHotel.phone_number)
+                                .customFont(.subheadline)
                         }
                         .padding(.top, 1)
                         .frame(
@@ -60,6 +63,7 @@ struct HotelDetailView: View {
                                 Text("-")
                                 Text(choosenHotel.closing_hour)
                             }
+                            .customFont(.subheadline)
                         }
                         .padding(.top, 1)
                         .frame(
@@ -71,22 +75,33 @@ struct HotelDetailView: View {
                             .frame(
                                 maxWidth: .infinity,
                                 alignment:  .topLeading)
+                            .customFont(.subheadline)
                         HStack {
                             Text(choosenHotel.description)
+                                .customFont(.body)
                         }
-                        .padding(.top, 1)
-                        .frame(
-                            maxWidth: .infinity,
-                            alignment:  .topLeading)
-                        Button("Order"){
+                        
+                        NavigationLink (destination: TransactionView()){
+                            Text("Order")
+                                .customFont(.subheadline)
+                                .foregroundColor(.white)
+                                .padding([.horizontal], 30)
+                                .padding([.vertical], 10)
+                                .background(Color(hex: "EF233D"))
+                                .cornerRadius(30)
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .stroke(Color(hex: "E91732"), lineWidth: 1)
+                                }
+                                .shadow(color: Color(hex: "BABABA"), radius: 3)
                         }
-                        .padding(.top)
-                        .buttonStyle(DefaultButton())
-                        .bold()
+                        .buttonStyle(PlainButtonStyle())
+
                     }
                     .font(.system(size: 20))
                     .padding()
                     .padding()
+                    .padding([.bottom], 100)
                     .frame(
                         maxWidth: .infinity,
                         alignment:  .topLeading)

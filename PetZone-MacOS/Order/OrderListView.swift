@@ -50,7 +50,6 @@ struct OrderListView: View {
                     }
                     .listStyle(PlainListStyle())
                 }
-                Spacer(minLength: 60)
             }
             .listStyle(PlainListStyle())
         }

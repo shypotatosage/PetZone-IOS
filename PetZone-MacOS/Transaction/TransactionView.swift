@@ -40,8 +40,9 @@ struct TransactionView: View {
                         .padding(.leading, 2)
                     TextField("Pet Name", text: $newOrder.petName)
                         .customFont(.body)
+                        .foregroundColor(.white)
                 }
-                .textFieldStyle(OvalTextFieldStyle())
+//                .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 
                 VStack(spacing: 10) {
@@ -50,9 +51,9 @@ struct TransactionView: View {
                         .customFont(.headline)
                         .padding(.leading, 2)
                     TextField("Pet Type", text: $newOrder.petType)
-                        .customFont(.body)
+                    .customFont(.body)
+                    .foregroundColor(.white)
                 }
-                .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 .padding(.top, 8)
                 
@@ -63,10 +64,11 @@ struct TransactionView: View {
                         .padding(.leading, 2)
                     DatePicker(selection: $newOrder.startDate, in: Date.now..., displayedComponents: [.date, .hourAndMinute]){
                     }
-                    .padding()
+                    .foregroundColor(.white)
+//                    .padding()
                     .labelsHidden()
                 }
-                .textFieldStyle(OvalTextFieldStyle())
+               // .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 .padding(.top, 8)
                 
@@ -77,10 +79,10 @@ struct TransactionView: View {
                         .padding(.leading, 2)
                     DatePicker(selection: $newOrder.endDate, in: newOrder.startDate..., displayedComponents: [.date, .hourAndMinute]){
                     }
-                    .padding()
+//                    .padding()
                     .labelsHidden()
                 }
-                .textFieldStyle(OvalTextFieldStyle())
+//                .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 
                 VStack(spacing: 10) {
@@ -91,8 +93,9 @@ struct TransactionView: View {
                     TextField("0", value: $newOrder.purchase, formatter: NumberFormatter())
                         .customFont(.body)
                         .disabled(true)
+                     
                 }
-                .textFieldStyle(OvalTextFieldStyle())
+            //    .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 .padding(.bottom, 28)
                 

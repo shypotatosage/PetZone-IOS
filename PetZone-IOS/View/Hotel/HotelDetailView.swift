@@ -32,7 +32,9 @@ struct HotelDetailView: View {
                         .customFont(.subheadline)
                         
                         Text(choosenHotel.address)
+                            .customFont(.subheadline)
                         Text(choosenHotel.phone_number)
+                            .customFont(.subheadline)
                     }
                     Group{
                         HStack{
@@ -62,6 +64,7 @@ struct HotelDetailView: View {
                             .frame(
                                 maxWidth: .infinity,
                                 alignment:  .topLeading)
+                            .customFont(.body)
                     }
                     Group{
                         HStack {
@@ -82,6 +85,7 @@ struct HotelDetailView: View {
                         .frame(
                             maxWidth: .infinity,
                             alignment:  .topLeading)
+                        .customFont(.body)
 
                     NavigationLink (destination: TransactionView()){
                         Text("Order")
