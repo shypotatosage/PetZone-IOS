@@ -47,7 +47,7 @@ struct FloatingTabBar: View {
                 Button(action: {
                     self.selected = 0
                 }) {
-                    Image(systemName: "house")
+                    Image(systemName: "pawprint")
                         .resizable()
                         .frame(width: 20, height: 16)
                         .foregroundColor(self.selected == 0 ? Color(hex: "EF233C") : .white)
@@ -61,7 +61,7 @@ struct FloatingTabBar: View {
                 Button(action: {
                     self.selected = 1
                 }) {
-                    Image(systemName: "list.bullet")
+                    Image(systemName: "list.bullet.clipboard")
                         .resizable()
                         .frame(width: 16, height: 16)
                         .foregroundColor(self.selected == 1 ? Color(hex: "EF233C") : .white)

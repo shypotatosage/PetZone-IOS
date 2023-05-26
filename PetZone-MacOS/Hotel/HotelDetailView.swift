@@ -81,6 +81,7 @@ struct HotelDetailView: View {
                             Text(choosenHotel.description)
                                 .customFont(.body)
                         }
+                        
                         NavigationLink (destination: TransactionView()){
                             Text("Order")
                                 .customFont(.subheadline)
@@ -95,6 +96,8 @@ struct HotelDetailView: View {
                                 }
                                 .shadow(color: Color(hex: "BABABA"), radius: 3)
                         }
+                        .buttonStyle(PlainButtonStyle())
+
                     }
                     .font(.system(size: 20))
                     .padding()

@@ -14,26 +14,27 @@ struct MainView: View {
             List {
                 Text("Menu")
                     .customFont(.largeTitle2)
-                    .foregroundColor(Color(hex: "EF233C"))
+                    .foregroundColor(.white)
                     .padding(.top, 12)
                 NavigationLink(destination: HomeView()) {
                     HStack(alignment: .center) {
                         VStack {
-                            Image(systemName: "house")
+                            Image(systemName: "pawprint")
                                 .customFont(.subheadline)
                         }
                         .frame(width: 24)
-                        Text("Home")
+                        Text("Hotel List")
                             .customFont(.subheadline)
                             .padding(.top, 4)
                     }
+                    .foregroundColor(.white)
                 }
                 .padding(.vertical, 1)
                 .padding(.leading, 20)
                 NavigationLink(destination: OrderListView()) {
                     HStack(alignment: .center) {
                         VStack {
-                            Image(systemName: "list.bullet")
+                            Image(systemName: "list.bullet.clipboard")
                                 .customFont(.subheadline)
                         }
                         .frame(width: 24)
@@ -41,6 +42,7 @@ struct MainView: View {
                             .customFont(.subheadline)
                             .padding(.top, 4)
                     }
+                    .foregroundColor(.white)
                 }
                 .padding(.vertical, 1)
                 .padding(.leading, 20)
@@ -55,12 +57,13 @@ struct MainView: View {
                             .customFont(.subheadline)
                             .padding(.top, 4)
                     }
+                    .foregroundColor(.white)
                 }
                 .padding(.vertical, 1)
                 .padding(.leading, 20)
             }
-            .listStyle(SidebarListStyle())
-            .navigationTitle("Menu")
+//            .listStyle(SidebarListStyle())
+            .background(Color(hex: "EF233C"))
             
             HomeView()
         }
