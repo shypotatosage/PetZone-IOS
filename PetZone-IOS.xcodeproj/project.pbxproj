@@ -22,7 +22,6 @@
 		0408551B2A1C443600595321 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462257C2A1B240F00B610AD /* SearchBar.swift */; };
 		0408551C2A1C443600595321 /* OvalTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462257B2A1B240F00B610AD /* OvalTextFieldStyle.swift */; };
 		0408551D2A1C443600595321 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462257D2A1B240F00B610AD /* CustomFont.swift */; };
-		0408551E2A1C445000595321 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046225462A1B22F800B610AD /* Assets.xcassets */; };
 		040855202A1C458900595321 /* PetZone_IOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0462254D2A1B22F800B610AD /* PetZone_IOS.xcdatamodeld */; };
 		040855212A1C463400595321 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462254B2A1B22F800B610AD /* Persistence.swift */; };
 		040855222A1C46EE00595321 /* PetZone_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225422A1B22F700B610AD /* PetZone_IOSApp.swift */; };
@@ -60,6 +59,8 @@
 		0465DC242A1DC4ED002FDCAC /* HotelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC232A1DC4ED002FDCAC /* HotelCardView.swift */; };
 		0465DC262A1EEE05002FDCAC /* HotelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC252A1EEE05002FDCAC /* HotelViewModel.swift */; };
 		063264652A1E57780040EE6C /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063264642A1E57780040EE6C /* Format.swift */; };
+		0649E6732A2059E900D6CDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040855062A1C430A00595321 /* Assets.xcassets */; };
+		0649E6742A205A8100D6CDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046225462A1B22F800B610AD /* Assets.xcassets */; };
 		064A37A62A1B5A0C00FEF914 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A32A1B5A0C00FEF914 /* OrderListView.swift */; };
 		064A37A72A1B5A0C00FEF914 /* OrderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */; };
 		064A37A82A1B5A0C00FEF914 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */; };
@@ -524,7 +525,8 @@
 				040855162A1C443200595321 /* Poppins-Medium.ttf in Resources */,
 				040855172A1C443200595321 /* Poppins-Bold.ttf in Resources */,
 				040855182A1C443200595321 /* Poppins-SemiBold.ttf in Resources */,
-				0408551E2A1C445000595321 /* Assets.xcassets in Resources */,
+				0649E6742A205A8100D6CDE2 /* Assets.xcassets in Resources */,
+				0649E6732A2059E900D6CDE2 /* Assets.xcassets in Resources */,
 				0408550A2A1C430A00595321 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
