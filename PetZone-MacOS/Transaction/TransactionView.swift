@@ -42,7 +42,6 @@ struct TransactionView: View {
                         .customFont(.body)
                         .foregroundColor(.white)
                 }
-//                .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 
                 VStack(spacing: 10) {
@@ -68,7 +67,6 @@ struct TransactionView: View {
 //                    .padding()
                     .labelsHidden()
                 }
-               // .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 .padding(.top, 8)
                 
@@ -82,7 +80,6 @@ struct TransactionView: View {
 //                    .padding()
                     .labelsHidden()
                 }
-//                .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 
                 VStack(spacing: 10) {
@@ -95,7 +92,6 @@ struct TransactionView: View {
                         .disabled(true)
                      
                 }
-            //    .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 .padding(.bottom, 28)
                 

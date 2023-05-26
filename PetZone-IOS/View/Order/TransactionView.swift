@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct TransactionView: View {
-    var petHotel = PetHotel.sampleHotel
+    var petHotel: PetHotel
     @State private var newOrder = Order.emptyOrder
+    @State var isError = false
     
     var body: some View {
         ScrollView {
             Image("dummypicthotel")
                 .resizable()
                 .scaledToFill()
+                .frame(maxWidth: .infinity, maxHeight: 300)
                 .clipped()
-                .frame(height: 300, alignment: .topLeading)
                 .padding(.bottom)
             Text(petHotel.name)
                 .customFont(.largeTitle)
@@ -109,7 +110,10 @@ struct TransactionView: View {
                     }
                     .shadow(color: Color(hex: "BABABA"), radius: 3)
                     .onTapGesture {
-                        
+                        if (newOrder.petName.isEmpty || newOrder.purchase.isEmpty || newOrder.petType.isEmpty || newOrder.startDate.isEmpty) {
+                            isError = true
+                        } else {
+                        }
                     }
             }
             .padding(.horizontal, 2)
@@ -120,6 +124,6 @@ struct TransactionView: View {
 
 struct TransactionView_Previews: PreviewProvider {
     static var previews: some View {
-        TransactionView()
+        TransactionView(petHotel: PetHotel.sampleHotel)
     }
 }

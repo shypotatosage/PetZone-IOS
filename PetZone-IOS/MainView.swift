@@ -19,7 +19,7 @@ struct MainView: View {
                 } else if self.selected == 1 {
                     OrderListView()
                 } else {
-                    EditProfileView()
+                    HomeView()
                 }
                 
             }

@@ -24,4 +24,8 @@ class OrderViewModel: ObservableObject {
     init(){
         orders = Order.sampleOrderList
     }
+    
+    func addOrder(newOrder: Order) {
+        orders.append(newOrder)
+    }
 }
