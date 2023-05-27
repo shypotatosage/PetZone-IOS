@@ -15,11 +15,11 @@ struct MainView: View {
         ZStack(alignment: .bottom) {
             VStack {
                 if self.selected == 0 {
-                    HomeView()
+                    HomeView(selected: $selected)
                 } else if self.selected == 1 {
                     OrderListView()
                 } else {
-                    EditProfileView()
+                    ProfileView()
                 }
                 
             }

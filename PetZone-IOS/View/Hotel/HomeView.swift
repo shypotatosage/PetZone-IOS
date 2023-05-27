@@ -11,6 +11,8 @@ struct HomeView: View {
     @StateObject var hotelViewModel = HotelViewModel()
     @State private var searchText = ""
     
+    @Binding public var selected: Int
+    
     var body: some View {
         GeometryReader { geo in
             NavigationStack {
@@ -22,10 +24,13 @@ struct HomeView: View {
                                     .customFont(.largeTitle)
                                     .foregroundColor(Color(hex: "EF233C"))
                                 Spacer()
-                                Image("profilepict")
-                                    .resizable()
-                                    .frame(width: 50, height: 50)
-                                    .cornerRadius(1000)
+                                Button(action: {selected = 2}){
+                                    Image("profilepict")
+                                        .resizable()
+                                        .frame(width: 50, height: 50)
+                                        .cornerRadius(1000)
+                                }
+                                
                             }
                             .padding()
                         }
@@ -53,7 +58,6 @@ struct HomeView: View {
                         }
                         .listRowSeparator(.hidden)
                     }
-                    
                     Spacer(minLength: 60)
                 }
                 .listStyle(PlainListStyle())
@@ -65,6 +69,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(selected: .constant(0))
     }
 }

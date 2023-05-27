@@ -73,6 +73,8 @@
 		068CC7862A1C53D700099235 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068CC7842A1C53D700099235 /* OrderViewModel.swift */; };
 		06EF77012A1E1C450085A50F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EF77002A1E1C450085A50F /* SplashView.swift */; };
 		06EF77022A1E1CD40085A50F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EF77002A1E1C450085A50F /* SplashView.swift */; };
+		793E33252A22595600A2DBD7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E33242A22595600A2DBD7 /* ProfileView.swift */; };
+		793E33272A2261B100A2DBD7 /* ProfileDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E33262A2261B100A2DBD7 /* ProfileDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,8 @@
 		0680A4272A1F450B009535A1 /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
 		068CC7842A1C53D700099235 /* OrderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		06EF77002A1E1C450085A50F /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		793E33242A22595600A2DBD7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		793E33262A2261B100A2DBD7 /* ProfileDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +303,7 @@
 				0462257E2A1B240F00B610AD /* DefaultButton.swift */,
 				0462257F2A1B240F00B610AD /* Color.swift */,
 				063264642A1E57780040EE6C /* Format.swift */,
+				793E33262A2261B100A2DBD7 /* ProfileDetail.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 		046225852A1B242700B610AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				793E33232A22593400A2DBD7 /* Profile */,
 				06EF76FF2A1E1C450085A50F /* Splash */,
 				064A37A22A1B5A0C00FEF914 /* Order */,
 				046225862A1B242700B610AD /* EditProfile */,
@@ -395,6 +401,14 @@
 				06EF77002A1E1C450085A50F /* SplashView.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		793E33232A22593400A2DBD7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				793E33242A22595600A2DBD7 /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -611,7 +625,9 @@
 				0462254C2A1B22F800B610AD /* Persistence.swift in Sources */,
 				046225452A1B22F700B610AD /* ContentView.swift in Sources */,
 				046225432A1B22F700B610AD /* PetZone_IOSApp.swift in Sources */,
+				793E33272A2261B100A2DBD7 /* ProfileDetail.swift in Sources */,
 				0462259A2A1B245800B610AD /* User.swift in Sources */,
+				793E33252A22595600A2DBD7 /* ProfileView.swift in Sources */,
 				046225902A1B242700B610AD /* TransactionView.swift in Sources */,
 				046225802A1B240F00B610AD /* OvalTextFieldStyle.swift in Sources */,
 				0462254F2A1B22F800B610AD /* PetZone_IOS.xcdatamodeld in Sources */,
