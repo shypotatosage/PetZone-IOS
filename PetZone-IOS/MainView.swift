@@ -24,6 +24,7 @@ struct MainView: View {
                         .environmentObject(orderViewModel)
                 } else {
                     HomeView()
+                        .environmentObject(orderViewModel)
                 }
             }
             .edgesIgnoringSafeArea(.all)
