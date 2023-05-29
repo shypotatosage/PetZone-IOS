@@ -40,7 +40,7 @@ struct TransactionView: View {
                         .padding(.leading, 2)
                     TextField("Pet Name", text: $newOrder.petName)
                         .customFont(.body)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                 }
                 .padding(.horizontal)
                 
@@ -51,7 +51,7 @@ struct TransactionView: View {
                         .padding(.leading, 2)
                     TextField("Pet Type", text: $newOrder.petType)
                     .customFont(.body)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                 }
                 .padding(.horizontal)
                 .padding(.top, 8)
