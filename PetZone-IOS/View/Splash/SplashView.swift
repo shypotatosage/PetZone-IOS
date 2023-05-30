@@ -22,7 +22,7 @@ struct SplashView: View {
             else{
                 VStack{
                     Rectangle()
-                        .foregroundColor(Color.white)
+                        .foregroundColor(Color.clear)
                         .frame(height: 70)
                     Image("Logo")
                         .resizable()

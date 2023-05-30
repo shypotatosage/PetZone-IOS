@@ -26,9 +26,14 @@ struct MainView: View {
                         .environmentObject(orderViewModel)
                 } else {
 
+
                     ProfileView()
 
                     
+
+
+                    EditProfileView()
+                        .environmentObject(orderViewModel)
 
                 }
             }

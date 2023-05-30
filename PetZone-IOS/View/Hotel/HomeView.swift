@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var hotelViewModel = HotelViewModel()
     @State private var searchText = ""
+
     
 //<<<<<<< HEAD
     @Binding public var selected: Int
@@ -17,6 +18,16 @@ struct HomeView: View {
     @EnvironmentObject var orderViewModel: OrderViewModel
 //>>>>>>> main
     
+
+    @State private var datestart = Date()
+    @State private var dateend = Date()
+    
+    @State private var date = Date()
+    @State private var text = ""
+    var placeholder = "Select Price Range"
+    var dropDownList = ["None","10.000-50.000", "50.000-100.000", "100.000-200.000", "200.000-500.000"]
+    @State var value = ""
+
     var body: some View {
         GeometryReader { geo in
             NavigationStack {
@@ -47,8 +58,89 @@ struct HomeView: View {
                             .padding(.vertical)
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
+                        HStack{
+                            DatePicker(
+                                "Start Date",
+                                selection: $datestart,
+                                in: Date.now...,
+                                displayedComponents: [.date]
+                            ).padding(.horizontal)
+                            .padding(.bottom)
+                            .listRowSeparator(.hidden)
+                            .listRowInsets(EdgeInsets())
+                    }.padding(.horizontal)
+                        .padding(.bottom)
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(EdgeInsets())
+                        HStack{
+                      
+                        DatePicker(
+                            "End Date",
+                            selection: $dateend,
+                            in: datestart...,
+                            displayedComponents: [.date]
+                        ).padding(.horizontal)
+                                .padding(.bottom)
+                                .listRowSeparator(.hidden)
+                            .listRowInsets(EdgeInsets())
+                   
+                 
+                    }.padding(.horizontal)
+                        .padding(.bottom)
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(EdgeInsets())
+                        HStack{
+                            Text("Price Range")
+                            Menu {
+                                ForEach(dropDownList, id: \.self){ client in
+                                    Button(client) {
+                                        self.value = client
+                                       
+                                        if(self.value == "None"){
+                                            hotelViewModel.minimumPrice=0}
+                                        else if(self.value == "10.000-50.000"){
+                                            hotelViewModel.minimumPrice = 10000
+                                            hotelViewModel.maximumPrice = 50000
+                                        }
+                                        else if(self.value == "50.000-100.000"){
+                                            hotelViewModel.minimumPrice = 50000
+                                            hotelViewModel.maximumPrice = 100000
+                                        }
+                                        else if(self.value == "100.000-200.000"){
+                                            hotelViewModel.minimumPrice = 100000
+                                            hotelViewModel.maximumPrice = 200000
+                                        }
+                                        else if(self.value == "200.000-500.000"){
+                                            hotelViewModel.minimumPrice = 200000
+                                            hotelViewModel.maximumPrice = 500000
+                                        }
+                                        else{
+                                            hotelViewModel.minimumPrice=0
+                                        }
+                                    }
+                                }
+                                 } label: {
+                                     VStack(spacing: 5){
+                                         HStack{
+                                             Text(value.isEmpty ? placeholder : value)
+                                                 .foregroundColor(value.isEmpty ? .gray : .black)
+                                             Spacer()
+                                             Image(systemName: "chevron.down")
+                                                 .foregroundColor(Color(hex: "EF233C"))
+                                             .customFont(.subheadline)                                         }
+                                         .padding(.horizontal)
+                                         Rectangle()
+                                             .fill(Color(hex: "EF233C"))
+                                             .frame(height: 2)
+                                     }
+                                 }
+                           }.padding(.horizontal)
+                            .padding(.bottom)
+                            .padding()
+                            .listRowSeparator(.hidden)
+                            .listRowInsets(EdgeInsets())
                         
-                        ForEach(hotelViewModel.filteredPetHotels) { hotel in
+                        ForEach(hotelViewModel.rangePetHotels) { hotel in
                             ZStack {
                                 NavigationLink {
                                     HotelDetailView(choosenHotel: hotel)
@@ -63,6 +155,7 @@ struct HomeView: View {
                             }
                         }
                         .listRowSeparator(.hidden)
+                        
                         
                         Spacer(minLength: 72)
                     }

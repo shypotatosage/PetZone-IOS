@@ -9,13 +9,16 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var hotelViewModel = HotelViewModel()
-    @State private var date = Date()
+    @State private var datestart = Date()
+    @State private var dateend = Date()
     @State private var text = " "
     var twoColumnGrid = [GridItem(.flexible()),GridItem(.flexible())]
     var placeholder = "Select Price Range"
     var dropDownList = ["none","10.000-50.000", "50.000-100.000", "100.000-200.000", "200.000-500.000"]
     @State var value = ""
     @State private var searchText = ""
+    
+    @EnvironmentObject var orderViewModel: OrderViewModel
     
     var body: some View {
         GeometryReader { geo in
@@ -47,16 +50,18 @@ struct HomeView: View {
                         HStack{
                             DatePicker(
                                 "Start Date",
-                                selection: $date,
-                                displayedComponents: [.date, .hourAndMinute]
+                                selection: $datestart,
+                                in: Date.now...,
+                                displayedComponents: [.date]
                             ).padding(.horizontal)
                                 .padding(.bottom)
                                 .listRowSeparator(.hidden)
                                 .listRowInsets(EdgeInsets())
                             DatePicker(
                                 "End Date",
-                                selection: $date,
-                                displayedComponents: [.date, .hourAndMinute]
+                                selection: $dateend,
+                                in: datestart...,
+                                displayedComponents: [.date]
                             ).padding(.horizontal)
                                 .padding(.bottom)
                                 .listRowSeparator(.hidden)
@@ -68,13 +73,26 @@ struct HomeView: View {
                                     ForEach(dropDownList, id: \.self){ client in
                                         Button(client) {
                                             self.value = client
-                                            if(self.value == "none"){
-                                                hotelViewModel.searchText=""}
+                                            if(self.value == "None"){
+                                                hotelViewModel.minimumPrice=0}
                                             else if(self.value == "10.000-50.000"){
-                                                hotelViewModel.searchText="Pet zone"
+                                                hotelViewModel.minimumPrice = 10000
+                                                hotelViewModel.maximumPrice = 50000
                                             }
                                             else if(self.value == "50.000-100.000"){
-                                                hotelViewModel.searchText="the paws"
+                                                hotelViewModel.minimumPrice = 50000
+                                                hotelViewModel.maximumPrice = 100000
+                                            }
+                                            else if(self.value == "100.000-200.000"){
+                                                hotelViewModel.minimumPrice = 100000
+                                                hotelViewModel.maximumPrice = 200000
+                                            }
+                                            else if(self.value == "200.000-500.000"){
+                                                hotelViewModel.minimumPrice = 200000
+                                                hotelViewModel.maximumPrice = 500000
+                                            }
+                                            else{
+                                                hotelViewModel.minimumPrice=0
                                             }
                                         }
                                     }
@@ -109,7 +127,7 @@ struct HomeView: View {
                             .padding(.bottom)
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
-                        ForEach(hotelViewModel.filteredPetHotels) { hotel in
+                        ForEach(hotelViewModel.rangePetHotels) { hotel in
                             ZStack {
                                 NavigationLink {
                                     HotelDetailView(choosenHotel: hotel)

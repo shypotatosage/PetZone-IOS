@@ -1,8 +1,8 @@
 //
 //  TransactionView.swift
-//  PetZone
+//  PetZone-MacOS
 //
-//  Created by MacBook Pro on 21/05/23.
+//  Created by MacBook Pro on 23/05/23.
 //
 
 import SwiftUI
@@ -11,6 +11,7 @@ struct TransactionView: View {
     var petHotel: PetHotel
     @State private var newOrder = Order.emptyOrder
     @State var isError = false
+    
     @EnvironmentObject var orderViewModel: OrderViewModel
     
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
@@ -29,6 +30,7 @@ struct TransactionView: View {
                 .padding(.top, 8)
             Text(petHotel.address)
                 .customFont(.subheadline3)
+                .padding(.top, 8)
             Text(petHotel.phone_number)
                 .customFont(.subheadline3)
             HStack{
@@ -44,6 +46,15 @@ struct TransactionView: View {
                         .padding(.leading, 2)
                     TextField("Pet Name", text: $newOrder.petName)
                         .customFont(.body)
+                        .textFieldStyle(.plain)
+                        .padding(7)
+                        .padding(.horizontal, 2)
+                        .background(Color(NSColor.textBackgroundColor))
+                        .cornerRadius(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color(hex: "d3d3d3"), lineWidth: 1)
+                        )
                     if isError == true && newOrder.petName.isEmpty {
                         Text("Pet Name is required.")
                             .customFont(.footnote)
@@ -52,7 +63,6 @@ struct TransactionView: View {
                             .padding(.leading, 2)
                     }
                 }
-                .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 
                 VStack(spacing: 10) {
@@ -62,6 +72,15 @@ struct TransactionView: View {
                         .padding(.leading, 2)
                     TextField("Pet Type", text: $newOrder.petType)
                         .customFont(.body)
+                        .textFieldStyle(.plain)
+                        .padding(7)
+                        .padding(.horizontal, 2)
+                        .background(Color(NSColor.textBackgroundColor))
+                        .cornerRadius(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color(hex: "d3d3d3"), lineWidth: 1)
+                        )
                     if isError == true && newOrder.petType.isEmpty {
                         Text("Pet Type is required.")
                             .customFont(.footnote)
@@ -70,7 +89,6 @@ struct TransactionView: View {
                             .padding(.leading, 2)
                     }
                 }
-                .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 .padding(.top, 8)
                 
@@ -91,7 +109,6 @@ struct TransactionView: View {
                             .padding(.leading, 2)
                     }
                 }
-                .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 .padding(.top, 8)
                 
@@ -105,11 +122,11 @@ struct TransactionView: View {
                     .padding()
                     .labelsHidden()
                     .onChange(of: newOrder.endDate) { newValue in
+                        //                        newOrder.purchase = Calendar.current.dateComponents([.day], from: newOrder.startDate, to: newValue).day! * petHotel.price
                         let cal = Calendar(identifier: .gregorian)
                         newOrder.purchase = Calendar.current.dateComponents([.day], from: cal.startOfDay(for: newOrder.startDate), to: newValue).day! * petHotel.price
                     }
                 }
-                .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 .padding(.top, 8)
                 
@@ -120,34 +137,41 @@ struct TransactionView: View {
                         .padding(.leading, 2)
                     TextField("0", value: $newOrder.purchase, formatter: NumberFormatter())
                         .customFont(.body)
+                        .textFieldStyle(.plain)
+                        .padding(7)
+                        .padding(.horizontal, 2)
+                        .background(Color(NSColor.textBackgroundColor))
+                        .cornerRadius(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color(hex: "d3d3d3"), lineWidth: 1)
+                        )
                         .disabled(true)
                 }
-                .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 .padding(.bottom, 28)
                 
-                Button {
-                    if (newOrder.petName.isEmpty || newOrder.petType.isEmpty || newOrder.startDate >= newOrder.endDate) {
-                        isError = true
-                    } else {
-                        orderViewModel.addOrder(newOrder: newOrder)
-                        
-                        presentationMode.wrappedValue.dismiss()
+                Text("Order")
+                    .customFont(.subheadline)
+                    .foregroundColor(.white)
+                    .padding([.horizontal], 30)
+                    .padding([.vertical], 10)
+                    .background(Color(hex: "EF233D"))
+                    .cornerRadius(30)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 30)
+                            .stroke(Color(hex: "E91732"), lineWidth: 1)
                     }
-                } label: {
-                    Text("Order")
-                        .customFont(.subheadline)
-                        .foregroundColor(.white)
-                        .padding([.horizontal], 30)
-                        .padding([.vertical], 10)
-                        .background(Color(hex: "EF233D"))
-                        .cornerRadius(30)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 30)
-                                .stroke(Color(hex: "E91732"), lineWidth: 1)
+                    .shadow(color: Color(hex: "BABABA"), radius: 3)
+                    .onTapGesture {
+                        if (newOrder.petName.isEmpty || newOrder.petType.isEmpty || newOrder.startDate >= newOrder.endDate) {
+                            isError = true
+                        } else {
+                            orderViewModel.addOrder(newOrder: newOrder)
+                            
+                            presentationMode.wrappedValue.dismiss()
                         }
-                        .shadow(color: Color(hex: "BABABA"), radius: 3)
-                }
+                    }
                 
                 Spacer(minLength: 72)
             }

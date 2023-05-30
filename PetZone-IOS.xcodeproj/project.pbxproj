@@ -187,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				067EC2E62A1F2BF600D69773 /* Order */,
-				0465DC202A1CA6E9002FDCAC /* Transaction */,
 				0465DC1F2A1CA1A2002FDCAC /* Info.plist */,
 				0465DC1E2A1CA13A002FDCAC /* Home */,
 				040855112A1C43CC00595321 /* Hotel */,
@@ -357,14 +356,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		0465DC202A1CA6E9002FDCAC /* Transaction */ = {
-			isa = PBXGroup;
-			children = (
-				0465DC212A1CA6F8002FDCAC /* TransactionView.swift */,
-			);
-			path = Transaction;
-			sourceTree = "<group>";
-		};
 		064A37A22A1B5A0C00FEF914 /* Order */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +371,7 @@
 		067EC2E62A1F2BF600D69773 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				0465DC212A1CA6F8002FDCAC /* TransactionView.swift */,
 				067EC2E72A1F2C2C00D69773 /* OrderCardView.swift */,
 				0680A4252A1F44A0009535A1 /* OrderListView.swift */,
 				0680A4272A1F450B009535A1 /* OrderDetailView.swift */,
@@ -484,7 +476,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					040854FF2A1C430800595321 = {
 						CreatedOnToolsVersion = 14.3;
@@ -676,6 +668,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"PetZone-MacOS/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -706,6 +699,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"PetZone-MacOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 5H7J7YUY92;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -849,7 +843,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PetZone-IOS/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7573MGT656;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PetZone-IOS/Info.plist";
@@ -863,7 +857,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "petzone.PetZone-IOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "petzone.PetZone-IOS2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -879,7 +873,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PetZone-IOS/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7573MGT656;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PetZone-IOS/Info.plist";
@@ -893,7 +887,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "petzone.PetZone-IOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "petzone.PetZone-IOS2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
