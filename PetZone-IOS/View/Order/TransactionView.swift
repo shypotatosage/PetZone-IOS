@@ -162,9 +162,6 @@ struct TransactionView: View {
             newOrder.purchase = petHotel.price
         }
     }
-    func daysBetween(_ start: Date, and end: Date) -> Int {
-            return Calendar.current.dateComponents([.day], from: start, to: end).day!
-        }
 }
 
 struct TransactionView_Previews: PreviewProvider {

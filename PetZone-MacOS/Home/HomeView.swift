@@ -18,6 +18,8 @@ struct HomeView: View {
     @State var value = ""
     @State private var searchText = ""
     
+    @EnvironmentObject var orderViewModel: OrderViewModel
+    
     var body: some View {
         GeometryReader { geo in
             NavigationStack {

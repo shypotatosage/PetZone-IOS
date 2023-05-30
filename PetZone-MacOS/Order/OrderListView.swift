@@ -27,11 +27,13 @@ struct OrderListView: View {
                         .padding(.horizontal)
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets())
+                        
                         SearchBar(text: $orderViewModel.searchText)
                             .padding(.horizontal)
                             .padding(.bottom)
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
+                        
                         ForEach(orderViewModel.filteredOrders) { order in
                             ZStack {
                                 NavigationLink {
@@ -51,7 +53,6 @@ struct OrderListView: View {
                     .listStyle(PlainListStyle())
                 }
             }
-            .listStyle(PlainListStyle())
         }
     }
 }
