@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    
+    @StateObject var orderViewModel = OrderViewModel()
     var body: some View {
         NavigationView {
             List {
@@ -31,7 +31,7 @@ struct MainView: View {
                 }
                 .padding(.vertical, 1)
                 .padding(.leading, 20)
-                NavigationLink(destination: OrderListView()) {
+                NavigationLink(destination: OrderListView() .environmentObject(orderViewModel)) {
                     HStack(alignment: .center) {
                         VStack {
                             Image(systemName: "list.bullet.clipboard")

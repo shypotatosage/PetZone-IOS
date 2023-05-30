@@ -11,7 +11,11 @@ struct HomeView: View {
     @StateObject var hotelViewModel = HotelViewModel()
     @State private var searchText = ""
     
+//<<<<<<< HEAD
     @Binding public var selected: Int
+//=======
+    @EnvironmentObject var orderViewModel: OrderViewModel
+//>>>>>>> main
     
     var body: some View {
         GeometryReader { geo in
@@ -40,13 +44,15 @@ struct HomeView: View {
                         
                         SearchBar(text: $hotelViewModel.searchText)
                             .padding(.horizontal)
-                            .padding(.bottom)
+                            .padding(.vertical)
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
+                        
                         ForEach(hotelViewModel.filteredPetHotels) { hotel in
                             ZStack {
                                 NavigationLink {
                                     HotelDetailView(choosenHotel: hotel)
+                                        .environmentObject(orderViewModel)
                                 } label: {
                                     EmptyView()
                                 }
@@ -57,8 +63,13 @@ struct HomeView: View {
                             }
                         }
                         .listRowSeparator(.hidden)
+                        
+                        Spacer(minLength: 72)
                     }
+//<<<<<<< HEAD
                     Spacer(minLength: 60)
+//=======
+//>>>>>>> main
                 }
                 .listStyle(PlainListStyle())
             }
@@ -69,6 +80,11 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
+//<<<<<<< HEAD
+       // HomeView(selected: .constant(0))
+//=======
         HomeView(selected: .constant(0))
+            .environmentObject(OrderViewModel())
+//>>>>>>> main
     }
 }

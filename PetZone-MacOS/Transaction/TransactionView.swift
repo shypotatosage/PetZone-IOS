@@ -40,9 +40,8 @@ struct TransactionView: View {
                         .padding(.leading, 2)
                     TextField("Pet Name", text: $newOrder.petName)
                         .customFont(.body)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                 }
-//                .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 
                 VStack(spacing: 10) {
@@ -52,7 +51,7 @@ struct TransactionView: View {
                         .padding(.leading, 2)
                     TextField("Pet Type", text: $newOrder.petType)
                     .customFont(.body)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                 }
                 .padding(.horizontal)
                 .padding(.top, 8)
@@ -68,7 +67,6 @@ struct TransactionView: View {
 //                    .padding()
                     .labelsHidden()
                 }
-               // .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 .padding(.top, 8)
                 
@@ -82,7 +80,6 @@ struct TransactionView: View {
 //                    .padding()
                     .labelsHidden()
                 }
-//                .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 
                 VStack(spacing: 10) {
@@ -95,7 +92,6 @@ struct TransactionView: View {
                         .disabled(true)
                      
                 }
-            //    .textFieldStyle(OvalTextFieldStyle())
                 .padding(.horizontal)
                 .padding(.bottom, 28)
                 

@@ -9,23 +9,37 @@ import SwiftUI
 
 struct MainView: View {
     @State var selected = 0
+    @State var isActive = false
+    @StateObject var orderViewModel = OrderViewModel()
     
     var body: some View {
         
         ZStack(alignment: .bottom) {
             VStack {
                 if self.selected == 0 {
-                    HomeView(selected: $selected)
+
+                    HomeView()
+                        .environmentObject(orderViewModel)
+
                 } else if self.selected == 1 {
                     OrderListView()
+                        .environmentObject(orderViewModel)
                 } else {
+
                     ProfileView()
+
+                    
+
                 }
-                
             }
             .edgesIgnoringSafeArea(.all)
             
-            FloatingTabBar(selected: self.$selected)
+            FloatingTabBar(selected: self.$selected, rootIsActive: self.$isActive)
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                self.isActive = true
+            }
         }
     }
 }
@@ -38,6 +52,7 @@ struct MainView_Previews: PreviewProvider {
 
 struct FloatingTabBar: View {
     @Binding var selected: Int
+    @Binding var rootIsActive: Bool
     
     var body: some View {
         HStack {
@@ -45,6 +60,7 @@ struct FloatingTabBar: View {
             
             HStack{
                 Button(action: {
+                    self.rootIsActive.toggle()
                     self.selected = 0
                 }) {
                     Image(systemName: "pawprint")
@@ -59,6 +75,7 @@ struct FloatingTabBar: View {
                 Spacer(minLength: 15)
                 
                 Button(action: {
+                    self.rootIsActive.toggle()
                     self.selected = 1
                 }) {
                     Image(systemName: "list.bullet.clipboard")
@@ -73,6 +90,7 @@ struct FloatingTabBar: View {
                 Spacer(minLength: 15)
                 
                 Button(action: {
+                    self.rootIsActive.toggle()
                     self.selected = 2
                 }) {
                     Image(systemName: "person")

@@ -315,7 +315,6 @@
 				06EF76FF2A1E1C450085A50F /* Splash */,
 				064A37A22A1B5A0C00FEF914 /* Order */,
 				046225862A1B242700B610AD /* EditProfile */,
-				046225882A1B242700B610AD /* Transaction */,
 				0462258D2A1B242700B610AD /* Hotel */,
 			);
 			path = View;
@@ -327,14 +326,6 @@
 				046225872A1B242700B610AD /* EditProfileView.swift */,
 			);
 			path = EditProfile;
-			sourceTree = "<group>";
-		};
-		046225882A1B242700B610AD /* Transaction */ = {
-			isa = PBXGroup;
-			children = (
-				046225892A1B242700B610AD /* TransactionView.swift */,
-			);
-			path = Transaction;
 			sourceTree = "<group>";
 		};
 		0462258D2A1B242700B610AD /* Hotel */ = {
@@ -381,6 +372,7 @@
 				064A37A32A1B5A0C00FEF914 /* OrderListView.swift */,
 				064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */,
 				064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */,
+				046225892A1B242700B610AD /* TransactionView.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";

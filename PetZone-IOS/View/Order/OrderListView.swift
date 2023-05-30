@@ -9,7 +9,7 @@ import SwiftUI
 
 //untuk tampilan order list
 struct OrderListView: View {
-    @StateObject var orderViewModel = OrderViewModel()
+    @EnvironmentObject var orderViewModel: OrderViewModel
     
     var body: some View {
         GeometryReader { geo in
@@ -60,5 +60,6 @@ struct OrderListView: View {
 struct OrderListView_Previews: PreviewProvider {
     static var previews: some View {
         OrderListView()
+            .environmentObject(OrderViewModel())
     }
 }

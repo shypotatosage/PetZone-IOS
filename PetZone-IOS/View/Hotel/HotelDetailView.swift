@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HotelDetailView: View {
     @State var choosenHotel : PetHotel
+    
+    @EnvironmentObject var orderViewModel: OrderViewModel
 
     var body: some View {
         NavigationStack {
@@ -87,7 +89,10 @@ struct HotelDetailView: View {
                             alignment:  .topLeading)
                         .customFont(.body)
 
-                    NavigationLink (destination: TransactionView()){
+                    NavigationLink (
+                        destination: TransactionView(petHotel: choosenHotel)
+                            .environmentObject(orderViewModel)
+                    ){
                         Text("Order")
                             .customFont(.subheadline)
                             .foregroundColor(.white)
@@ -111,5 +116,6 @@ struct HotelDetailView: View {
 struct HotelDetailView_Previews: PreviewProvider {
     static var previews: some View {
         HotelDetailView(choosenHotel: PetHotel.sampleHotel)
+            .environmentObject(OrderViewModel())
     }
 }
