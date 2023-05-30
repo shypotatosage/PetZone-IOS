@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var hotelViewModel = HotelViewModel()
-    @State private var date = Date()
+    @State private var datestart = Date()
+    @State private var dateend = Date()
     @State private var text = " "
     var twoColumnGrid = [GridItem(.flexible()),GridItem(.flexible())]
     var placeholder = "Select Price Range"
@@ -47,16 +48,18 @@ struct HomeView: View {
                         HStack{
                             DatePicker(
                                 "Start Date",
-                                selection: $date,
-                                displayedComponents: [.date, .hourAndMinute]
+                                selection: $datestart,
+                                in: Date.now...,
+                                displayedComponents: [.date]
                             ).padding(.horizontal)
                                 .padding(.bottom)
                                 .listRowSeparator(.hidden)
                                 .listRowInsets(EdgeInsets())
                             DatePicker(
                                 "End Date",
-                                selection: $date,
-                                displayedComponents: [.date, .hourAndMinute]
+                                selection: $dateend,
+                                in: datestart...,
+                                displayedComponents: [.date]
                             ).padding(.horizontal)
                                 .padding(.bottom)
                                 .listRowSeparator(.hidden)

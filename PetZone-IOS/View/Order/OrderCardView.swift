@@ -18,7 +18,8 @@ struct OrderCardView: View {
                 Image(order.petHotel.hotel_pic)
                     .resizable()
                     .scaledToFill()
-                    .frame(maxWidth: width/6)
+                if
+                    .frame(maxWidth: width/4)
                     .clipped()
                     .cornerRadius(20)
             }

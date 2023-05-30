@@ -49,7 +49,7 @@ extension PetHotel{
     static let sampleHotel: PetHotel =
     PetHotel(
         name: "Pet Zone",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        description: "Welcome to Pet Zone, the ultimate destination for pet owners seeking a comfortable, safe, and fun-filled stay for their furry friends. Our pet hotel is designed with your pet's needs in mind, ensuring that they receive the highest level of care and attention during their stay.",
 //        coordinates: "Surabaya, Blue House Wp 2 No 26",
         city: "Surabaya",
         address: "Jalan WP 2 No 26",
@@ -58,73 +58,49 @@ extension PetHotel{
         closing_hour: "22.00",
         hotel_pic: "dummypicthotel",
         price: 80000,
-        user : User(
-            name: "Micheila Jiemesha",
-            email: "mjiemesha@gmail.com",
-            address: "Surabaya, Blue House Wp 2 No 26",
-            phone_number: "081212341234",
-            profile_pic: ""
-            )
+        user : User.sampleUser
         )
     
     static let sampleHotelList: [PetHotel] =
     [
         PetHotel(
             name: "K9 Resorts",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            description: "Welcome to K9 Resorts, the ultimate luxury pet hotel for discerning pet owners who want nothing but the best for their furry friends. Our pet hotel is designed to offer the highest level of comfort, safety, and fun, ensuring that your pets receive a truly unforgettable experience.",
     //        coordinates: "Surabaya, Blue House Wp 2 No 26",
             city: "Jakarta",
-            address: "Jalan Abdul Muis No 8",
+            address: "Jalan Kemang Selatan VIII No. 23",
             phone_number: "082192243200",
             opening_hour: "06.00",
             closing_hour: "20.00",
             hotel_pic: "dummypicthotel1",
             price: 120000,
-            user : User(
-                name: "Marsha Alexis Likorawung",
-                email: "mjiemesha@gmail.com",
-                address: "Surabaya, Blue House Wp 2 No 26",
-                phone_number: "081212341234",
-                profile_pic: ""
-                )
+            user : User.sampleUser
         ),
         PetHotel(
             name: "Pet Zone",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            description: "Welcome to Pet Zone, the ultimate destination for pet owners seeking a comfortable, safe, and fun-filled stay for their furry friends. Our pet hotel is designed with your pet's needs in mind, ensuring that they receive the highest level of care and attention during their stay.",
     //        coordinates: "Surabaya, Blue House Wp 2 No 26",
             city: "Surabaya",
-            address: "Jalan WP 2 No 26",
+            address: "Jalan Kebon Jeruk Raya No. 99",
             phone_number: "08118732379",
             opening_hour: "10.00",
             closing_hour: "22.00",
             hotel_pic: "dummypicthotel",
             price: 80000,
-            user : User(
-                name: "Micheila Jiemesha",
-                email: "mjiemesha@gmail.com",
-                address: "Surabaya, Blue House Wp 2 No 26",
-                phone_number: "081212341234",
-                profile_pic: ""
-                )
+            user : User.sampleUser
         ),
         PetHotel(
             name: "The Paws",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            description: "Welcome to The Paws Pet Hotel, where your furry friends can stay in comfort and luxury! Our pet hotel is designed to provide your beloved pets with a safe and comfortable environment while you are away.",
     //        coordinates: "Surabaya, Blue House Wp 2 No 26",
             city: "Makassar",
-            address: "Jalan Gunung Merapi No 76",
+            address: "Jalan Raya Makassar KM 26 No. 17",
             phone_number: "081212341234",
             opening_hour: "12.00",
             closing_hour: "18.00",
             hotel_pic: "dummypethotel2",
             price: 73000,
-            user : User(
-                name: "Micheila Jiemesha",
-                email: "mjiemesha@gmail.com",
-                address: "Surabaya, Blue House Wp 2 No 26",
-                phone_number: "081212341234",
-                profile_pic: ""
-                )
+            user : User.sampleUser
         )
      ]
 }

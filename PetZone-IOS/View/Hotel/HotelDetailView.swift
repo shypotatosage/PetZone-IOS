@@ -28,8 +28,7 @@ struct HotelDetailView: View {
                             .padding(.top)
                             .foregroundColor(Color(hex: "EF233C"))
                         HStack{
-                            Text("Rp.")
-                            Text(String(choosenHotel.price))
+                            Text(NumberFormat(choosenHotel.price))
                         }
                         .customFont(.subheadline)
                         
