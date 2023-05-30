@@ -10,12 +10,13 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var hotelViewModel = HotelViewModel()
     @State private var searchText = ""
-    
+    @State private var datestart = Date()
+    @State private var dateend = Date()
     @EnvironmentObject var orderViewModel: OrderViewModel
     @State private var date = Date()
-    @State private var text = " "
+    @State private var text = ""
     var placeholder = "Select Price Range"
-    var dropDownList = ["none","10.000-50.000", "50.000-100.000", "100.000-200.000", "200.000-500.000"]
+    var dropDownList = ["None","10.000-50.000", "50.000-100.000", "100.000-200.000", "200.000-500.000"]
     @State var value = ""
     var body: some View {
         GeometryReader { geo in
@@ -45,11 +46,12 @@ struct HomeView: View {
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
                         HStack{
-                        DatePicker(
-                            "Start Date",
-                            selection: $date,
-                            displayedComponents: [.date]
-                        ).padding(.horizontal)
+                            DatePicker(
+                                "Start Date",
+                                selection: $datestart,
+                                in: Date.now...,
+                                displayedComponents: [.date]
+                            ).padding(.horizontal)
                             .padding(.bottom)
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
@@ -61,11 +63,12 @@ struct HomeView: View {
                       
                         DatePicker(
                             "End Date",
-                            selection: $date,
+                            selection: $dateend,
+                            in: datestart...,
                             displayedComponents: [.date]
                         ).padding(.horizontal)
-                            .padding(.bottom)
-                            .listRowSeparator(.hidden)
+                                .padding(.bottom)
+                                .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
                    
                  
@@ -79,13 +82,31 @@ struct HomeView: View {
                                 ForEach(dropDownList, id: \.self){ client in
                                     Button(client) {
                                         self.value = client
-                                        if(self.value == "none"){
-                                            hotelViewModel.searchText=""}
+                                       
+                                        if(self.value == "None"){
+                                            hotelViewModel.minimumPrice=0}
                                         else if(self.value == "10.000-50.000"){
-                                            hotelViewModel.searchText="Pet zone"
+                                            hotelViewModel.minimumPrice = 10000
+                                            hotelViewModel.maximumPrice = 50000
+                                            print(hotelViewModel.rangePetHotels)
                                         }
                                         else if(self.value == "50.000-100.000"){
-                                            hotelViewModel.searchText="the paws"
+                                            hotelViewModel.minimumPrice = 50000
+                                            hotelViewModel.maximumPrice = 100000
+                                            print(hotelViewModel.rangePetHotels)
+                                        }
+                                        else if(self.value == "100.000-200.000"){
+                                            hotelViewModel.minimumPrice = 100000
+                                            hotelViewModel.maximumPrice = 200000
+                                            print(hotelViewModel.rangePetHotels)
+                                        }
+                                        else if(self.value == "200.000-500.000"){
+                                            hotelViewModel.minimumPrice = 200000
+                                            hotelViewModel.maximumPrice = 500000
+                                            print(hotelViewModel.rangePetHotels)
+                                        }
+                                        else{
+                                            hotelViewModel.minimumPrice=0
                                         }
                                     }
                                 }
@@ -109,7 +130,8 @@ struct HomeView: View {
                             .padding()
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
-                        ForEach(hotelViewModel.filteredPetHotels) { hotel in
+                        
+                        ForEach(hotelViewModel.rangePetHotels) { hotel in
                             ZStack {
                                 NavigationLink {
                                     HotelDetailView(choosenHotel: hotel)
@@ -124,6 +146,7 @@ struct HomeView: View {
                             }
                         }
                         .listRowSeparator(.hidden)
+                        
                         
                         Spacer(minLength: 72)
                     }

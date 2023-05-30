@@ -11,7 +11,6 @@ struct TransactionView: View {
     var petHotel: PetHotel
     @State private var newOrder = Order.emptyOrder
     @State var isError = false
-    
     @EnvironmentObject var orderViewModel: OrderViewModel
     
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
