@@ -15,13 +15,23 @@ struct OrderCardView: View {
     var body: some View {
         HStack {
             VStack {
-                Image(order.petHotel.hotel_pic)
-                    .resizable()
-                    .scaledToFill()
-                if
-                    .frame(maxWidth: width/4)
-                    .clipped()
-                    .cornerRadius(20)
+                if #available(iOS 13.0, *) {
+                    Image(order.petHotel.hotel_pic)
+                        .resizable()
+                        .scaledToFill()
+                        .clipped()
+                        .frame(maxWidth: width/4)
+                        .clipped()
+                        .cornerRadius(17)
+                }else{
+                    Image(order.petHotel.hotel_pic)
+                        .resizable()
+                        .scaledToFill()
+                        .clipped()
+                        .frame(maxWidth: width/6)
+                        .clipped()
+                        .cornerRadius(15)
+                    }
             }
             .frame(alignment: .leading)
             VStack {
@@ -74,3 +84,4 @@ struct OrderCardView_Previews: PreviewProvider {
             .frame(height: 100)
     }
 }
+
