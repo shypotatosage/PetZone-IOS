@@ -62,7 +62,6 @@ struct MainView: View {
                 .padding(.vertical, 1)
                 .padding(.leading, 20)
             }
-//            .listStyle(SidebarListStyle())
             .background(Color(hex: "EF233C"))
             
             HomeView()

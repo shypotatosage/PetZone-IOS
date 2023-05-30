@@ -81,7 +81,7 @@ struct HotelDetailView: View {
                                 .customFont(.body)
                         }
                         
-                        NavigationLink (destination: TransactionView()){
+                        NavigationLink (destination: TransactionView(petHotel: choosenHotel)){
                             Text("Order")
                                 .customFont(.subheadline)
                                 .foregroundColor(.white)
