@@ -13,9 +13,8 @@ struct EditProfileView: View {
     
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
-    
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView{
                 VStack{
                     Image("profilepict")
@@ -33,6 +32,7 @@ struct EditProfileView: View {
                         Image(systemName: "person.fill").foregroundColor(.gray)
                         TextField("Enter Your Name", text: $newUser.name)
                             .textFieldStyle(RoundedBorderTextFieldStyle()).font(.headline)
+                            .disabled(true)
                     }
                 }
                 .padding(10)
@@ -46,6 +46,7 @@ struct EditProfileView: View {
                         Image(systemName: "envelope.fill").foregroundColor(.gray)
                         TextField("Enter Your Name", text: $newUser.email)
                             .textFieldStyle(RoundedBorderTextFieldStyle()).font(.headline)
+                            .disabled(true)
                     }
                 }
                 .padding(10)
@@ -59,13 +60,27 @@ struct EditProfileView: View {
                         Image(systemName: "phone.fill").foregroundColor(.gray)
                         TextField("Enter Your Name", text: $newUser.phone_number)
                             .textFieldStyle(RoundedBorderTextFieldStyle()).font(.headline)
+                            .disabled(true)
                     }
                 }
                 .padding(10)
-                Button("Logout"){
+                NavigationLink (
+                    destination: EmptyView()
+                ){
+                    Text("Log Out")
+                        .customFont(.subheadline)
+                        .foregroundColor(.white)
+                        .padding([.horizontal], 30)
+                        .padding([.vertical], 10)
+                        .background(Color(hex: "EF233D"))
+                        .cornerRadius(30)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 30)
+                                .stroke(Color(hex: "E91732"), lineWidth: 1)
+                        }
+                        .shadow(color: Color(hex: "BABABA"), radius: 3)
                 }
-                .buttonStyle(DefaultButton())
-                .bold()
+
             }
             .padding(20)
                 .navigationTitle("Profile")

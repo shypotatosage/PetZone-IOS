@@ -23,7 +23,7 @@ struct MainView: View {
                     OrderListView()
                         .environmentObject(orderViewModel)
                 } else {
-                    HomeView()
+                    EditProfileView()
                         .environmentObject(orderViewModel)
                 }
             }

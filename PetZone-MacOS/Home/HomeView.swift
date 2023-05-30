@@ -78,22 +78,18 @@ struct HomeView: View {
                                             else if(self.value == "10.000-50.000"){
                                                 hotelViewModel.minimumPrice = 10000
                                                 hotelViewModel.maximumPrice = 50000
-                                                print(hotelViewModel.rangePetHotels)
                                             }
                                             else if(self.value == "50.000-100.000"){
                                                 hotelViewModel.minimumPrice = 50000
                                                 hotelViewModel.maximumPrice = 100000
-                                                print(hotelViewModel.rangePetHotels)
                                             }
                                             else if(self.value == "100.000-200.000"){
                                                 hotelViewModel.minimumPrice = 100000
                                                 hotelViewModel.maximumPrice = 200000
-                                                print(hotelViewModel.rangePetHotels)
                                             }
                                             else if(self.value == "200.000-500.000"){
                                                 hotelViewModel.minimumPrice = 200000
                                                 hotelViewModel.maximumPrice = 500000
-                                                print(hotelViewModel.rangePetHotels)
                                             }
                                             else{
                                                 hotelViewModel.minimumPrice=0
@@ -131,7 +127,7 @@ struct HomeView: View {
                             .padding(.bottom)
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
-                        ForEach(hotelViewModel.filteredPetHotels) { hotel in
+                        ForEach(hotelViewModel.rangePetHotels) { hotel in
                             ZStack {
                                 NavigationLink {
                                     HotelDetailView(choosenHotel: hotel)
