@@ -55,8 +55,6 @@ struct TransactionView: View {
                             RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color(hex: "d3d3d3"), lineWidth: 1)
                         )
-                    TextField("Pet Name", text: $newOrder.petName)
-                        .customFont(.body)
                     if isError == true && newOrder.petName.isEmpty {
                         Text("Pet Name is required.")
                             .customFont(.footnote)
@@ -74,6 +72,15 @@ struct TransactionView: View {
                         .padding(.leading, 2)
                     TextField("Pet Type", text: $newOrder.petType)
                         .customFont(.body)
+                        .textFieldStyle(.plain)
+                        .padding(7)
+                        .padding(.horizontal, 2)
+                        .background(Color(NSColor.textBackgroundColor))
+                        .cornerRadius(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color(hex: "d3d3d3"), lineWidth: 1)
+                        )
                     if isError == true && newOrder.petType.isEmpty {
                         Text("Pet Type is required.")
                             .customFont(.footnote)
@@ -130,6 +137,15 @@ struct TransactionView: View {
                         .padding(.leading, 2)
                     TextField("0", value: $newOrder.purchase, formatter: NumberFormatter())
                         .customFont(.body)
+                        .textFieldStyle(.plain)
+                        .padding(7)
+                        .padding(.horizontal, 2)
+                        .background(Color(NSColor.textBackgroundColor))
+                        .cornerRadius(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color(hex: "d3d3d3"), lineWidth: 1)
+                        )
                         .disabled(true)
                 }
                 .padding(.horizontal)

@@ -105,7 +105,6 @@ struct TransactionView: View {
                     .padding()
                     .labelsHidden()
                     .onChange(of: newOrder.endDate) { newValue in
-//                        newOrder.purchase = Calendar.current.dateComponents([.day], from: newOrder.startDate, to: newValue).day! * petHotel.price
                         let cal = Calendar(identifier: .gregorian)
                         newOrder.purchase = Calendar.current.dateComponents([.day], from: cal.startOfDay(for: newOrder.startDate), to: newValue).day! * petHotel.price
                     }
