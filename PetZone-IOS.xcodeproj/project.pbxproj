@@ -25,7 +25,6 @@
 		040855202A1C458900595321 /* PetZone_IOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0462254D2A1B22F800B610AD /* PetZone_IOS.xcdatamodeld */; };
 		040855212A1C463400595321 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462254B2A1B22F800B610AD /* Persistence.swift */; };
 		040855222A1C46EE00595321 /* PetZone_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225422A1B22F700B610AD /* PetZone_IOSApp.swift */; };
-		040855272A1C472000595321 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225872A1B242700B610AD /* EditProfileView.swift */; };
 		046225432A1B22F700B610AD /* PetZone_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225422A1B22F700B610AD /* PetZone_IOSApp.swift */; };
 		046225452A1B22F700B610AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225442A1B22F700B610AD /* ContentView.swift */; };
 		046225472A1B22F800B610AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046225462A1B22F800B610AD /* Assets.xcassets */; };
@@ -75,6 +74,9 @@
 		06EF77022A1E1CD40085A50F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EF77002A1E1C450085A50F /* SplashView.swift */; };
 		793E33252A22595600A2DBD7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E33242A22595600A2DBD7 /* ProfileView.swift */; };
 		793E33272A2261B100A2DBD7 /* ProfileDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E33262A2261B100A2DBD7 /* ProfileDetail.swift */; };
+		79491F062A2664E300A20B02 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046225872A1B242700B610AD /* EditProfileView.swift */; };
+		79491F072A26650900A20B02 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E33242A22595600A2DBD7 /* ProfileView.swift */; };
+		79491F082A26651500A20B02 /* ProfileDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E33262A2261B100A2DBD7 /* ProfileDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -564,7 +566,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040855272A1C472000595321 /* EditProfileView.swift in Sources */,
 				0465DC242A1DC4ED002FDCAC /* HotelCardView.swift in Sources */,
 				0680A4282A1F450B009535A1 /* OrderDetailView.swift in Sources */,
 				068CC7862A1C53D700099235 /* OrderViewModel.swift in Sources */,
@@ -578,8 +579,11 @@
 				0465DC1A2A1C5099002FDCAC /* HomeView.swift in Sources */,
 				040855192A1C443600595321 /* DefaultButton.swift in Sources */,
 				0408551C2A1C443600595321 /* OvalTextFieldStyle.swift in Sources */,
+				79491F082A26651500A20B02 /* ProfileDetail.swift in Sources */,
 				040855222A1C46EE00595321 /* PetZone_IOSApp.swift in Sources */,
+				79491F072A26650900A20B02 /* ProfileView.swift in Sources */,
 				0408551A2A1C443600595321 /* Color.swift in Sources */,
+				79491F062A2664E300A20B02 /* EditProfileView.swift in Sources */,
 				040855102A1C43B800595321 /* HotelDetailView.swift in Sources */,
 				0680A4262A1F44A0009535A1 /* OrderListView.swift in Sources */,
 				0408551D2A1C443600595321 /* CustomFont.swift in Sources */,

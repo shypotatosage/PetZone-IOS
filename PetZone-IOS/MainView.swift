@@ -18,7 +18,7 @@ struct MainView: View {
             VStack {
                 if self.selected == 0 {
 
-                    HomeView()
+                    HomeView(selected: .constant(0))
                         .environmentObject(orderViewModel)
 
                 } else if self.selected == 1 {
@@ -32,8 +32,8 @@ struct MainView: View {
                     
 
 
-                    EditProfileView()
-                        .environmentObject(orderViewModel)
+                    //EditProfileView()
+                       // .environmentObject(orderViewModel)
 
                 }
             }

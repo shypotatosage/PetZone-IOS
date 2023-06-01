@@ -11,6 +11,12 @@ struct ProfileDetail: View {
     let icon: String
     let content: String
     
+    #if os(iOS)
+    let inputWidth = UIScreen.main.bounds.size.width > 400.0 ? 400.0 : Double.infinity
+    #elseif os(macOS)
+    let inputWidth = 300.0
+    #endif
+    
     var body: some View {
         HStack {
             Image(systemName: icon)
@@ -28,7 +34,7 @@ struct ProfileDetail: View {
                 )
             )
         )
-        .frame(width: .infinity)
+        .frame(width: inputWidth)
         .padding(.horizontal)
         .padding(.bottom, 40.0)
     }

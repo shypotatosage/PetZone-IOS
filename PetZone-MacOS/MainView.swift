@@ -46,7 +46,7 @@ struct MainView: View {
                 }
                 .padding(.vertical, 1)
                 .padding(.leading, 20)
-                NavigationLink(destination: EditProfileView()) {
+                NavigationLink(destination: ProfileView()) {
                     HStack(alignment: .center) {
                         VStack {
                             Image(systemName: "person")
