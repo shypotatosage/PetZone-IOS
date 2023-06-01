@@ -26,11 +26,10 @@ struct ProfileDetail: View {
         }
         .background(in: RoundedRectangle(cornerRadius: 8).inset(by: -15))
         .backgroundStyle(
-            Color(hex: "F0F0F0")
-            .gradient
+            Color(hex: "FFFFFF")
             .shadow(
                 .drop(
-                    radius: 1, x: 2, y: 2
+                    radius: 2, x: 2, y: 2
                 )
             )
         )

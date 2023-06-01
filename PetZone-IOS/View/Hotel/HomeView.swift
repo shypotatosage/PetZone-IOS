@@ -10,18 +10,10 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var hotelViewModel = HotelViewModel()
     @State private var searchText = ""
-
-    
-//<<<<<<< HEAD
     @Binding public var selected: Int
-//=======
     @EnvironmentObject var orderViewModel: OrderViewModel
-//>>>>>>> main
-    
-
     @State private var datestart = Date()
     @State private var dateend = Date()
-    
     @State private var date = Date()
     @State private var text = ""
     var placeholder = "Select Price Range"
