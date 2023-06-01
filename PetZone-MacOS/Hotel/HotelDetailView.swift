@@ -107,7 +107,7 @@ struct HotelDetailView: View {
                         alignment:  .topLeading)
                 }
             }
-        }
+        }.background(Color.white)
     }
 }
 

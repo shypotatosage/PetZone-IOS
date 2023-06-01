@@ -127,11 +127,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        //<<<<<<< HEAD
-        // HomeView(selected: .constant(0))
-        //=======
         HomeView(selected: .constant(0))
             .environmentObject(OrderViewModel())
-        //>>>>>>> main
     }
 }

@@ -39,7 +39,8 @@ struct ProfileView: View {
                 .padding(.all)
                 #endif
             }
-        }
+        }.foregroundColor(.black)
+            .background(Color.white)
     }
 }
 
@@ -96,19 +97,21 @@ struct ProfileImageView:View{
 
 struct ProfileBodyView:View{
     var body:some View{
-        VStack{
-            ProfileDetail(icon: "person", content: User.sampleUser.name)
-            
-            ProfileDetail(icon: "envelope", content: User.sampleUser.email)
-            
-            ProfileDetail(icon: "phone", content: User.sampleUser.phone_number)
-            
-            Button(action: {exit(0)}){
-                Text("Logout")
-            }
-            .buttonStyle(DefaultButton())
-            .bold()
-        }
+        NavigationStack{
+            VStack{
+                ProfileDetail(icon: "person", content: User.sampleUser.name)
+                
+                ProfileDetail(icon: "envelope", content: User.sampleUser.email)
+                
+                ProfileDetail(icon: "phone", content: User.sampleUser.phone_number)
+                
+                Button(action: {exit(0)}){
+                    Text("Logout")
+                }
+                .buttonStyle(DefaultButton())
+                .bold()
+            }.background(Color.white)
+        }.navigationBarBackButtonHidden(true)
     }
 }
 

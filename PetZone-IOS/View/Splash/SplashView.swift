@@ -16,6 +16,8 @@ struct SplashView: View {
     
     var body: some View {
         ZStack{
+            Color.white
+                .ignoresSafeArea()
             if self.isActive {
                 MainView()
             }

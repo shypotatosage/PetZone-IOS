@@ -104,7 +104,8 @@ struct OrderDetailView: View {
                             alignment:  .topLeading)
                 }  .padding([.bottom], 100)
             }
-        }
+        } .foregroundColor(.black)
+        .background(Color.white)
     }
 }
 

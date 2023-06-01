@@ -183,7 +183,8 @@ struct TransactionView: View {
             newOrder.endDate = Calendar.current.date(byAdding: .day, value: 1, to: newOrder.startDate)!
             newOrder.startDate = Date.now
             newOrder.purchase = petHotel.price
-        }
+        }.foregroundColor(.black)
+            .background(Color.white)
     }
 }
 

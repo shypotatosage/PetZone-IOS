@@ -29,10 +29,14 @@ struct HomeView: View {
                                     .customFont(.largeTitle)
                                     .foregroundColor(Color(hex: "EF233C"))
                                 Spacer()
-                                Image("profilepict")
-                                    .resizable()
-                                    .frame(width: 50, height: 50)
-                                    .cornerRadius(1000)
+                                NavigationLink (destination: ProfileView()){
+                                    Image("profilepict")
+                                        .resizable()
+                                        .frame(width: 50, height: 50)
+                                        .cornerRadius(1000)
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                               
                             }
                             .padding()
                         }
@@ -126,7 +130,7 @@ struct HomeView: View {
                 }
                 .listStyle(PlainListStyle())
             }
-        }
+        }.background(Color.white)
     }
 }
 

@@ -25,16 +25,7 @@ struct MainView: View {
                     OrderListView()
                         .environmentObject(orderViewModel)
                 } else {
-
-
                     ProfileView()
-
-                    
-
-
-                    //EditProfileView()
-                       // .environmentObject(orderViewModel)
-
                 }
             }
             .edgesIgnoringSafeArea(.all)
