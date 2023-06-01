@@ -24,17 +24,8 @@ struct ProfileDetail: View {
             Text(content)
             Spacer()
         }
-        .background(in: RoundedRectangle(cornerRadius: 8).inset(by: -15))
-        .backgroundStyle(
-            Color(hex: "FFFFFF")
-            .shadow(
-                .drop(
-                    radius: 2, x: 2, y: 2
-                )
-            )
-        )
         .frame(maxWidth: inputWidth)
         .padding(.horizontal)
-        .padding(.bottom, 40.0)
+        .padding(.bottom, 20)
     }
 }

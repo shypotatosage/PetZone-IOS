@@ -45,10 +45,11 @@ struct OrderListView: View {
                             }
                             
                         } .listRowSeparator(.hidden)
+                        
+                        Spacer(minLength: 72)
                     }
                     .listStyle(PlainListStyle())
                 }
-                Spacer(minLength: 60)
             }
             .listStyle(PlainListStyle())
         }

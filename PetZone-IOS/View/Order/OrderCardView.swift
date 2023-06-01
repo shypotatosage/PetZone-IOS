@@ -72,6 +72,7 @@ struct OrderCardView: View {
                     y: 5
                 )
         )
+        .padding(.bottom, 10)
     }
 }
 

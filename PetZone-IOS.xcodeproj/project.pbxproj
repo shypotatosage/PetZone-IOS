@@ -190,7 +190,6 @@
 			children = (
 				067EC2E62A1F2BF600D69773 /* Order */,
 				0465DC1F2A1CA1A2002FDCAC /* Info.plist */,
-				0465DC1E2A1CA13A002FDCAC /* Home */,
 				040855112A1C43CC00595321 /* Hotel */,
 				040855042A1C430900595321 /* ContentView.swift */,
 				040855062A1C430A00595321 /* Assets.xcassets */,
@@ -213,6 +212,7 @@
 		040855112A1C43CC00595321 /* Hotel */ = {
 			isa = PBXGroup;
 			children = (
+				0465DC192A1C5099002FDCAC /* HomeView.swift */,
 				0408550F2A1C43B800595321 /* HotelDetailView.swift */,
 			);
 			path = Hotel;
@@ -348,14 +348,6 @@
 				046225972A1B245800B610AD /* User.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		0465DC1E2A1CA13A002FDCAC /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				0465DC192A1C5099002FDCAC /* HomeView.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		064A37A22A1B5A0C00FEF914 /* Order */ = {

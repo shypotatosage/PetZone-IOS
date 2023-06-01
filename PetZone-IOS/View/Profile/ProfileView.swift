@@ -79,6 +79,8 @@ struct ProfileImageView:View{
                 .cornerRadius(1000)
             Image("profilepict")
                 .resizable()
+                .scaledToFill()
+                .clipped()
                 .frame(width: imageHeight, height: imageHeight)
                 .cornerRadius(1000)
         }

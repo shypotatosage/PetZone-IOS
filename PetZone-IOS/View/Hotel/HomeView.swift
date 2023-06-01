@@ -12,14 +12,12 @@ struct HomeView: View {
     @State private var searchText = ""
     @Binding public var selected: Int
     @EnvironmentObject var orderViewModel: OrderViewModel
-    @State private var datestart = Date()
-    @State private var dateend = Date()
     @State private var date = Date()
     @State private var text = ""
     var placeholder = "Select Price Range"
     var dropDownList = ["None","10.000-50.000", "50.000-100.000", "100.000-200.000", "200.000-500.000"]
     @State var value = ""
-
+    
     var body: some View {
         GeometryReader { geo in
             NavigationStack {
@@ -51,43 +49,12 @@ struct HomeView: View {
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets())
                         HStack{
-                            DatePicker(
-                                "Start Date",
-                                selection: $datestart,
-                                in: Date.now...,
-                                displayedComponents: [.date]
-                            ).padding(.horizontal)
-                            .padding(.bottom)
-                            .listRowSeparator(.hidden)
-                            .listRowInsets(EdgeInsets())
-                    }.padding(.horizontal)
-                        .padding(.bottom)
-                        .listRowSeparator(.hidden)
-                        .listRowInsets(EdgeInsets())
-                        HStack{
-                      
-                        DatePicker(
-                            "End Date",
-                            selection: $dateend,
-                            in: datestart...,
-                            displayedComponents: [.date]
-                        ).padding(.horizontal)
-                                .padding(.bottom)
-                                .listRowSeparator(.hidden)
-                            .listRowInsets(EdgeInsets())
-                   
-                 
-                    }.padding(.horizontal)
-                        .padding(.bottom)
-                        .listRowSeparator(.hidden)
-                        .listRowInsets(EdgeInsets())
-                        HStack{
                             Text("Price Range")
                             Menu {
                                 ForEach(dropDownList, id: \.self){ client in
                                     Button(client) {
                                         self.value = client
-                                       
+                                        
                                         if(self.value == "None"){
                                             hotelViewModel.minimumPrice=0}
                                         else if(self.value == "10.000-50.000"){
@@ -111,22 +78,22 @@ struct HomeView: View {
                                         }
                                     }
                                 }
-                                 } label: {
-                                     VStack(spacing: 5){
-                                         HStack{
-                                             Text(value.isEmpty ? placeholder : value)
-                                                 .foregroundColor(value.isEmpty ? .gray : .black)
-                                             Spacer()
-                                             Image(systemName: "chevron.down")
-                                                 .foregroundColor(Color(hex: "EF233C"))
-                                             .customFont(.subheadline)                                         }
-                                         .padding(.horizontal)
-                                         Rectangle()
-                                             .fill(Color(hex: "EF233C"))
-                                             .frame(height: 2)
-                                     }
-                                 }
-                           }.padding(.horizontal)
+                            } label: {
+                                VStack(spacing: 5){
+                                    HStack{
+                                        Text(value.isEmpty ? placeholder : value)
+                                            .foregroundColor(value.isEmpty ? .gray : .black)
+                                        Spacer()
+                                        Image(systemName: "chevron.down")
+                                            .foregroundColor(Color(hex: "EF233C"))
+                                        .customFont(.subheadline)                                         }
+                                    .padding(.horizontal)
+                                    Rectangle()
+                                        .fill(Color(hex: "EF233C"))
+                                        .frame(height: 2)
+                                }
+                            }
+                        }.padding(.horizontal)
                             .padding(.bottom)
                             .padding()
                             .listRowSeparator(.hidden)
@@ -148,13 +115,8 @@ struct HomeView: View {
                         }
                         .listRowSeparator(.hidden)
                         
-                        
                         Spacer(minLength: 72)
                     }
-//<<<<<<< HEAD
-                    Spacer(minLength: 60)
-//=======
-//>>>>>>> main
                 }
                 .listStyle(PlainListStyle())
             }
@@ -165,11 +127,11 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-//<<<<<<< HEAD
-       // HomeView(selected: .constant(0))
-//=======
+        //<<<<<<< HEAD
+        // HomeView(selected: .constant(0))
+        //=======
         HomeView(selected: .constant(0))
             .environmentObject(OrderViewModel())
-//>>>>>>> main
+        //>>>>>>> main
     }
 }

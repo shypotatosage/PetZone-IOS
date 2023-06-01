@@ -30,25 +30,24 @@ struct HotelDetailView: View {
                         HStack{
                             Text(NumberFormat(choosenHotel.price))
                         }
-                        .customFont(.subheadline)
+                        .customFont(.subheadline3)
                         
-                        Text(choosenHotel.address)
-                            .customFont(.subheadline)
                         Text(choosenHotel.phone_number)
-                            .customFont(.subheadline)
+                            .customFont(.subheadline3)
                     }
                     Group{
                         HStack{
-                            Text(choosenHotel.opening_hour).customFont(.subheadline)
+                            Text(choosenHotel.opening_hour)
+                                .customFont(.subheadline3)
                             Text("-")
-                                .customFont(.subheadline)
+                                .customFont(.subheadline3)
                             Text(choosenHotel.closing_hour)
-                                .customFont(.subheadline)
+                                .customFont(.subheadline3)
                         }
                     }
                     Group{
                         HStack {
-                            Image(systemName: "location.fill").foregroundColor(.gray)
+                            Image(systemName: "map").foregroundColor(.gray)
                             Text("Lokasi").customFont(.subheadline)
                         }
                         .padding(.top)
@@ -69,7 +68,7 @@ struct HotelDetailView: View {
                     }
                     Group{
                         HStack {
-                            Image(systemName: "house.fill").foregroundColor(.gray)
+                            Image(systemName: "square.text.square").foregroundColor(.gray)
                             Text("Deskripsi").customFont(.subheadline)
                         }
                         .padding(.top)
@@ -87,6 +86,7 @@ struct HotelDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                         .customFont(.body)
+                        .padding(.bottom)
 
                     NavigationLink (
                         destination: TransactionView(petHotel: choosenHotel)
