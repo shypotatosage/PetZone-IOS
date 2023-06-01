@@ -27,7 +27,7 @@ struct SplashView: View {
                     Image("Logo")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 300, height: 300)
+                        .frame(width: 150, height: 150)
                     Image("Paw01")
                         .padding(.leading, POINT + 70.0)
                     Image("Paw02")

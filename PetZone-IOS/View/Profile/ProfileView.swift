@@ -58,7 +58,7 @@ struct ProfileHeaderView:View{
                 .foregroundColor(Color(hex: "EF233C"))
             Spacer()
         }
-        .frame(width: .infinity, alignment: .leading)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
     }
 }
@@ -82,7 +82,12 @@ struct ProfileImageView:View{
                 .frame(width: imageHeight, height: imageHeight)
                 .cornerRadius(1000)
         }
-        .frame(width: .infinity, alignment: .leading)
+        #if os(macOS)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.leading, 24)
+        #else
+        .frame(maxWidth: .infinity, alignment: .center)
+        #endif
         .padding(.bottom, 30.0)
     }
 }

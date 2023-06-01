@@ -33,7 +33,7 @@ struct ProfileDetail: View {
                 )
             )
         )
-        .frame(width: inputWidth)
+        .frame(maxWidth: inputWidth)
         .padding(.horizontal)
         .padding(.bottom, 40.0)
     }
