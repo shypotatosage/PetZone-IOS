@@ -28,16 +28,9 @@ struct HomeView: View {
                                 Text("Hotel List")
                                     .customFont(.largeTitle)
                                     .foregroundColor(Color(hex: "EF233C"))
-                                Spacer()
-                                Button(action: {selected = 2}){
-                                    Image("profilepict")
-                                        .resizable()
-                                        .frame(width: 50, height: 50)
-                                        .cornerRadius(1000)
-                                }
-                                
                             }
-                            .padding()
+                            .padding(.horizontal)
+                            .padding(.top)
                         }
                         .padding(.horizontal)
                         .listRowSeparator(.hidden)
@@ -93,11 +86,11 @@ struct HomeView: View {
                                         .frame(height: 2)
                                 }
                             }
-                        }.padding(.horizontal)
-                            .padding(.bottom)
-                            .padding()
-                            .listRowSeparator(.hidden)
-                            .listRowInsets(EdgeInsets())
+                        }
+                        .padding(.horizontal)
+                        .padding()
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(EdgeInsets())
                         
                         ForEach(hotelViewModel.rangePetHotels) { hotel in
                             ZStack {

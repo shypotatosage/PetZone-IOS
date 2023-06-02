@@ -28,15 +28,6 @@ struct HomeView: View {
                                 Text("Hotel List")
                                     .customFont(.largeTitle)
                                     .foregroundColor(Color(hex: "EF233C"))
-                                Spacer()
-                                NavigationLink (destination: ProfileView()){
-                                    Image("profilepict")
-                                        .resizable()
-                                        .frame(width: 50, height: 50)
-                                        .cornerRadius(1000)
-                                }
-                                .buttonStyle(PlainButtonStyle())
-                               
                             }
                             .padding()
                         }
