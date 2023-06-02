@@ -8,20 +8,25 @@
 import SwiftUI
 
 struct HotelDetailView: View {
-    @State var choosenHotel : PetHotel
+    @State var chosenHotel : PetHotel
     
     var body: some View {
         ScrollView{
             VStack{
-                Image(choosenHotel.hotel_pic)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(maxWidth: .infinity, maxHeight: 400)
-                    .clipped()
+                TabView {
+                    ForEach(chosenHotel.hotel_pic, id: \.self) { image in
+                        Image(image)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(maxWidth: .infinity, maxHeight: 400)
+                            .clipped()
+                    }
+                }
+                .frame(height: 400)
                 Group{
                     VStack{
                         HStack{
-                            Text(choosenHotel.name)
+                            Text(chosenHotel.name)
                                 .foregroundColor(Color(hex: "EF233C"))
                                 .customFont(.largeTitle)
                                 .font(.system(size: 36))
@@ -30,7 +35,7 @@ struct HotelDetailView: View {
                                     maxWidth: .infinity,
                                     alignment:  .topLeading)
                             HStack{
-                                Text(NumberFormat(choosenHotel.price))
+                                Text(NumberFormat(chosenHotel.price))
                             }
                             .customFont(.largeTitle)
                             .font(.system(size: 30))
@@ -40,7 +45,7 @@ struct HotelDetailView: View {
                         
                         HStack {
                             Image(systemName: "location.fill").foregroundColor(.black)
-                            Text(choosenHotel.address)
+                            Text(chosenHotel.address)
                                 .customFont(.subheadline)
                         }
                         .padding(.top, 1)
@@ -49,7 +54,7 @@ struct HotelDetailView: View {
                             alignment:  .topLeading)
                         HStack {
                             Image(systemName: "phone.fill").foregroundColor(.black)
-                            Text(choosenHotel.phone_number)
+                            Text(chosenHotel.phone_number)
                                 .customFont(.subheadline)
                         }
                         .padding(.top, 1)
@@ -59,9 +64,9 @@ struct HotelDetailView: View {
                         HStack {
                             Image(systemName: "clock.fill").foregroundColor(.black)
                             HStack{
-                                Text(choosenHotel.opening_hour)
+                                Text(chosenHotel.opening_hour)
                                 Text("-")
-                                Text(choosenHotel.closing_hour)
+                                Text(chosenHotel.closing_hour)
                             }
                             .customFont(.subheadline)
                         }
@@ -77,11 +82,11 @@ struct HotelDetailView: View {
                                 alignment:  .topLeading)
                             .customFont(.subheadline)
                         HStack {
-                            Text(choosenHotel.description)
+                            Text(chosenHotel.description)
                                 .customFont(.body)
                         }
                         
-                        NavigationLink (destination: TransactionView(petHotel: choosenHotel)){
+                        NavigationLink (destination: TransactionView(petHotel: chosenHotel)){
                             Text("Order")
                                 .customFont(.subheadline)
                                 .foregroundColor(.white)
@@ -113,6 +118,6 @@ struct HotelDetailView: View {
 
 struct HotelDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        HotelDetailView(choosenHotel: PetHotel.sampleHotel)
+        HotelDetailView(chosenHotel: PetHotel.sampleHotel)
     }
 }

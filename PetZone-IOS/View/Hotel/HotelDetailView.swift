@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HotelDetailView: View {
-    @State var choosenHotel : PetHotel
+    @State var chosenHotel : PetHotel
     
     @EnvironmentObject var orderViewModel: OrderViewModel
 
@@ -17,31 +17,38 @@ struct HotelDetailView: View {
             ScrollView{
                 VStack{
                     Group{
-                        Image(choosenHotel.hotel_pic)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(maxWidth: .infinity, maxHeight: 300)
-                            .clipped()
+                        TabView {
+                            ForEach(chosenHotel.hotel_pic, id: \.self) { image in
+                                Image(image)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(maxWidth: .infinity, maxHeight: 300)
+                                    .clipped()
+                            }
+                        }
+                        .tabViewStyle(PageTabViewStyle())
+                        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                        .frame(height: 300)
                         
-                        Text(choosenHotel.name)
+                        Text(chosenHotel.name)
                             .customFont(.largeTitle)
                             .padding(.top)
                             .foregroundColor(Color(hex: "EF233C"))
                         HStack{
-                            Text(NumberFormat(choosenHotel.price))
+                            Text(NumberFormat(chosenHotel.price))
                         }
                         .customFont(.subheadline3)
                         
-                        Text(choosenHotel.phone_number)
+                        Text(chosenHotel.phone_number)
                             .customFont(.subheadline3)
                     }
                     Group{
                         HStack{
-                            Text(choosenHotel.opening_hour)
+                            Text(chosenHotel.opening_hour)
                                 .customFont(.subheadline3)
                             Text("-")
                                 .customFont(.subheadline3)
-                            Text(choosenHotel.closing_hour)
+                            Text(chosenHotel.closing_hour)
                                 .customFont(.subheadline3)
                         }
                     }
@@ -57,7 +64,7 @@ struct HotelDetailView: View {
                             alignment:  .topLeading)
                     }
                     Group{
-                        Text(choosenHotel.address)
+                        Text(chosenHotel.address)
                             .padding(.horizontal)
                             .padding(.horizontal)
                             .padding(.horizontal)
@@ -78,7 +85,7 @@ struct HotelDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                     }
-                    Text(choosenHotel.description)
+                    Text(chosenHotel.description)
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)
@@ -89,7 +96,7 @@ struct HotelDetailView: View {
                         .padding(.bottom)
 
                     NavigationLink (
-                        destination: TransactionView(petHotel: choosenHotel)
+                        destination: TransactionView(petHotel: chosenHotel)
                             .environmentObject(orderViewModel)
                     ){
                         Text("Order")
@@ -114,7 +121,7 @@ struct HotelDetailView: View {
 
 struct HotelDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        HotelDetailView(choosenHotel: PetHotel.sampleHotel)
+        HotelDetailView(chosenHotel: PetHotel.sampleHotel)
             .environmentObject(OrderViewModel())
     }
 }

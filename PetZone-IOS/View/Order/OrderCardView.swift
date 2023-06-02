@@ -16,7 +16,7 @@ struct OrderCardView: View {
         HStack {
             VStack {
                 if #available(iOS 13.0, *) {
-                    Image(order.petHotel.hotel_pic)
+                    Image(order.petHotel.hotel_pic[0])
                         .resizable()
                         .scaledToFill()
                         .clipped()
@@ -24,7 +24,7 @@ struct OrderCardView: View {
                         .clipped()
                         .cornerRadius(17)
                 }else{
-                    Image(order.petHotel.hotel_pic)
+                    Image(order.petHotel.hotel_pic[0])
                         .resizable()
                         .scaledToFill()
                         .clipped()

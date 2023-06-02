@@ -15,7 +15,7 @@ struct OrderCardView: View {
     var body: some View {
         HStack {
             VStack {
-                Image(order.petHotel.hotel_pic)
+                Image(order.petHotel.hotel_pic[0])
                     .resizable()
                     .centerCropped()
                     .edgesIgnoringSafeArea(.all)

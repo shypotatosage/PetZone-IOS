@@ -14,7 +14,7 @@ struct OrderDetailView: View {
         NavigationStack {
             ScrollView{
                 VStack{
-                    Image(order.petHotel.hotel_pic)
+                    Image(order.petHotel.hotel_pic[0])
                         .resizable()
                         .scaledToFit()
                     Text("Order Detail")
