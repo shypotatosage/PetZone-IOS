@@ -60,8 +60,31 @@ struct TransactionView: View {
                         .frame(maxWidth: .infinity, alignment: .topLeading)
                         .customFont(.headline)
                         .padding(.leading, 2)
-                    TextField("Pet Type", text: $newOrder.petType)
-                        .customFont(.body)
+                    HStack{
+                        Menu {
+                            ForEach(petHotel.pet_type, id: \.self){ client in
+                                Button(client) {
+                                    self.newOrder.petType = client
+                                }
+                            }
+                        } label: {
+                            VStack(spacing: 5){
+                                HStack{
+                                    Text(newOrder.petType.isEmpty ? "Pet Type" : newOrder.petType)
+                                        .foregroundColor(newOrder.petType.isEmpty ? .gray : .black)
+                                    Spacer()
+                                    Image(systemName: "chevron.down")
+                                        .foregroundColor(Color(hex: "EF233C"))
+                                    .customFont(.subheadline)                                         }
+                                .padding(.horizontal)
+                                Rectangle()
+                                    .fill(Color(hex: "EF233C"))
+                                    .frame(height: 2)
+                            }
+                        }
+                    }
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets())
                     if isError == true && newOrder.petType.isEmpty {
                         Text("Pet Type is required.")
                             .customFont(.footnote)
@@ -151,7 +174,7 @@ struct TransactionView: View {
                 
                 Spacer(minLength: 72)
             }
-            .padding(.horizontal, 2)
+            .padding(.horizontal, 6)
             .padding(.bottom)
         }
         .onAppear {

@@ -85,6 +85,7 @@ struct HotelDetailView: View {
                             Text(chosenHotel.description)
                                 .customFont(.body)
                         }
+                        .padding(.bottom)
                         
                         NavigationLink (destination: TransactionView(petHotel: chosenHotel)){
                             Text("Order")

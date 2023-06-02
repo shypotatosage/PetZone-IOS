@@ -70,17 +70,43 @@ struct TransactionView: View {
                         .frame(maxWidth: .infinity, alignment: .topLeading)
                         .customFont(.headline)
                         .padding(.leading, 2)
-                    TextField("Pet Type", text: $newOrder.petType)
-                        .customFont(.body)
-                        .textFieldStyle(.plain)
-                        .padding(7)
-                        .padding(.horizontal, 2)
-                        .background(Color(NSColor.textBackgroundColor))
-                        .cornerRadius(8)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color(hex: "d3d3d3"), lineWidth: 1)
-                        )
+                    HStack{
+                        Menu {
+                            ForEach(petHotel.pet_type, id: \.self){ client in
+                                Button(client) {
+                                    self.newOrder.petType = client
+                                }
+                                .customFont(.body)
+                            }
+                        } label: {
+                            VStack(spacing: 5){
+                                HStack{
+                                    Text(newOrder.petType.isEmpty ? "Pet Type" : newOrder.petType)
+                                        .foregroundColor(newOrder.petType.isEmpty ? .gray : .black)
+                                        .customFont(.body)
+                                    Spacer()
+                                    Image(systemName: "chevron.down")
+                                        .foregroundColor(Color(hex: "EF233C"))
+                                        .customFont(.body)
+                                }
+                                .padding(.horizontal)
+                                Rectangle()
+                                    .fill(Color(hex: "EF233C"))
+                                    .frame(height: 2)
+                            }
+                            .customFont(.body)
+                            .padding(7)
+                            .padding(.horizontal, 2)
+                            .background(Color(NSColor.textBackgroundColor))
+                            .cornerRadius(8)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color(hex: "d3d3d3"), lineWidth: 1)
+                            )
+                        }
+                    }
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets())
                     if isError == true && newOrder.petType.isEmpty {
                         Text("Pet Type is required.")
                             .customFont(.footnote)
