@@ -14,7 +14,7 @@ struct OrderDetailView: View {
         NavigationStack {
             ScrollView{
                 VStack{
-                    Image(order.petHotel.hotel_pic[0])
+                    Image(order.pet_hotel.hotel_pic[0])
                         .resizable()
                         .scaledToFit()
                     Text("Order Detail")
@@ -32,7 +32,7 @@ struct OrderDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                     }
-                    Text(order.petName)
+                    Text(order.pet_name)
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)
@@ -51,7 +51,7 @@ struct OrderDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                     }
-                    Text(order.petType)
+                    Text(order.pet_type)
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)
@@ -70,7 +70,7 @@ struct OrderDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                     }
-                    Text("\(DateFormats(order.startDate)) - \(DateFormats(order.endDate))")
+                    Text("\(DateFormats(order.start_date)) - \(DateFormats(order.end_date))")
                         .padding(.horizontal)
                         .padding(.horizontal)
                         .padding(.horizontal)

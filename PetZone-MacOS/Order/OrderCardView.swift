@@ -15,7 +15,7 @@ struct OrderCardView: View {
     var body: some View {
         HStack {
             VStack {
-                Image(order.petHotel.hotel_pic[0])
+                Image(order.pet_hotel.hotel_pic[0])
                     .resizable()
                     .centerCropped()
                     .edgesIgnoringSafeArea(.all)
@@ -28,7 +28,7 @@ struct OrderCardView: View {
             .frame( width: width/5)
             VStack {
                 HStack{
-                    Text(order.petHotel.name)
+                    Text(order.pet_hotel.name)
                         .customFont(.title3)
                         .frame(maxWidth: .infinity, alignment: .topLeading)
                     Text(NumberFormat(order.purchase))
@@ -36,10 +36,10 @@ struct OrderCardView: View {
                         .frame(maxWidth: .infinity, alignment: .topTrailing)
                         .padding(.trailing)
                 }
-                Text(order.petName)
+                Text(order.pet_name)
                     .customFont(.subheadline2)
                     .frame(maxWidth: .infinity, alignment: .topLeading)
-                Text(DateFormat(order.endDate))
+                Text(DateFormat(order.end_date))
                     .customFont(.caption)
                     .frame(maxWidth: .infinity, alignment: .topLeading)
             }

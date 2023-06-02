@@ -16,27 +16,21 @@ struct OrderCardView: View {
         HStack {
             VStack {
                 if #available(iOS 13.0, *) {
-                    Image(order.petHotel.hotel_pic[0])
-                        .resizable()
-                        .scaledToFill()
-                        .clipped()
+                    Image(order.pet_hotel.hotel_pic[0])
+                        .centerCropped()
                         .frame(maxWidth: width/4)
-                        .clipped()
                         .cornerRadius(17)
                 }else{
-                    Image(order.petHotel.hotel_pic[0])
-                        .resizable()
-                        .scaledToFill()
-                        .clipped()
+                    Image(order.pet_hotel.hotel_pic[0])
+                        .centerCropped()
                         .frame(maxWidth: width/6)
-                        .clipped()
                         .cornerRadius(15)
                     }
             }
             .frame(alignment: .leading)
             VStack {
                 HStack{
-                    Text(order.petHotel.name)
+                    Text(order.pet_hotel.name)
                         .customFont(.title3)
                         .frame(maxWidth: .infinity, alignment: .topLeading)
                     Text(NumberFormat(order.purchase))
@@ -44,10 +38,10 @@ struct OrderCardView: View {
                         .frame(maxWidth: .infinity, alignment: .topTrailing)
                         .padding(.trailing)
                 }
-                Text(order.petName)
+                Text(order.pet_name)
                     .customFont(.subheadline2)
                     .frame(maxWidth: .infinity, alignment: .topLeading)
-                Text(DateFormat(order.endDate))
+                Text(DateFormat(order.end_date))
                     .customFont(.caption)
                     .frame(maxWidth: .infinity, alignment: .topLeading)
             }
@@ -86,3 +80,15 @@ struct OrderCardView_Previews: PreviewProvider {
     }
 }
 
+
+extension Image {
+    func centerCropped() -> some View {
+        GeometryReader { geo in
+            self
+            .resizable()
+            .scaledToFill()
+            .frame(width: geo.size.width, height: geo.size.height)
+            .clipped()
+        }
+    }
+}

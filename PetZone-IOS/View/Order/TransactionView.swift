@@ -42,9 +42,9 @@ struct TransactionView: View {
                         .frame(maxWidth: .infinity, alignment: .topLeading)
                         .customFont(.headline)
                         .padding(.leading, 2)
-                    TextField("Pet Name", text: $newOrder.petName)
+                    TextField("Pet Name", text: $newOrder.pet_name)
                         .customFont(.body)
-                    if isError == true && newOrder.petName.isEmpty {
+                    if isError == true && newOrder.pet_name.isEmpty {
                         Text("Pet Name is required.")
                             .customFont(.footnote)
                             .foregroundColor(.red)
@@ -64,14 +64,14 @@ struct TransactionView: View {
                         Menu {
                             ForEach(petHotel.pet_type, id: \.self){ client in
                                 Button(client) {
-                                    self.newOrder.petType = client
+                                    self.newOrder.pet_type = client
                                 }
                             }
                         } label: {
                             VStack(spacing: 5){
                                 HStack{
-                                    Text(newOrder.petType.isEmpty ? "Pet Type" : newOrder.petType)
-                                        .foregroundColor(newOrder.petType.isEmpty ? .gray : .black)
+                                    Text(newOrder.pet_type.isEmpty ? "Pet Type" : newOrder.pet_type)
+                                        .foregroundColor(newOrder.pet_type.isEmpty ? .gray : .black)
                                     Spacer()
                                     Image(systemName: "chevron.down")
                                         .foregroundColor(Color(hex: "EF233C"))
@@ -85,7 +85,7 @@ struct TransactionView: View {
                     }
                     .listRowSeparator(.hidden)
                     .listRowInsets(EdgeInsets())
-                    if isError == true && newOrder.petType.isEmpty {
+                    if isError == true && newOrder.pet_type.isEmpty {
                         Text("Pet Type is required.")
                             .customFont(.footnote)
                             .foregroundColor(.red)
@@ -102,11 +102,11 @@ struct TransactionView: View {
                         .frame(maxWidth: .infinity, alignment: .topLeading)
                         .customFont(.headline)
                         .padding(.leading, 2)
-                    DatePicker(selection: $newOrder.startDate, in: Date.now..., displayedComponents: [.date, .hourAndMinute]){
+                    DatePicker(selection: $newOrder.start_date, in: Date.now..., displayedComponents: [.date, .hourAndMinute]){
                     }
                     .padding()
                     .labelsHidden()
-                    if isError == true && newOrder.startDate >= newOrder.endDate {
+                    if isError == true && newOrder.start_date >= newOrder.end_date {
                         Text("Start Date has to be before the End Date")
                             .customFont(.footnote)
                             .foregroundColor(.red)
@@ -123,13 +123,13 @@ struct TransactionView: View {
                         .frame(maxWidth: .infinity, alignment: .topLeading)
                         .customFont(.headline)
                         .padding(.leading, 2)
-                    DatePicker(selection: $newOrder.endDate, in: Calendar.current.date(byAdding: .day, value: 1, to: newOrder.startDate)!..., displayedComponents: [.date, .hourAndMinute]){
+                    DatePicker(selection: $newOrder.end_date, in: Calendar.current.date(byAdding: .day, value: 1, to: newOrder.start_date)!..., displayedComponents: [.date, .hourAndMinute]){
                     }
                     .padding()
                     .labelsHidden()
-                    .onChange(of: newOrder.endDate) { newValue in
+                    .onChange(of: newOrder.end_date) { newValue in
                         let cal = Calendar(identifier: .gregorian)
-                        newOrder.purchase = Calendar.current.dateComponents([.day], from: cal.startOfDay(for: newOrder.startDate), to: newValue).day! * petHotel.price
+                        newOrder.purchase = Calendar.current.dateComponents([.day], from: cal.startOfDay(for: newOrder.start_date), to: newValue).day! * petHotel.price
                     }
                 }
                 .textFieldStyle(OvalTextFieldStyle())
@@ -150,11 +150,10 @@ struct TransactionView: View {
                 .padding(.bottom, 28)
                 
                 Button {
-                    if (newOrder.petName.isEmpty || newOrder.petType.isEmpty || newOrder.startDate >= newOrder.endDate) {
+                    if (newOrder.pet_name.isEmpty || newOrder.pet_type.isEmpty || newOrder.start_date >= newOrder.start_date) {
                         isError = true
                     } else {
                         orderViewModel.addOrder(newOrder: newOrder)
-                        
                         presentationMode.wrappedValue.dismiss()
                     }
                 } label: {
@@ -178,9 +177,9 @@ struct TransactionView: View {
             .padding(.bottom)
         }
         .onAppear {
-            newOrder.petHotel = petHotel
-            newOrder.endDate = Calendar.current.date(byAdding: .day, value: 1, to: newOrder.startDate)!
-            newOrder.startDate = Date.now
+            newOrder.pet_hotel = petHotel
+            newOrder.end_date = Calendar.current.date(byAdding: .day, value: 1, to: newOrder.start_date)!
+            newOrder.start_date = Date.now
             newOrder.purchase = petHotel.price
         }
     }

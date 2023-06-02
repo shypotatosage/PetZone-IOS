@@ -17,7 +17,7 @@ class OrderViewModel: ObservableObject {
         guard !searchText.isEmpty else { return orders }
         
         return orders.filter { order in
-            order.petHotel.name.lowercased().contains(searchText.lowercased())
+            order.pet_hotel.name.lowercased().contains(searchText.lowercased())
         }
     }
     
