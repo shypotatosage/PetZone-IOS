@@ -13,16 +13,16 @@ struct OrderDetailView: View {
     var body: some View {
             ScrollView{
                 VStack{
-                    Text("Order Detail")
-                        .customFont(.largeTitle)
-                        .padding(.top)
-                        .foregroundColor(Color(hex: "EF233C"))
-//                    Image(order.pet_hotel.hotel_pic[0])
-//                        .resizable()
-//                        .scaledToFill()
-//                        .frame(maxWidth: .infinity, maxHeight: 400)
-//                        .clipped()
                     Group{
+                        Image(order.pet_hotel.hotel_pic[0])
+                            .resizable()
+                            .scaledToFill()
+                            .frame(maxWidth: .infinity, maxHeight: 400)
+                            .clipped()
+                        Text("Order Detail")
+                            .customFont(.largeTitle)
+                            .padding(.top)
+                            .foregroundColor(Color(hex: "EF233C"))
                         HStack {
                             Image(systemName: "pawprint.fill").foregroundColor(.gray)
                             Text("Pet Name").customFont(.subheadline)
@@ -32,15 +32,15 @@ struct OrderDetailView: View {
                         .frame(
                             maxWidth: .infinity,
                             alignment:  .topLeading)
+                        Text(order.pet_name)
+                            .customFont(.caption)
+                            .padding(.horizontal)
+                            .padding(.horizontal)
+                            .padding(.horizontal)
+                            .frame(
+                                maxWidth: .infinity,
+                                alignment:  .topLeading)
                     }
-                    Text(order.pet_name)
-                        .customFont(.caption)
-                        .padding(.horizontal)
-                        .padding(.horizontal)
-                        .padding(.horizontal)
-                        .frame(
-                            maxWidth: .infinity,
-                            alignment:  .topLeading)
                     Group{
                         HStack {
                             Image(systemName: "house.fill").foregroundColor(.gray)
