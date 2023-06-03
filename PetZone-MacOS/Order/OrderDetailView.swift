@@ -11,7 +11,6 @@ import SwiftUI
 struct OrderDetailView: View {
     @State var order : Order
     var body: some View {
-        NavigationStack {
             ScrollView{
                 VStack{
                     Image(order.pet_hotel.hotel_pic[0])
@@ -103,9 +102,7 @@ struct OrderDetailView: View {
                             maxWidth: .infinity,
                             alignment:  .topLeading)
                 }  .padding([.bottom], 100)
-            }
-        } .foregroundColor(.black)
-        .background(Color.white)
+            }.background(Color.white)
     }
 }
 

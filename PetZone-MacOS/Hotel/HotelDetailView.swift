@@ -22,6 +22,7 @@ struct HotelDetailView: View {
                             .clipped()
                     }
                 }
+                .tabViewStyle(.automatic)
                 .frame(height: 400)
                 Group{
                     VStack{

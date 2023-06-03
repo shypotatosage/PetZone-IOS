@@ -26,8 +26,7 @@ struct HotelDetailView: View {
                                     .clipped()
                             }
                         }
-                        .tabViewStyle(PageTabViewStyle())
-                        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                        .tabViewStyle(.page)
                         .frame(height: 300)
                         
                         Text(chosenHotel.name)

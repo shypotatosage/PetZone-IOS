@@ -12,7 +12,7 @@ struct HomeView: View {
     @State private var text = " "
     var twoColumnGrid = [GridItem(.flexible()),GridItem(.flexible())]
     var placeholder = "Select Price Range"
-    var dropDownList = ["none","10.000-50.000", "50.000-100.000", "100.000-200.000", "200.000-500.000"]
+    var dropDownList = ["None","10.000-50.000", "50.000-100.000", "100.000-200.000", "200.000-500.000"]
     @State var value = ""
     @State private var searchText = ""
     
