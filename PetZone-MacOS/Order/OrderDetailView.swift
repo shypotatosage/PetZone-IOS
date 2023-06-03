@@ -13,15 +13,15 @@ struct OrderDetailView: View {
     var body: some View {
             ScrollView{
                 VStack{
-                    Image(order.pet_hotel.hotel_pic[0])
-                        .resizable()
-                        .scaledToFill()
-                        .frame(maxWidth: .infinity, maxHeight: 400)
-                        .clipped()
                     Text("Order Detail")
                         .customFont(.largeTitle)
                         .padding(.top)
                         .foregroundColor(Color(hex: "EF233C"))
+//                    Image(order.pet_hotel.hotel_pic[0])
+//                        .resizable()
+//                        .scaledToFill()
+//                        .frame(maxWidth: .infinity, maxHeight: 400)
+//                        .clipped()
                     Group{
                         HStack {
                             Image(systemName: "pawprint.fill").foregroundColor(.gray)
