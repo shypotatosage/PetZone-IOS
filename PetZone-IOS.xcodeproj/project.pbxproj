@@ -57,6 +57,7 @@
 		0465DC222A1CA6F8002FDCAC /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC212A1CA6F8002FDCAC /* TransactionView.swift */; };
 		0465DC242A1DC4ED002FDCAC /* HotelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC232A1DC4ED002FDCAC /* HotelCardView.swift */; };
 		0465DC262A1EEE05002FDCAC /* HotelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465DC252A1EEE05002FDCAC /* HotelViewModel.swift */; };
+		060E4E252A2B0BA200121213 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060E4E242A2B0BA200121213 /* OrderDetailView.swift */; };
 		063264652A1E57780040EE6C /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063264642A1E57780040EE6C /* Format.swift */; };
 		0649E6732A2059E900D6CDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040855062A1C430A00595321 /* Assets.xcassets */; };
 		0649E6742A205A8100D6CDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046225462A1B22F800B610AD /* Assets.xcassets */; };
@@ -67,7 +68,6 @@
 		067EC2E22A1F2BC600D69773 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063264642A1E57780040EE6C /* Format.swift */; };
 		067EC2E82A1F2C2C00D69773 /* OrderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EC2E72A1F2C2C00D69773 /* OrderCardView.swift */; };
 		0680A4262A1F44A0009535A1 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680A4252A1F44A0009535A1 /* OrderListView.swift */; };
-		0680A4282A1F450B009535A1 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680A4272A1F450B009535A1 /* OrderDetailView.swift */; };
 		068CC7852A1C53D700099235 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068CC7842A1C53D700099235 /* OrderViewModel.swift */; };
 		068CC7862A1C53D700099235 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068CC7842A1C53D700099235 /* OrderViewModel.swift */; };
 		06EF77012A1E1C450085A50F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EF77002A1E1C450085A50F /* SplashView.swift */; };
@@ -140,13 +140,13 @@
 		0465DC212A1CA6F8002FDCAC /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		0465DC232A1DC4ED002FDCAC /* HotelCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCardView.swift; sourceTree = "<group>"; };
 		0465DC252A1EEE05002FDCAC /* HotelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelViewModel.swift; sourceTree = "<group>"; };
+		060E4E242A2B0BA200121213 /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
 		063264642A1E57780040EE6C /* Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
 		064A37A32A1B5A0C00FEF914 /* OrderListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
 		064A37A42A1B5A0C00FEF914 /* OrderCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCardView.swift; sourceTree = "<group>"; };
 		064A37A52A1B5A0C00FEF914 /* OrderDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
 		067EC2E72A1F2C2C00D69773 /* OrderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCardView.swift; sourceTree = "<group>"; };
 		0680A4252A1F44A0009535A1 /* OrderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
-		0680A4272A1F450B009535A1 /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
 		068CC7842A1C53D700099235 /* OrderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		06EF77002A1E1C450085A50F /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		793E33242A22595600A2DBD7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -214,6 +214,7 @@
 			children = (
 				0465DC192A1C5099002FDCAC /* HomeView.swift */,
 				0408550F2A1C43B800595321 /* HotelDetailView.swift */,
+				060E4E242A2B0BA200121213 /* OrderDetailView.swift */,
 			);
 			path = Hotel;
 			sourceTree = "<group>";
@@ -368,7 +369,6 @@
 				0465DC212A1CA6F8002FDCAC /* TransactionView.swift */,
 				067EC2E72A1F2C2C00D69773 /* OrderCardView.swift */,
 				0680A4252A1F44A0009535A1 /* OrderListView.swift */,
-				0680A4272A1F450B009535A1 /* OrderDetailView.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -559,7 +559,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0465DC242A1DC4ED002FDCAC /* HotelCardView.swift in Sources */,
-				0680A4282A1F450B009535A1 /* OrderDetailView.swift in Sources */,
 				068CC7862A1C53D700099235 /* OrderViewModel.swift in Sources */,
 				0465DC182A1C4E6B002FDCAC /* MainView.swift in Sources */,
 				067EC2E22A1F2BC600D69773 /* Format.swift in Sources */,
@@ -585,6 +584,7 @@
 				040855212A1C463400595321 /* Persistence.swift in Sources */,
 				040855142A1C441300595321 /* User.swift in Sources */,
 				040855052A1C430900595321 /* ContentView.swift in Sources */,
+				060E4E252A2B0BA200121213 /* OrderDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

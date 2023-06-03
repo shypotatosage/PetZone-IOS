@@ -1,10 +1,9 @@
 //
 //  OrderDetailView.swift
-//  PetZone
+//  PetZone-MacOS
 //
-//  Created by Marsha Likorawung  on 22/05/23.
+//  Created by Marsha Likorawung  on 03/06/23.
 //
-
 import SwiftUI
 
 //untuk tampilan order detail view
