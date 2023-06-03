@@ -214,7 +214,6 @@
 			children = (
 				0465DC192A1C5099002FDCAC /* HomeView.swift */,
 				0408550F2A1C43B800595321 /* HotelDetailView.swift */,
-				060E4E242A2B0BA200121213 /* OrderDetailView.swift */,
 			);
 			path = Hotel;
 			sourceTree = "<group>";
@@ -366,6 +365,7 @@
 		067EC2E62A1F2BF600D69773 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				060E4E242A2B0BA200121213 /* OrderDetailView.swift */,
 				0465DC212A1CA6F8002FDCAC /* TransactionView.swift */,
 				067EC2E72A1F2C2C00D69773 /* OrderCardView.swift */,
 				0680A4252A1F44A0009535A1 /* OrderListView.swift */,
