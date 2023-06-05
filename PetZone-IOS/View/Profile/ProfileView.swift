@@ -10,6 +10,8 @@ import SwiftUI
 
 
 struct ProfileView: View {
+    @StateObject var profileViewModel = ProfileViewModel()
+    
     var body: some View {
         GeometryReader { geo in
             NavigationStack {
@@ -19,7 +21,9 @@ struct ProfileView: View {
                         VStack {
                             ProfileHeaderView()
                             ProfileImageView()
+                                .environmentObject(profileViewModel)
                             ProfileBodyView()
+                                .environmentObject(profileViewModel)
                         }
                         .padding(.horizontal)
                         .listRowSeparator(.hidden)
@@ -65,11 +69,13 @@ struct ProfileHeaderView:View{
 }
 
 struct ProfileImageView:View{
-#if os(iOS)
+    @EnvironmentObject var profileViewModel: ProfileViewModel
+    
+    #if os(iOS)
     let imageHeight = 257.0
-#elseif os(macOS)
+    #elseif os(macOS)
     let imageHeight = 200.0
-#endif
+    #endif
     
     var body:some View{
         ZStack{
@@ -78,7 +84,7 @@ struct ProfileImageView:View{
                     .shadow(.drop(radius: 10, x: 5, y: 5)))
                 .frame(width: imageHeight, height: imageHeight)
                 .cornerRadius(1000)
-            Image("profilepict")
+            Image(profileViewModel.user.profile_pic)
                 .resizable()
                 .scaledToFill()
                 .clipped()
@@ -96,20 +102,16 @@ struct ProfileImageView:View{
 }
 
 struct ProfileBodyView:View{
+    @EnvironmentObject var profileViewModel: ProfileViewModel
+    
     var body:some View{
         NavigationStack{
             VStack{
-                ProfileDetail(icon: "person", content: User.sampleUser.name)
+                ProfileDetail(icon: "person", content: profileViewModel.user.name)
                 
-                ProfileDetail(icon: "envelope", content: User.sampleUser.email)
+                ProfileDetail(icon: "envelope", content: profileViewModel.user.email)
                 
-                ProfileDetail(icon: "phone", content: User.sampleUser.phone_number)
-                
-                Button(action: {exit(0)}){
-                    Text("Logout")
-                }
-                .buttonStyle(DefaultButton())
-                .bold()
+                ProfileDetail(icon: "phone", content: profileViewModel.user.phone_number)
             }.background(Color.white)
         }.navigationBarBackButtonHidden(true)
     }

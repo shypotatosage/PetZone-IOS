@@ -32,7 +32,7 @@ extension User{
         email: "hwatson@gmail.com",
         address: "Surabaya, Blue House Wp 2 No 26",
         phone_number: "081212341234",
-        profile_pic: ""
+        profile_pic: "profilepict"
         )
 }
 
