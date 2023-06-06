@@ -10,10 +10,9 @@ import SwiftUI
 var POINT = -90.0;
 var SECOND = 2.5;
 
+//tampilan splashview
 struct SplashView: View {
-    
     @State var isActive: Bool = false
-    
     var body: some View {
         ZStack{
             Color.white
@@ -49,6 +48,7 @@ struct SplashView: View {
     }
 }
 
+//tampilan preview splash view
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
         SplashView()

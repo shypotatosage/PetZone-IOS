@@ -7,6 +7,7 @@
 
 import Foundation
 
+//model user
 struct User : Identifiable, Codable{
     let id: UUID
     var name: String
@@ -25,6 +26,7 @@ struct User : Identifiable, Codable{
     }
 }
 
+//isi user
 extension User{
     static let sampleUser: User =
     User(
@@ -33,6 +35,6 @@ extension User{
         address: "Surabaya, Blue House Wp 2 No 26",
         phone_number: "081212341234",
         profile_pic: "profilepict"
-        )
+    )
 }
 

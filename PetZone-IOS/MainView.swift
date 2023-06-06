@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//navigation bar
 struct MainView: View {
     @State var selected = 0
     @State var isActive = false
@@ -18,15 +19,13 @@ struct MainView: View {
         ZStack(alignment: .bottom) {
             VStack {
                 if self.selected == 0 {
-
-                    HomeView(selected: .constant(0))
-                        .environmentObject(orderViewModel)
-
+                    
+                    HomeView(selected: .constant(0)).environmentObject(orderViewModel)
+                    
                 } else if self.selected == 1 {
-                    OrderListView()
-                        .environmentObject(orderViewModel)
+                    OrderListView().environmentObject(orderViewModel)
                 } else {
-                    ProfileView() .environmentObject(profileViewModel)
+                    ProfileView().environmentObject(profileViewModel)
                 }
             }
             .edgesIgnoringSafeArea(.all)

@@ -7,25 +7,26 @@
 
 import SwiftUI
 
+//default search bar apple
 struct SearchBar: View {
     @Binding var text: String
- 
+    
     @State private var isEditing = false
     @Environment(\.colorScheme) var colorScheme: ColorScheme
- 
+    
     var body: some View {
         HStack {
- 
+            
             TextField("Search", text: $text)
                 .textFieldStyle(.plain)
                 .padding(7)
                 .padding(.horizontal, 25)
-                #if !os(macOS)
+#if !os(macOS)
                 .background(Color(hex: "EDEDED"))
-                #endif
-                #if os(macOS)
+#endif
+#if os(macOS)
                 .background(Color(NSColor.textBackgroundColor))
-                #endif
+#endif
                 .cornerRadius(8)
                 .overlay(
                     HStack {
@@ -33,7 +34,7 @@ struct SearchBar: View {
                             .foregroundColor(.gray)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, 8)
-                 
+                        
                         if isEditing {
                             Button(action: {
                                 self.text = ""
@@ -51,16 +52,16 @@ struct SearchBar: View {
                 )
                 .padding(.horizontal, 10)
                 .onTapGesture {
-                    #if !os(macOS)
+#if !os(macOS)
                     self.isEditing = true
-                    #endif
+#endif
                 }
- 
+            
             if isEditing {
                 Button(action: {
                     self.isEditing = false
                     self.text = ""
- 
+                    
                 }) {
                     Text("Cancel")
                 }

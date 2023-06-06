@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//custom textfield bentuk oval
 struct OvalTextFieldStyle: TextFieldStyle {
     func _body(configuration: TextField<Self._Label>) -> some View {
         configuration

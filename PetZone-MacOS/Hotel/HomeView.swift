@@ -7,15 +7,14 @@
 
 import SwiftUI
 
+//tampilan Home View
 struct HomeView: View {
     @StateObject var hotelViewModel = HotelViewModel()
     @State private var text = " "
-    var twoColumnGrid = [GridItem(.flexible()),GridItem(.flexible())]
     var placeholder = "Select Price Range"
     var dropDownList = ["None","10.000-50.000", "50.000-100.000", "100.000-200.000", "200.000-500.000"]
     @State var value = ""
     @State private var searchText = ""
-    
     @EnvironmentObject var orderViewModel: OrderViewModel
     
     var body: some View {
@@ -34,12 +33,11 @@ struct HomeView: View {
                         .padding(.horizontal)
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets())
-                       
-                            SearchBar(text: $hotelViewModel.searchText)
-                                .padding(.horizontal)
-                                .padding(.bottom)
-                                .listRowSeparator(.hidden)
-                                .listRowInsets(EdgeInsets())
+                        SearchBar(text: $hotelViewModel.searchText)
+                            .padding(.horizontal)
+                            .padding(.bottom)
+                            .listRowSeparator(.hidden)
+                            .listRowInsets(EdgeInsets())
                         HStack{
                             HStack{
                                 Text("Price Range")
@@ -70,33 +68,26 @@ struct HomeView: View {
                                             }
                                         }
                                     }
-                                     } label: {
-                                         VStack(spacing: 5){
-                                             HStack{
-                                                 Text(value.isEmpty ? placeholder : value)
-                                                     .foregroundColor(value.isEmpty ? .gray : .black)
-                                                 Spacer()
-                                                 Image(systemName: "chevron.down")
-                                                     .foregroundColor(Color.orange)
-                                                     .font(Font.system(size: 20, weight: .bold))
-                                             }
-                                             .padding(.horizontal)
-                                             Rectangle()
-                                                 .fill(Color.orange)
-                                                 .frame(height: 2)
-                                         }
-                                     }
-                               }.padding(.horizontal)
+                                } label: {
+                                    VStack(spacing: 5){
+                                        HStack{
+                                            Text(value.isEmpty ? placeholder : value)
+                                                .foregroundColor(value.isEmpty ? .gray : .black)
+                                            Spacer()
+                                            Image(systemName: "chevron.down")
+                                                .foregroundColor(Color.orange)
+                                                .font(Font.system(size: 20, weight: .bold))
+                                        }
+                                        .padding(.horizontal)
+                                        Rectangle()
+                                            .fill(Color.orange)
+                                            .frame(height: 2)
+                                    }
+                                }
+                            }.padding(.horizontal)
                                 .padding(.bottom)
                                 .listRowSeparator(.hidden)
                                 .listRowInsets(EdgeInsets())
-//                            Button("Search"){
-//                                hotelViewModel.searchText="Pet zone"
-//                            }.padding(.horizontal)
-//                                .padding(.bottom)
-//                                .listRowSeparator(.hidden)
-//                                .listRowInsets(EdgeInsets())
-//                                .buttonBorderShape(.roundedRectangle)
                         }.padding(.horizontal)
                             .padding(.bottom)
                             .listRowSeparator(.hidden)
@@ -125,6 +116,7 @@ struct HomeView: View {
     }
 }
 
+//tampilan Home View Previews
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()

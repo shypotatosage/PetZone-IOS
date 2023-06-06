@@ -31,7 +31,6 @@ class HotelViewModel: ObservableObject {
         }
     }
     
-    
     init(){
         petHotels = PetHotel.sampleHotelList
     }

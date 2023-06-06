@@ -7,12 +7,12 @@
 
 import SwiftUI
 
+//untuk tampilan transaction view
 struct TransactionView: View {
-    var petHotel: PetHotel
+    @State var petHotel: PetHotel
     @State private var newOrder = Order.emptyOrder
     @State var isError = false
     @EnvironmentObject var orderViewModel: OrderViewModel
-    
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     
     var body: some View {
@@ -150,7 +150,7 @@ struct TransactionView: View {
                 .padding(.bottom, 28)
                 
                 Button {
-                    if (newOrder.pet_name.isEmpty || newOrder.pet_type.isEmpty || newOrder.start_date >= newOrder.start_date) {
+                    if (newOrder.pet_name.isEmpty || newOrder.pet_type.isEmpty || newOrder.start_date >= newOrder.end_date) {
                         isError = true
                     } else {
                         orderViewModel.addOrder(newOrder: newOrder)
@@ -185,6 +185,7 @@ struct TransactionView: View {
     }
 }
 
+//untuk tampilan transaction view preview
 struct TransactionView_Previews: PreviewProvider {
     static var previews: some View {
         TransactionView(petHotel: PetHotel.sampleHotel)

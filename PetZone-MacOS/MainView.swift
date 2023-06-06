@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//untuk tampilan main view
 struct MainView: View {
     @StateObject var orderViewModel = OrderViewModel()
     @StateObject var profileViewModel = ProfileViewModel()
@@ -17,7 +18,7 @@ struct MainView: View {
                     .customFont(.largeTitle2)
                     .foregroundColor(.white)
                     .padding(.top, 12)
-                NavigationLink(destination: HomeView()) {
+                NavigationLink(destination: HomeView().environmentObject(orderViewModel)) {
                     HStack(alignment: .center) {
                         VStack {
                             Image(systemName: "pawprint")
@@ -32,7 +33,7 @@ struct MainView: View {
                 }
                 .padding(.vertical, 1)
                 .padding(.leading, 20)
-                NavigationLink(destination: OrderListView() .environmentObject(orderViewModel)) {
+                NavigationLink(destination: OrderListView().environmentObject(orderViewModel)) {
                     HStack(alignment: .center) {
                         VStack {
                             Image(systemName: "list.bullet.clipboard")
@@ -64,12 +65,12 @@ struct MainView: View {
                 .padding(.leading, 20)
             }
             .background(Color(hex: "EF233C"))
-            
-            HomeView()
+            HomeView().environmentObject(orderViewModel)
         }
     }
 }
 
+//untuk tampilan main view preview
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()

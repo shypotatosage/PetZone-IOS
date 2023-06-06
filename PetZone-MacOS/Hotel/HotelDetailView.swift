@@ -7,9 +7,10 @@
 
 import SwiftUI
 
+//menampilkan hotel detail view
 struct HotelDetailView: View {
     @State var chosenHotel : PetHotel
-    
+    @EnvironmentObject var orderViewModel: OrderViewModel
     var body: some View {
         ScrollView{
             VStack{
@@ -30,8 +31,6 @@ struct HotelDetailView: View {
                             Text(chosenHotel.name)
                                 .foregroundColor(Color(hex: "EF233C"))
                                 .customFont(.largeTitle)
-                                .font(.system(size: 36))
-                                .bold()
                                 .frame(
                                     maxWidth: .infinity,
                                     alignment:  .topLeading)
@@ -39,8 +38,6 @@ struct HotelDetailView: View {
                                 Text(NumberFormat(chosenHotel.price))
                             }
                             .customFont(.largeTitle)
-                            .font(.system(size: 30))
-                            .bold()
                         }
                         
                         
@@ -77,7 +74,6 @@ struct HotelDetailView: View {
                             alignment:  .topLeading)
                         Text("Description")
                             .padding(.top, 1)
-                            .bold()
                             .frame(
                                 maxWidth: .infinity,
                                 alignment:  .topLeading)
@@ -105,7 +101,6 @@ struct HotelDetailView: View {
                         .buttonStyle(PlainButtonStyle())
 
                     }
-                    .font(.system(size: 20))
                     .padding()
                     .padding()
                     .padding([.bottom], 100)
@@ -118,8 +113,9 @@ struct HotelDetailView: View {
     }
 }
 
+//menampilkan hotel detail view preview
 struct HotelDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        HotelDetailView(chosenHotel: PetHotel.sampleHotel)
+        HotelDetailView(chosenHotel: PetHotel.sampleHotel).environmentObject(OrderViewModel())
     }
 }

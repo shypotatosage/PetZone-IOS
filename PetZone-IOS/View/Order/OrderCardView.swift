@@ -11,7 +11,6 @@ import SwiftUI
 struct OrderCardView: View {
     let width: CGFloat
     let order: Order
-    
     var body: some View {
         HStack {
             VStack {
@@ -25,7 +24,7 @@ struct OrderCardView: View {
                         .centerCropped()
                         .frame(maxWidth: width/6)
                         .cornerRadius(15)
-                    }
+                }
             }
             .frame(alignment: .leading)
             VStack {
@@ -80,15 +79,15 @@ struct OrderCardView_Previews: PreviewProvider {
     }
 }
 
-
+//untuk melakukan cropping image agar semua image satu ukuran
 extension Image {
     func centerCropped() -> some View {
         GeometryReader { geo in
             self
-            .resizable()
-            .scaledToFill()
-            .frame(width: geo.size.width, height: geo.size.height)
-            .clipped()
+                .resizable()
+                .scaledToFill()
+                .frame(width: geo.size.width, height: geo.size.height)
+                .clipped()
         }
     }
 }

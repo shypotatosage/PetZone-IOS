@@ -22,7 +22,7 @@ func NumberFormat(_ value: Int)->String{
     let currencyFormatter = NumberFormatter()
     currencyFormatter.numberStyle = .currencyISOCode
     currencyFormatter.locale = Locale(identifier: "id_ID")
-
+    
     let formattedValue = currencyFormatter.string(from: value as NSNumber)!
     return formattedValue + ",00"
 }

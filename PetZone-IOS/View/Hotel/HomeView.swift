@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//tampilan home view
 struct HomeView: View {
     @StateObject var hotelViewModel = HotelViewModel()
     @State private var searchText = ""
@@ -117,7 +118,7 @@ struct HomeView: View {
     }
 }
 
-
+//tampilan home view preview
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(selected: .constant(0))

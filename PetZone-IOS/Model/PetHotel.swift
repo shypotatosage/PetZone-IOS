@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import SwiftUI
-import CoreLocation
 
+//model pethotel
 struct PetHotel: Identifiable, Codable{
     let id: UUID
     var name: String
@@ -39,7 +38,7 @@ struct PetHotel: Identifiable, Codable{
     }
 }
 
-
+//isi pethotel
 extension PetHotel{
     static var emptyHotel: PetHotel{
         PetHotel(name: "", description: "", city: "", address: "", phone_number: "", opening_hour: "", closing_hour: "", hotel_pic: [], pet_type: [], price: 0, user: User(name: "", email: "", address: "", phone_number: "", profile_pic: ""))
@@ -49,7 +48,6 @@ extension PetHotel{
     PetHotel(
         name: "Pet Zone",
         description: "Welcome to Pet Zone, the ultimate destination for pet owners seeking a comfortable, safe, and fun-filled stay for their furry friends. Our pet hotel is designed with your pet's needs in mind, ensuring that they receive the highest level of care and attention during their stay.",
-//        coordinates: "Surabaya, Blue House Wp 2 No 26",
         city: "Surabaya",
         address: "Jalan WP 2 No 26",
         phone_number: "081212341234",
@@ -59,7 +57,7 @@ extension PetHotel{
         pet_type: ["Fish", "Hamster"],
         price: 80000,
         user : User.sampleUser
-        )
+    )
     
     static let sampleHotelList: [PetHotel] =
     [
@@ -71,7 +69,7 @@ extension PetHotel{
             phone_number: "082192243200",
             opening_hour: "06.00",
             closing_hour: "20.00",
-            hotel_pic: ["dummypicthotel1", "dummypethotel2", "dummypicthotel4"],
+            hotel_pic: ["dummypicthotel4", "dummypicthotel8", "dummypicthotel9"],
             pet_type: ["Cat", "Dog", "Bunny"],
             price: 120000,
             user : User.sampleUser
@@ -102,6 +100,6 @@ extension PetHotel{
             price: 73000,
             user : User.sampleUser
         )
-     ]
+    ]
 }
 

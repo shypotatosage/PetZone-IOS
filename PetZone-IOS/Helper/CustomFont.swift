@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
+//font custom poppins
 struct CustomFont: ViewModifier {
     var textStyle: TextStyle
-
     var name: String {
         switch textStyle {
         case .title, .title2, .title3, .largeTitle2:
@@ -23,7 +23,7 @@ struct CustomFont: ViewModifier {
             return "Poppins SemiBold"
         }
     }
-
+    
     var size: CGFloat {
         switch textStyle {
         case .largeTitle:
@@ -58,7 +58,7 @@ struct CustomFont: ViewModifier {
             return 12
         }
     }
-
+    
     var relative: Font.TextStyle {
         switch textStyle {
         case .largeTitle:
@@ -93,7 +93,7 @@ struct CustomFont: ViewModifier {
             return .caption
         }
     }
-
+    
     func body(content: Content) -> some View {
         content.font(.custom(name, size: size, relativeTo: relative))
     }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//tampilan hotel detail view
 struct HotelDetailView: View {
     @State var chosenHotel : PetHotel
     
@@ -118,6 +119,7 @@ struct HotelDetailView: View {
     }
 }
 
+//tampilan hotel detail view preview
 struct HotelDetailView_Previews: PreviewProvider {
     static var previews: some View {
         HotelDetailView(chosenHotel: PetHotel.sampleHotel)
