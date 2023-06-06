@@ -71,7 +71,7 @@ extension PetHotel{
             phone_number: "082192243200",
             opening_hour: "06.00",
             closing_hour: "20.00",
-            hotel_pic: ["dummypicthotel1", "dummypethotel2"],
+            hotel_pic: ["dummypicthotel1", "dummypethotel2", "dummypicthotel4"],
             pet_type: ["Cat", "Dog", "Bunny"],
             price: 120000,
             user : User.sampleUser
@@ -84,7 +84,7 @@ extension PetHotel{
             phone_number: "08118732379",
             opening_hour: "10.00",
             closing_hour: "22.00",
-            hotel_pic: ["dummypicthotel", "dummypicthotel1"],
+            hotel_pic: ["dummypicthotel", "dummypicthotel1", "dummypicthotel3"],
             pet_type: ["Fish", "Hamster"],
             price: 80000,
             user : User.sampleUser
@@ -97,7 +97,7 @@ extension PetHotel{
             phone_number: "081212341234",
             opening_hour: "12.00",
             closing_hour: "18.00",
-            hotel_pic: ["dummypethotel2", "dummypicthotel1"],
+            hotel_pic: ["dummypethotel2", "dummypicthotel6", "dummypicthotel5"],
             pet_type: ["Cat", "Dog"],
             price: 73000,
             user : User.sampleUser
