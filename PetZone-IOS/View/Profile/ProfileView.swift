@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct ProfileView: View {
-    @StateObject var profileViewModel = ProfileViewModel()
+    @EnvironmentObject var profileViewModel : ProfileViewModel
     
     var body: some View {
         GeometryReader { geo in

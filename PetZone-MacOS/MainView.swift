@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject var orderViewModel = OrderViewModel()
+    @StateObject var profileViewModel = ProfileViewModel()
     var body: some View {
         NavigationView {
             List {
@@ -46,7 +47,7 @@ struct MainView: View {
                 }
                 .padding(.vertical, 1)
                 .padding(.leading, 20)
-                NavigationLink(destination: ProfileView()) {
+                NavigationLink(destination: ProfileView().environmentObject(profileViewModel)) {
                     HStack(alignment: .center) {
                         VStack {
                             Image(systemName: "person")
