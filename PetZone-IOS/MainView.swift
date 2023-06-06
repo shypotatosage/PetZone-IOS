@@ -11,6 +11,7 @@ struct MainView: View {
     @State var selected = 0
     @State var isActive = false
     @StateObject var orderViewModel = OrderViewModel()
+    @StateObject var profileViewModel = ProfileViewModel()
     
     var body: some View {
         
@@ -25,7 +26,7 @@ struct MainView: View {
                     OrderListView()
                         .environmentObject(orderViewModel)
                 } else {
-                    ProfileView()
+                    ProfileView() .environmentObject(profileViewModel)
                 }
             }
             .edgesIgnoringSafeArea(.all)
