@@ -92,6 +92,7 @@ struct ProfileImageView:View{
         }
 #if os(macOS)
         .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.top, 40)
         .padding(.leading, 24)
 #else
         .frame(maxWidth: .infinity, alignment: .center)

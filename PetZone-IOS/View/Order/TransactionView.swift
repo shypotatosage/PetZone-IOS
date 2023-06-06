@@ -13,6 +13,7 @@ struct TransactionView: View {
     @State private var newOrder = Order.emptyOrder
     @State var isError = false
     @EnvironmentObject var orderViewModel: OrderViewModel
+    
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     
     var body: some View {
